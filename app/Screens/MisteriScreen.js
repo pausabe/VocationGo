@@ -7,63 +7,59 @@ import {
   View,
   Platform,
 } from 'react-native';
+
 const Sound = require('react-native-sound');
 
-const Button = ({title, onPress}) => (
-  <TouchableOpacity onPress={onPress}>
-    <Text style={styles.button}>{title}</Text>
-  </TouchableOpacity>
-);
-
-const Header = ({children}) => (<Text style={styles.header}>{children}</Text>);
-
-const Feature = ({title, onPress, description, buttonLabel = "PLAY"}) => (
-  <View style={styles.feature}>
-    <Header>{title}</Header>
-    <Button title={buttonLabel} onPress={onPress}/>
-  </View>);
-
-const requireAudio = require('../Audio/goig.mp3');
-
-class MainView extends Component {
-
+class MisteriScreen extends Component {
   constructor(props) {
     super(props);
 
     Sound.setCategory('Ambient', false);
 
-    this.playSoundBundle = () => {
-      const s = new Sound('goig.mp3', Sound.MAIN_BUNDLE, (e) => {
-        if (e) {
-          console.log('error', e);
-        } else {
-          s.setSpeed(1);
-          console.log('duration', s.getDuration());
-          s.play(() => s.release()); // Release when it's done so we're not using up resources
-        }
-      });
-    };
-
-    this.playSoundFromRequire = () => {
-      const s = new Sound(requireAudio, (e) => {
+    var s = new Sound('goig.mp3', Sound.MAIN_BUNDLE, (e) => {
         if (e) {
           console.log('error', e);
           return;
         }
+        console.log('duration', s.getDuration());
+    });
 
-        s.play(() => s.release());
-      });
-    };
+    this.playSound = () => {
+      s.play(() => s.release());
+    }
+
+    this.stopSound = () => {
+      s.stop();
+    }
+
+    this.setTimeSound = (seconds) => {
+      s.setCurrentTime(seconds);
+    }
+
+    this.pauseSound = () => {
+      s.pause();
+    }
+
+    this.releaseSound = () => {
+      s.release();
+    }
   }
 
   render() {
     return (
       <View style={styles.container}>
-        { Platform.OS === 'ios' ?
-          <Feature key="require" title="Misteri" onPress={this.playSoundFromRequire}/>
-          :
-          <Feature title="Misteri" onPress={this.playSoundBundle}/>
-        }
+        <TouchableOpacity onPress={this.playSound}>
+          <Text style={styles.button}>Play</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.stopSound}>
+          <Text style={styles.button}>Stop</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.setTimeSound.bind(this, 20)}>
+          <Text style={styles.button}>Seconds</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.pauseSound}>
+          <Text style={styles.button}>Pause</Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -91,4 +87,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default MainView;
+export default MisteriScreen;
