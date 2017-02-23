@@ -38,29 +38,26 @@ export default class GrupScreen extends Component {
     }
   }
 
+  getMarkersFromApiAsync() {
+    return fetch('http://www.worship.cat/markers.json')
+      .then((response) => response.json())
+      .then((responseJson) => {
+
+        this.displayData(responseJson);
+
+        return responseJson;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  displayData(data){
+    this.setState({markers: data.markers});
+  }
+
   componentWillMount() {
-    var auxMarkers = [];
-
-    auxMarkers.push({
-      key: '0',
-      coordinate: {
-        latitude: 41.49545,
-        longitude: 2.12837
-      },
-      title: "Súper title 1",
-      description: "Súper description 1"
-    });
-    auxMarkers.push({
-      key: '1',
-      coordinate: {
-        latitude: 41.45831,
-        longitude: 2.06925
-      },
-      title: "Súper title 2",
-      description: "Súper description 2"
-    });
-
-    this.setState({markers: auxMarkers});
+    this.getMarkersFromApiAsync();
   }
 
   render() {
