@@ -14,7 +14,7 @@ class MisteriScreen extends Component {
   constructor(props) {
     super(props);
 
-    Sound.setCategory('Ambient', false);
+    Sound.setCategory('Playback', true);
 
     var s = new Sound('goig.mp3', Sound.MAIN_BUNDLE, (e) => {
         if (e) {
@@ -25,6 +25,7 @@ class MisteriScreen extends Component {
     });
 
     this.playSound = () => {
+      //not if already playing
       s.play(() => s.release());
     }
 
