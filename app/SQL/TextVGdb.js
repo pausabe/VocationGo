@@ -9,7 +9,7 @@ import {
 
 let SQLite = require('react-native-sqlite-storage')
 
-export default class SqlTest extends Component {
+export default class TextVGdb extends Component {
   constructor(props) {
     super(props)
 
@@ -17,7 +17,7 @@ export default class SqlTest extends Component {
       record: "empty"
     }
 
-     let nameDB = "db.db";
+     let nameDB = "vgDB.db";
      let createFrom;
      if (Platform.OS == "ios") { createFrom = "1"; } //ios platform
      else { createFrom = `~${nameDB}`} //android platform
@@ -32,12 +32,12 @@ export default class SqlTest extends Component {
 
 
     db.transaction((tx) => {
-      tx.executeSql('SELECT * FROM test', [], (tx, results) => {
+      tx.executeSql('SELECT * FROM pvoc', [], (tx, results) => {
         console.log("Query completed");
 
         //console.log(`SIIIIIIIIII: ${results.rows.item(0).name}`);
 
-        this.setState({record: results.rows.item(0).name});
+        this.setState({record: results.rows.item(0).pregaria});
 
           /*var len = results.rows.length;
           for (let i = 0; i < len; i++) {
@@ -65,33 +65,29 @@ export default class SqlTest extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.platformText}> {Platform.OS} </Text>
-        <Text style={styles.normalText}>
-          {this.state.record !== null ? this.state.record : 'Waiting...'}
-        </Text>
+      <View>
+        <Text style={styles.redColor}>Divendres 24</Text>
+        <Text style={styles.blackColor}>
+          {this.state.record !== null ?
+            this.state.record
+            :
+            'Hi ha hagut un error. Fes una pregàraria si us plau'
+          }
+      </Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    //backgroundColor: '#2980b9',
-  },
-  normalText: {
+  blackColor: {
     textAlign: 'center',
-    color: '#000000',
-    fontWeight: '300'
+    color: '#000000'
   },
-  platformText: {
+  redColor: {
     textAlign: 'center',
-    color: '#000000',
-    fontWeight: '700'
+    color: '#FF0000'
   }
 });
 
-AppRegistry.registerComponent('SqlTest', () => SqlTest);
+AppRegistry.registerComponent('TextVGdb', () => TextVGdb);

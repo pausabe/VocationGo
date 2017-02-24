@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, StatusBar, BackAndroid } from 'react-native';
 
-import SqlTest from '../SQL/SqlTest'
-
 var buttonPress
 
 export default class HomeScreen extends Component {
