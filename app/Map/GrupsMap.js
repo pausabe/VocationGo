@@ -1,9 +1,10 @@
+//i4S6u4d5
 import React, { Component, PropTypes } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { AppRegistry, View, Text, StyleSheet } from 'react-native';
 
 import MapView from 'react-native-maps';
 
-export default class GrupScreen extends Component {
+export default class GrupsMap extends Component {
   constructor(props) {
     super(props)
 
@@ -39,20 +40,22 @@ export default class GrupScreen extends Component {
   }
 
   getMarkersFromApiAsync() {
-    return fetch('http://www.worship.cat/markers.json')
+    console.log("ha fet fetch");
+    return fetch('https://apps.lifeteen.es/apps/markers.json')
       .then((response) => response.json())
       .then((responseJson) => {
-
+        console.log("fetch correcte");
         this.displayData(responseJson);
 
         return responseJson;
       })
       .catch((error) => {
-        console.error(error);
+        console.error("Error de ferch: " + error);
       });
   }
 
   displayData(data){
+    //console.log("de debo funciona el fetch? " + data.markers[2].description);
     this.setState({markers: data.markers});
   }
 
@@ -96,3 +99,5 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
   }
 })
+
+AppRegistry.registerComponent('GrupsMap', () => GrupsMap);

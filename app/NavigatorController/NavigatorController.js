@@ -14,7 +14,7 @@ import CustomTransitions from '../CustomTransitions/CustomTransitions';
 import HomeScreen from '../Screens/HomeScreen'
 import RosariScreen from '../Screens/RosariScreen'
 import MisteriScreen from '../Screens/MisteriScreen'
-import GrupScreen from '../Screens/GrupScreen'
+import GrupScreen from '../Screens/GrupsScreen'
 import PVocScreen from '../Screens/PVocScreen'
 import TVocScreen from '../Screens/TVocScreen'
 import AboutScreen from '../Screens/AboutScreen'
