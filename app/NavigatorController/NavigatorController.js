@@ -54,7 +54,7 @@ export default class NavigatorController extends Component {
                 else {
                   return (
                     <TouchableHighlight style={styles.container}
-                                        onPress={() => navigator.pop()} >
+                                        onPress={this.backPress.bind(this, navigator)} >
                       <Text style={styles.barText}>Back</Text>
                     </TouchableHighlight>
                   );
@@ -86,6 +86,10 @@ export default class NavigatorController extends Component {
         }
       />
     );
+  }
+
+  backPress(nav){
+    nav.pop();
   }
 
   setPress(){
