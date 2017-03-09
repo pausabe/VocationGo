@@ -9,34 +9,39 @@ import {
 
 import AudioBar from '../AudioBar/AudioBar';
 
-var padBar = 54;
+function paddingBar(){
+  if(Platform.OS === 'ios'){
+    return 64;
+  }
+  return 54;
+}
 
 class MisteriScreen extends Component {
-  componentWillMount() {
-    if(Platform.OS === 'ios'){
-      console.log("hola " + Platform.OS);
-      padBar = 64;
-    }
-  }
-
   render() {
-    console.log("padd: " + padBar);
     return (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#E1F5FE',
-          paddingTop: padBar
-        }}
-      >
-        <AudioBar />
+      <View style={styles.container}>
+        <View style={styles.audioContainer}>
+          <AudioBar />
+        </View>
+        <View style={styles.otherContainer}>
+        </View>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+    backgroundColor: '#E1F5FE',
+    paddingTop: paddingBar()
+  },
+  audioContainer:{
+    flex:1,
+  },
+  otherContainer: {
+    flex:13,
+  }
 });
 
 export default MisteriScreen;

@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View
 } from 'react-native';
 
 import NavigatorController from './app/NavigatorController/NavigatorController'
 
-export default class VocationGo extends Component {  
+export default class VocationGo extends Component {
   render() {
     return (
       <NavigatorController />

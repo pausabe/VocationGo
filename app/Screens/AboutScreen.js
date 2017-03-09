@@ -1,5 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform } from 'react-native';
+
+function paddingBar(){
+  if(Platform.OS === 'ios'){
+    return 0;
+  }
+  return 54;
+}
 
 export default class AboutScreen extends Component {
   render() {
@@ -16,6 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: paddingBar(),
     backgroundColor: '#E1F5FE',
   },
   normalText: {

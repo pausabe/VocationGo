@@ -71,7 +71,7 @@ export default class TextVGdb extends Component {
           {this.state.record !== null ?
             this.state.record
             :
-            'Hi ha hagut un error. Fes una pregàraria si us plau'
+            'Hi ha hagut un error. Fes una pregàraria si-us-plau'
           }
       </Text>
       </View>

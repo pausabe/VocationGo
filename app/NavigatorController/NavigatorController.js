@@ -6,7 +6,11 @@ import {
   Text,
   StyleSheet,
   View,
-  TouchableHighlight
+  TouchableOpacity,
+  StatusBar,
+  Alert,
+  Image,
+  Platform
 } from 'react-native';
 
 import CustomTransitions from '../CustomTransitions/CustomTransitions';
@@ -19,81 +23,113 @@ import PVocScreen from '../Screens/PVocScreen'
 import TVocScreen from '../Screens/TVocScreen'
 import AboutScreen from '../Screens/AboutScreen'
 
-var NoTransition = {
-  opacity: {
-    from: 1,
-    to: 1,
-    min: 1,
-    max: 1,
-    type: 'linear',
-    extrapolate: false,
-    round: 100,
-  },
-};
+import GLOBAL from '../Globals/Globals'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class NavigatorController extends Component {
+  componentWillMount() {
+    Icon.getImageSource('ios-settings', 30).then((source) => this.setState({ gearIcon: source }));
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      gearIcon: null
+    }
+  }
+
   render() {
-    return (
-      <Navigator
-        initialRoute={{id: 'home', index: 0}}
-        renderScene={this.renderScene}
+    if (!this.state.gearIcon) {
+      return false;
+    }
 
-        configureScene={(route, routeStack) =>
-          //Navigator.SceneConfigs.PushFromRight
-          CustomTransitions.NONE
-        }
-
-        navigationBar={
-          <Navigator.NavigationBar
-            routeMapper={{
-              LeftButton: (route, navigator, index, navState) =>
-              {
-                if (route.index === 0) {
-                  return null;
-                }
-                else {
-                  return (
-                    <TouchableHighlight style={styles.container}
-                                        onPress={this.backPress.bind(this, navigator)} >
-                      <Text style={styles.barText}>Back</Text>
-                    </TouchableHighlight>
-                  );
-                }
-              },
-              RightButton: (route, navigator, index, navState) =>
-                {
-                  if(route.index === 1){
-                    return null;
-                  }
-                  else{
-                    return (
-                      <TouchableHighlight style={styles.container}
-                                          onPress={this.setPress} >
-                        <Text style={styles.barText}>Sett</Text>
-                      </TouchableHighlight>
-                    );
-                  }
-                },
-              Title: (route, navigator, index, navState) =>
-                { return (
-                  <View style={styles.container}>
-                    <Text style={styles.barText}>VocationGo</Text>
-                  </View>
-                );},
-            }}
-            style={styles.bar}
+    if(Platform.OS === 'ios'){
+      return (
+        <View style={{flex: 1}}>
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor={GLOBAL.statusBarColor}
           />
-        }
-      />
-    );
+          <NavigatorIOS
+            ref='navi'
+            initialRoute={{
+              component: HomeScreen,
+              title: GLOBAL.titleApp,
+            }}
+
+            style={{flex: 1}}
+            barTintColor={GLOBAL.barColor}
+            tintColor={GLOBAL.itemsBarColor}
+            titleTextColor={GLOBAL.itemsBarColor}
+          />
+        </View>
+      );
+    }
+    else{
+      return (
+        <View style={{flex: 1}}>
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor={GLOBAL.statusBarColor}
+          />
+          <Navigator
+            initialRoute={{id: 'home', index: 0}}
+            renderScene={this.renderScene}
+
+            configureScene={(route, routeStack) =>
+              CustomTransitions.NONE
+              //Navigator.SceneConfigs.PushFromRight //tipo iphone
+              //Navigator.SceneConfigs.FloatFromBottomAndroid //tipo android
+            }
+
+            navigationBar={
+              <Navigator.NavigationBar
+                routeMapper={{
+                  LeftButton: (route, navigator, index, navState) =>
+                  {
+                    if (route.index === 0) {
+                      return null;
+                    }
+                    else {
+                      return (
+                        <TouchableOpacity style={styles.barButton}
+                                            onPress={this.backPress.bind(this, navigator)}>
+                          <View style={{flex:1, flexDirection: 'row', alignItems: 'center', justifyContent:'center'}}>
+                            <View >
+                              <Icon
+                                name="ios-arrow-back-outline"
+                                size={30}
+                                color="#FFFFFF"
+                              />
+                            </View>
+                            <View >
+                                <Text style={styles.barTextBack}>{'  '}</Text>
+                            </View>
+                          </View>
+                        </TouchableOpacity>
+                      );
+                    }
+                  },
+                  Title: (route, navigator, index, navState) =>
+                    { return (
+                      <View style={styles.container}>
+                        <Text style={styles.barText}>{GLOBAL.titleApp}</Text>
+                      </View>
+                    );},
+                  RightButton: () => { return null}
+                }}
+                style={styles.bar}
+              />
+            }
+          />
+        </View>
+      );
+    }
   }
 
   backPress(nav){
     nav.pop();
-  }
-
-  setPress(){
-    console.log("settings");
   }
 
   renderScene(route,nav){
@@ -121,15 +157,27 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+  },
+  barButton: {
+    flex: 1,
+    paddingLeft: 5,
+    justifyContent: 'center'
   },
   barText: {
     textAlign: 'center',
-    color: '#FFFFFF',
-    fontWeight: '700'
+    justifyContent: 'center',
+    color: GLOBAL.itemsBarColor,
+    fontSize: 20,
+    fontWeight: '600'
+  },
+  barTextBack: {
+    color: GLOBAL.itemsBarColor,
+    fontSize: 16,
+    fontWeight: '300'
   },
   bar: {
-    backgroundColor: '#34495e'
+    backgroundColor: GLOBAL.barColor
   }
 })
 
