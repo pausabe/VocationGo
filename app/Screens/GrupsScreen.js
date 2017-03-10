@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { View, Text, StyleSheet, Platform } from 'react-native';
 
 import GrupsMap from '../Map/GrupsMap'
+import BottomBar from '../BottomBar/BottomBar'
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
@@ -13,8 +14,11 @@ function paddingBar(){
 export default class GrupsScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <GrupsMap />
+      <View style={{flex:1}}>
+        <View style={styles.container}>
+          <GrupsMap />
+        </View>
+        <BottomBar />
       </View>
     )
   }

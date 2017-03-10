@@ -23,7 +23,8 @@ export default class RosariScreen extends Component {
                 <Text style={styles.textTitolMisteri}>1. L'ENCARNACIÓ DEL FILL DE DÉU</Text>
               </View>
               <View style={styles.descripcioMisteri}>
-                <Text style={styles.textDescripcio}>L’àngel li digué: No tinguis por, Maria. Déu t’ha concedit la seva gràcia. Tindràs un fill i li posaràs el nom de Jesús... Maria va dir: Sóc l’esclava del Senyor: que es compleixin en mi les teves paraules. I l’àngel es va retirar. (Cf. Lc 1, 26-38)</Text>
+                <Text style={styles.textDescripcio}>De la mateixa manera que Déu irromp en la vida de Maria a través de la mediació de l'àngel Gabriel per manifestar-li la vocació a la qual ha estat cridada, a nosaltres ens continua cridant per encomanar-nos una missió en el si de l'Església i en el món a través de diverses mediacions. Hem de restar atents per a descobrir la crida que Déu ens fa a servir-lo de diverses maneres en el nostre dia a dia.
+Demanem a Maria per tots aquells que estan discernint la seva vocació, aquells que es pregunten per la voluntat del Pare per a les seves vides, perquè estiguin atents a les mediacions que Déu posa en el seu camí per a descobrir la seva vocació.</Text>
               </View>
               <View style={styles.audioContainer}>
                 <AudioBar soundName={'goig.mp3'}
@@ -36,7 +37,8 @@ export default class RosariScreen extends Component {
                 <Text style={styles.textTitolMisteri}>2. MARIA VISITA LA SEVA COSINA ELISABET</Text>
               </View>
               <View style={styles.descripcioMisteri}>
-                <Text style={styles.textDescripcio}>Quan Elisabet sentí la salutació de Maria, l’infant va saltar dins les seves entranyes, i Elisabet quedà plena de l’Esperit Sant. I cridà amb totes les forces: Ets beneïda entre totes les dones i és beneït el fruit de les teves  entranyes!... Feliç tu que has cregut: allò que el Senyor t’ha anunciat es complirà! (Cf. Lc 1, 39-45)</Text>
+                <Text style={styles.textDescripcio}>En el silenci del camí cap a la casa de la seva cosina Elisabet, Maria medita sobre el do rebut. En l'ajuda donada a la seva cosina, en el servei desinteressat a qui ho necessita, es troba el sentit de tota vocació. La crida es tradueix sempre en actituds i gestos d'amor i en servei cap als altres, especialment els qui més ho necessiten.
+Demanem a Maria pels que viuen la seva vocació donant la seva vida en benefici dels altres. Demanem especialment pels laics que, a través de les seves ocupacions ordinàries, de les diferents professions que exerceixen i de les formes de vida que adopten, fan present l'obra de la creació i de la salvació enmig del món.</Text>
               </View>
               <View style={styles.audioContainer}>
                 <AudioBar soundName={'goig.mp3'}
@@ -49,7 +51,8 @@ export default class RosariScreen extends Component {
                 <Text style={styles.textTitolMisteri}>3. EL NAIXEMENT DE JESÚS A BETLEM</Text>
               </View>
               <View style={styles.descripcioMisteri}>
-                <Text style={styles.textDescripcio}>L’àngel digué als pastors: No tingueu por. Us anuncio una bona nova que portarà a tot el poble una gran alegria: avui, a la ciutat de David, us ha nascut un salvador, que és el Messies, el Senyor. (Cf. Lc 2, 1-19)</Text>
+                <Text style={styles.textDescripcio}>En el misteri de Betlem, a la nuesa i la humilitat d’un pessebre, es fan presents la gràcia i la misericòrdia de Déu com a do per a tota la humanitat. Davant d'aquest gest d'amor, només cal el silenci de Maria i Josep i el reconeixement de la grandesa de Déu per part dels pastors que vénen a adorar el Nen.
+Demanem a Maria per l'Església, per tal que sigui fidel a la seva vocació de transmetre l’evangeli de la salvació a tots els homes.</Text>
               </View>
               <View style={styles.audioContainer}>
                 <AudioBar soundName={'dolor.mp3'}
@@ -62,7 +65,8 @@ export default class RosariScreen extends Component {
                 <Text style={styles.textTitolMisteri}>4. LA PRESENTACIÓ DE JESÚS AL TEMPLE</Text>
               </View>
               <View style={styles.descripcioMisteri}>
-                <Text style={styles.textDescripcio}>Simeó prengué l’Infant en braços i beneí Déu dient: Ara, Senyor, deixa que el teu servent se’n vagi en pau, com li havies promès... Simeó va beneir-los i digué a Maria, la seva mare: Aquest infant serà motiu que a Israel molts caiguin i molts d’altres s’aixequin; serà una senyera combatuda, i a tu mateixa una espasa et traspassarà l’ànima. (Cf. Lc 2, 22-35)</Text>
+                <Text style={styles.textDescripcio}>Josep i Maria, fidels a la tradició jueva de presentar el fill primogènit a Déu, van al temple a realitzar la seva ofrena. D'aquesta manera, ens ensenyen una actitud cristiana fonamental: la de presentar i oferir contínuament la pròpia vida, amb les seves aspiracions i il·lusions, els seus goigs i preocupacions, a Déu, el nostre Pare, font i origen de la pròpia existència.
+Demanem a Maria pels consagrats i consagrades que s'esforcen constantment per presentar la seva pròpia vida a Déu, per oferir-se en constant oblació al Pare i als germans; per tal que siguin testimoni d'aquesta actitud cristiana de l'oferiment existencial davant de tots els homes.</Text>
               </View>
               <View style={styles.audioContainer}>
                 <AudioBar soundName={'dolor.mp3'}
@@ -75,12 +79,13 @@ export default class RosariScreen extends Component {
                 <Text style={styles.textTitolMisteri}>5. JESÚS PREDUT I TROBAT AL TEMPLE</Text>
               </View>
               <View style={styles.descripcioMisteri}>
-                <Text style={styles.textDescripcio}>Al cap de tres dies el van trobar al temple, assegut entre els mestres de la Llei En veure’l allà, la seva mare li digué: Fill meu, per què t’has portat així amb nosaltres? El teu pare i jo et buscàvem amb ànsia. Ell els respongué: Per què em buscàveu? No sabíeu que jo havia d’estar a casa del meu Pare? (Cf. Lc 2, 41-52)</Text>
+                <Text style={styles.textDescripcio}>El gest de Jesús està carregat d'una forta connotació simbòlica: enmig dels mestres i doctors de la Llei, comença a explicar-los les Escriptures, en el temple, el lloc de la presència de Déu. Els sacerdots també han de meditar la Paraula de Déu per oferir- nos una paraula actual i rellevant que orienti la nostra vida cristiana a través de la predicació i la guia de la comunitat eclesial.
+Demanem a Maria pels sacerdots perquè, atents a la Paraula, sàpiguen transmetre a tots els fidels la bona notícia de la salvació. Demanem-li a la nostra Mare, Maria, que els protegeixi i els faci perseverar amb fidelitat al do de la vocació rebuda.</Text>
               </View>
               <View style={styles.audioContainer}>
                 <AudioBar soundName={'goig.mp3'}
-                          colorThumb={'rgb(204, 68, 0)'}
-                          colorTrack={'rgb(255, 119, 51)'}/>
+                          colorThumb={'rgb(192, 164, 153)'}
+                          colorTrack={'rgb(200, 119, 51)'}/>
               </View>
             </View>
           </ScrollView>
@@ -110,8 +115,8 @@ const styles = StyleSheet.create({
     height: 30,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: 'rgba(255, 85, 0, 0.2)',
-    backgroundColor: 'rgba(255, 119, 51, 0.2)',
+    borderColor: 'rgba(192, 164, 153, 0.9)',
+    backgroundColor: 'rgba(96, 83, 79, 0.32)',
     //backgroundColor: 'black',
     //opacity: 0.4
   },
@@ -125,10 +130,10 @@ const styles = StyleSheet.create({
     height: 30,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(63,127,191,0.2)',
+    backgroundColor: 'rgba(66,73,109,0.2)',
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: 'rgba(63,127,191,0.4)',
+    borderColor: 'rgba(66,73,109,0.4)',
     //opacity: 0.4,
     //paddingVertical: 5,
   },
