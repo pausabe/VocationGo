@@ -12,7 +12,7 @@ import PVocScreen from '../Screens/PVocScreen'
 import TVocScreen from '../Screens/TVocScreen'
 import AboutScreen from '../Screens/AboutScreen'
 
-var heightBottomBar = 45;
+import BottomBar from '../BottomBar/BottomBar'
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
@@ -98,15 +98,7 @@ export default class HomeScreen extends Component {
             </View>
           </View>
         </Image>
-        <View style={styles.bottomBar}>
-          <View style={{flex:1}}>
-            <Text style={styles.bottomBarText}>Seminari de Terrassa</Text>
-          </View>
-          <View style={{width: heightBottomBar}}>
-            <Image  source={require('../img/altres/logo-seminari.png')}
-                    style={styles.logoImage}/>
-          </View>
-        </View>
+        <BottomBar />
       </View>
     )
   }
@@ -135,13 +127,13 @@ const styles = StyleSheet.create({
    width: null,
    height: null,
    resizeMode: 'cover',
-   padding: 20
+   padding: 10
  },
   button: {
     flex: 1,
     justifyContent: 'center',
     //backgroundColor: 'rgba(63,127,191,0.2)',
-    padding: 10
+    padding: 15
   },
   homeImage: {
     flex: 1,
@@ -158,24 +150,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400'
   },
-  bottomBar: {
-    alignItems: 'flex-end', //text al terra
-    height: heightBottomBar,
-    backgroundColor: GLOBAL.barColor,
-    flexDirection: 'row',
-    padding: 5
-  },
-  bottomBarText: {
-    textAlign: 'right', //text a la dreta
-    color: 'white',
-    fontSize: 16,
-    fontWeight: '400'
-  },
-  logoImage: {
-    flex: 1,
-    width: null,
-    height: null,
-    borderRadius: 30,
-    resizeMode: 'contain',
-  }
+
 })

@@ -41,6 +41,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		5F6AA8971E5645A10085A7A1 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 5F6AA8961E5645A10085A7A1 /* www */; };
 		5FDE486D1E71AD8300ADF71F /* goig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FDE486C1E71AD8300ADF71F /* goig.mp3 */; };
+		5FE479BE1E72BE1200B6C9B1 /* dolor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FE479BD1E72BE1200B6C9B1 /* dolor.mp3 */; };
 		641300E742FF404FA51F2AC5 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9452EDAEC3594CD1B0CE51D2 /* libAirMaps.a */; };
 		7367BBED09E44746AC1A6C9E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E5A9AF32964C1D8F55111B /* libsqlite3.0.tbd */; };
 		77F6D15CC2B5475288BCFC47 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ECE8FF3BC0E466E8175C4AE /* Foundation.ttf */; };
@@ -302,6 +303,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5F6AA8961E5645A10085A7A1 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 		5FDE486C1E71AD8300ADF71F /* goig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig.mp3; path = ../app/Audio/goig.mp3; sourceTree = "<group>"; };
+		5FE479BD1E72BE1200B6C9B1 /* dolor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor.mp3; path = ../app/Audio/dolor.mp3; sourceTree = "<group>"; };
 		7039FE7232654346BD94593C /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 		13B07FAE1A68108700A75B9A /* VocationGo */ = {
 			isa = PBXGroup;
 			children = (
+				5FE479BD1E72BE1200B6C9B1 /* dolor.mp3 */,
 				5FDE486C1E71AD8300ADF71F /* goig.mp3 */,
 				5F6AA8961E5645A10085A7A1 /* www */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -1027,6 +1030,7 @@
 				5F6AA8971E5645A10085A7A1 /* www in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5FE479BE1E72BE1200B6C9B1 /* dolor.mp3 in Resources */,
 				935244F354EE41B2900187C7 /* Entypo.ttf in Resources */,
 				7EE2015CAE9D4E9FBE0B1A28 /* EvilIcons.ttf in Resources */,
 				1CC52947AD0C4EA2B7D37855 /* FontAwesome.ttf in Resources */,

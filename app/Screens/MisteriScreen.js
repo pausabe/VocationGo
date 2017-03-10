@@ -21,7 +21,7 @@ class MisteriScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.audioContainer}>
-          <AudioBar />
+          <AudioBar soundName={'goig.mp3'}/>
         </View>
         <View style={styles.otherContainer}>
         </View>
