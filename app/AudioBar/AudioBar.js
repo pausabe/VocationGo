@@ -94,7 +94,7 @@ export default class AudioBar extends Component {
       <View style={styles.container}>
         <View style={styles.columnContainer}>
           <View style={{width: 35, justifyContent: 'center', alignItems: 'center'}}>
-            <TouchableOpacity onPress={this.playSound}>
+            <TouchableOpacity hitSlop={{top:35,bottom:35,right:35,left:40}} onPress={this.playSound}>
               <Text style={styles.textbutton}>
                 {this.state.playing ?
                   <Icon
@@ -122,6 +122,7 @@ export default class AudioBar extends Component {
               }}
               trackStyle={{
                 height: 2,
+                marginTop: -2,
                 backgroundColor: '#303030',
               }}
               thumbStyle={{

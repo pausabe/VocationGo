@@ -22,6 +22,11 @@ class PVocScreen extends Component {
             <Text>Us preguem Senyor, per les famílies cristianes, perquè siguin "església domèstica" on puguin néixer futures vocacions per a l'Església universal.
             </Text>
           </View>
+          <View style={styles.audioContainer}>
+            <AudioBar soundName={'goig.mp3'}
+                      colorThumb={'rgb(204, 68, 0)'}
+                      colorTrack={'rgb(255, 119, 51)'}/>
+          </View>
         </Image>
         <BottomBar />
       </View>

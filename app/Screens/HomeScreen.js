@@ -70,7 +70,7 @@ export default class HomeScreen extends Component {
             <View style={{flex: 1, flexDirection: 'column'}} >
             <View style={styles.button}>
               <TouchableOpacity
-              onPress={this.onButtonPress.bind(this, "misteri", "Misteri", MisteriScreen)}
+              onPress={this.onButtonPress.bind(this, "misteri", "Misteri", RosariScreen)}
               style={styles.imageContainer}>
                 <Image  source={require('../img/homeButtons/misteri.png')}
                         style={styles.homeImage}/>
@@ -107,6 +107,7 @@ export default class HomeScreen extends Component {
     if(Platform.OS === 'ios'){
       this.props.navigator.push({
         title: title,
+        passProps: {title: title},
         component: component
       });
     }

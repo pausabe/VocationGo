@@ -94,7 +94,8 @@ export default class NavigatorController extends Component {
                     else {
                       return (
                         <TouchableOpacity style={styles.barButton}
-                                            onPress={this.backPress.bind(this, navigator)}>
+                                          hitSlop={{top:35,bottom:35,right:45,left:35}}
+                                          onPress={this.backPress.bind(this, navigator)}>
                           <View style={{flex:1, flexDirection: 'row', alignItems: 'center', justifyContent:'center'}}>
                             <View >
                               <Icon
@@ -137,9 +138,9 @@ export default class NavigatorController extends Component {
       case 'home':
         return (<HomeScreen navigator={nav} route={route} title="Home"/>);
       case 'rosari':
-        return (<RosariScreen navigator={nav} route={route} title="Rosi"/>);
+        return (<RosariScreen navigator={nav} route={route} title="Rosari"/>);
       case 'misteri':
-        return (<MisteriScreen navigator={nav} route={route} title="Misteri"/>);
+        return (<RosariScreen navigator={nav} route={route} title="Misteri"/>);
       case 'grup':
         return (<GrupScreen navigator={nav} route={route} title="Grup"/>);
       case 'pvoc':
