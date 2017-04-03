@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Image, AppRegistry } from 'react-native';
 
 import GLOBAL from '../Globals/Globals';
 
-var heightBottomBar = 45;
 
 export default class BottomBar extends Component {
   render() {
@@ -12,7 +11,7 @@ export default class BottomBar extends Component {
         <View style={{flex:1}}>
           <Text style={styles.bottomBarText}>Seminari de Terrassa</Text>
         </View>
-        <View style={{width: heightBottomBar}}>
+        <View style={{width: GLOBAL.heightBottomBar}}>
           <Image  source={require('../img/altres/logo-seminari.png')}
                   style={styles.logoImage}/>
         </View>
@@ -24,7 +23,7 @@ export default class BottomBar extends Component {
 const styles = StyleSheet.create({
   bottomBar: {
     alignItems: 'flex-end', //text al terra
-    height: heightBottomBar,
+    height: GLOBAL.heightBottomBar,
     backgroundColor: GLOBAL.barColor,
     flexDirection: 'row',
     padding: 5

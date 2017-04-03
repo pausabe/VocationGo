@@ -105,7 +105,7 @@ export default class NavigatorController extends Component {
                               />
                             </View>
                             <View >
-                                <Text style={styles.barTextBack}>{'  '}</Text>
+                                <Text style={styles.barTextBack}>{'          '}</Text>
                             </View>
                           </View>
                         </TouchableOpacity>

@@ -5,10 +5,11 @@ import { View, ScrollView, Text, StyleSheet,
 import AudioBar from '../AudioBar/AudioBar';
 import Hr from 'react-native-hr';
 import GLOBAL from '../Globals/Globals';
+import PREGARIES from '../Globals/PREGARIES';
 import BottomBar from '../BottomBar/BottomBar'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-let SQLite = require('react-native-sqlite-storage')
+//let SQLite = require('react-native-sqlite-storage')
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
@@ -18,6 +19,36 @@ function paddingBar(){
 }
 
 export default class RosariScreen extends Component {
+  componentWillMount(){
+    let today = new Date();
+    let day = today.getDate();
+    var id = (day-1)%6;
+
+    switch (id) {
+      case 0:
+        this.setState({preg1: PREGARIES.p1, preg2: PREGARIES.p2, preg3: PREGARIES.p3, preg4: PREGARIES.p4, preg5: PREGARIES.p5,})
+        break;
+      case 1:
+        this.setState({preg1: PREGARIES.p6, preg2: PREGARIES.p7, preg3: PREGARIES.p8, preg4: PREGARIES.p9, preg5: PREGARIES.p10,})
+        break;
+      case 2:
+        this.setState({preg1: PREGARIES.p11, preg2: PREGARIES.p12, preg3: PREGARIES.p13, preg4: PREGARIES.p14, preg5: PREGARIES.p15,})
+        break;
+      case 3:
+        this.setState({preg1: PREGARIES.p16, preg2: PREGARIES.p17, preg3: PREGARIES.p18, preg4: PREGARIES.p19, preg5: PREGARIES.p20,})
+        break;
+      case 4:
+        this.setState({preg1: PREGARIES.p21, preg2: PREGARIES.p22, preg3: PREGARIES.p23, preg4: PREGARIES.p24, preg5: PREGARIES.p25,})
+        break;
+      case 5:
+        this.setState({preg1: PREGARIES.p26, preg2: PREGARIES.p27, preg3: PREGARIES.p28, preg4: PREGARIES.p29, preg5: PREGARIES.p30,})
+        break;
+      case 6:
+        this.setState({preg1: PREGARIES.p31, preg2: PREGARIES.p32, preg3: PREGARIES.p33, preg4: PREGARIES.p17, preg5: PREGARIES.p13,})
+        break;
+    }
+  }
+
   constructor(props) {
     super(props)
 
@@ -34,7 +65,7 @@ export default class RosariScreen extends Component {
       press5: false,
     }
 
-     let nameDB = "vgDB.db";
+     /*let nameDB = "vgDB.db";
      let createFrom;
      if (Platform.OS == "ios") { createFrom = "1"; } //ios platform
      else { createFrom = `~${nameDB}`} //android platform
@@ -56,10 +87,10 @@ export default class RosariScreen extends Component {
                          preg5: results.rows.item(id+4).pregaria
                         });
           });
-      });
+      });*/
   }
 
-  errorCB(err) {
+  /*errorCB(err) {
     console.log("SQL Error: " + err);
   }
 
@@ -69,7 +100,7 @@ export default class RosariScreen extends Component {
 
   openCB() {
     console.log("Database OPENED");
-  }
+  }*/
 
   render() {
     return (
@@ -90,6 +121,7 @@ export default class RosariScreen extends Component {
       case 0: //diumenge
       case 3: //dimecres
         misteris = 'GLÒRIA';
+        audio = 'gloria';
         titol1 = "La Resurrecció del Senyor";
         referencia1 = "Jn 20, 1-18; Mc 16, 1-8;";
         text1 = "La resurrecció de Crist és el missatge central de la predicació cristiana. Si Crist no hagués ressuscitat, vana és la nostra fe, afirma sant Pau (cf. 1Co 15,14). Es tracta d'una realitat que transcendeix l'ordre de les coses creades i que apunta cap a una singular i definitiva intervenció de Déu en la nostra història. La resurrecció de Crist és la font de la nostra esperança, de la fe i de la caritat cristiana.\n\nDemanem a Maria per tots els homes, perquè trobem en la resurrecció de Crist un motiu per a la fe, l'esperança i la caritat.";
@@ -109,6 +141,7 @@ export default class RosariScreen extends Component {
       case 1: //dilluns
       case 6: //dissabte
         misteris = 'GOIG';
+        audio = 'goig';
         titol1 = "L'encarnació del Fill de Déu";
         referencia1 = "Lc 1, 26-38";
         text1 = "De la mateixa manera que Déu irromp en la vida de Maria a través de la mediació de l'àngel Gabriel per manifestar-li la vocació a la qual ha estat cridada, a nosaltres ens continua cridant per encomanar-nos una missió en el si de l'Església i en el món a través de diverses mediacions. Hem de restar atents per a descobrir la crida que Déu ens fa a servir-lo de diverses maneres en el nostre dia a dia.\n\nDemanem a Maria per tots aquells que estan discernint la seva vocació, aquells que es pregunten per la voluntat del Pare per a les seves vides, perquè estiguin atents a les mediacions que Déu posa en el seu camí per a descobrir la seva vocació.";
@@ -128,6 +161,7 @@ export default class RosariScreen extends Component {
       case 2: //dimarts
       case 5: //divendres
         misteris = 'DOLOR';
+        audio = 'dolor';
         titol1 = "Oració de Jesús a l'hort de Getsemaní";
         referencia1 = "Mc 14, 32-42; Mt 26, 36-46; Lc 22, 39-46";
         text1 = "Tot i l'angoixa i la tristesa, Jesús persevera en la pregària confiada al Pare, mostrant-nos en un moment tan singular l'essència de l'oració cristiana: posar-se en mans del Pare per complir la seva voluntat. Respondre a la crida que Déu ens fa a cada un de nosaltres comporta una gran dosi de confiança en Aquell que ens crida.\n\nDemanem a Maria per tots nosaltres, perquè se'ns concedeixi el do de la pregària, de l'encontre confiat amb Ell, i puguem respondre així a la crida particular que Ell ens fa.";
@@ -146,6 +180,7 @@ export default class RosariScreen extends Component {
         break;
       case 4: //dijous
         misteris = 'LLUM';
+        audio = 'llum';
         titol1 = "El Baptisme de Jesús en el Jordà";
         referencia1 = "Mc 1, 9-11; Mt 3, 13-17; Lc 3, 21-22";
         text1 = "Tu ets el meu Fill, el meu estimat, en qui m'he complagut (Mc 1, 11b). Aquestes paraules que se senten des cel referint-se a Jesús en el moment del baptisme al Jordà, ens són repetides a cada batejat des del mateix moment en què, pel baptisme cristià, passem a formar part de l'Església, de la comunitat dels fills de Déu. Pel baptisme som cridats a la santedat, a formar part del misteri d'amor que és Déu, Pare, Fill i Esperit Sant.\n\nDemanem a Maria per tots els batejats perquè, fidels a la crida a la santedat suscitada en el seu baptisme, traduïm la santedat de la qual ja vam participar en gestos concrets de caritat i fraternitat.";
@@ -215,7 +250,7 @@ export default class RosariScreen extends Component {
               <Text style={styles.textPregaria}>{this.state.preg1}</Text>
             </View>
             <View style={styles.audioContainer}>
-              <AudioBar soundName={'goig.mp3'}
+              <AudioBar soundName={`${audio}1.mp3`}
                         colorThumb={'rgb(204, 68, 0)'}
                         colorTrack={'rgb(255, 119, 51)'}/>
             </View>
@@ -263,7 +298,7 @@ export default class RosariScreen extends Component {
               <Text style={styles.textPregaria}>{this.state.preg2}</Text>
             </View>
             <View style={styles.audioContainer}>
-              <AudioBar soundName={'goig.mp3'}
+              <AudioBar soundName={`${audio}2.mp3`}
                         colorThumb={'rgb(204, 68, 0)'}
                         colorTrack={'rgb(255, 119, 51)'}/>
             </View>
@@ -311,7 +346,7 @@ export default class RosariScreen extends Component {
               <Text style={styles.textPregaria}>{this.state.preg3}</Text>
             </View>
             <View style={styles.audioContainer}>
-              <AudioBar soundName={'goig.mp3'}
+              <AudioBar soundName={`${audio}3.mp3`}
                         colorThumb={'rgb(204, 68, 0)'}
                         colorTrack={'rgb(255, 119, 51)'}/>
             </View>
@@ -359,7 +394,7 @@ export default class RosariScreen extends Component {
               <Text style={styles.textPregaria}>{this.state.preg4}</Text>
             </View>
             <View style={styles.audioContainer}>
-              <AudioBar soundName={'goig.mp3'}
+              <AudioBar soundName={`${audio}4.mp3`}
                         colorThumb={'rgb(204, 68, 0)'}
                         colorTrack={'rgb(255, 119, 51)'}/>
             </View>
@@ -407,7 +442,7 @@ export default class RosariScreen extends Component {
               <Text style={styles.textPregaria}>{this.state.preg5}</Text>
             </View>
             <View style={styles.audioContainer}>
-              <AudioBar soundName={'goig.mp3'}
+              <AudioBar soundName={`${audio}5.mp3`}
                         colorThumb={'rgb(204, 68, 0)'}
                         colorTrack={'rgb(255, 119, 51)'}/>
             </View>
@@ -415,6 +450,7 @@ export default class RosariScreen extends Component {
 
           <Text style={styles.misteriTitle}>Lletanies</Text>
           <Text style={styles.textDescripcio}>{lletanies}</Text>
+          <Text />
           <Text />
           <Hr lineColor='#CFD8DC' />
           <Text />
@@ -439,7 +475,7 @@ export default class RosariScreen extends Component {
             <Text style={styles.textDescripcio}>{text1}</Text>
           </View>
           <View style={styles.audioContainer}>
-            <AudioBar soundName={'goig.mp3'}
+            <AudioBar soundName={`${audio}1.mp3`}
                       colorThumb={'rgb(204, 68, 0)'}
                       colorTrack={'rgb(255, 119, 51)'}/>
           </View>

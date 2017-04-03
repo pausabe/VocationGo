@@ -8,7 +8,7 @@ import BottomBar from '../BottomBar/BottomBar'
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
-    return 64;
+    return 0;
   }
   return 54;
 }
@@ -17,16 +17,10 @@ class PVocScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/fons1.jpg')} style={styles.backgroundImage}>
-          <View style={styles.misteriContainer}>
-            <Text>Us preguem Senyor, per les famílies cristianes, perquè siguin "església domèstica" on puguin néixer futures vocacions per a l'Església universal.
-            </Text>
-          </View>
-          <View style={styles.audioContainer}>
-            <AudioBar soundName={'goig.mp3'}
-                      colorThumb={'rgb(204, 68, 0)'}
-                      colorTrack={'rgb(255, 119, 51)'}/>
-          </View>
+        <Image source={require('../img/bg/fons3.jpg')} style={styles.backgroundImage}>
+          <ScrollView automaticallyAdjustContentInsets={false} style={styles.square}>
+            <Text style={styles.normalText}>Un objectiu del pla pastoral del bisbat de Terrassa és la creació de grups de pregària per les vocacions. Ens falten capellans i hem de demanar aquest do. Ajuda'ns a aconseguir-ho formant un grup de pregària.</Text>
+          </ScrollView>
         </Image>
         <BottomBar />
       </View>
@@ -38,7 +32,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    paddingTop: paddingBar()
   },
   backgroundImage: {
    flex: 1,
@@ -46,52 +39,58 @@ const styles = StyleSheet.create({
    width: null,
    height: null,
    resizeMode: 'cover',
-   paddingHorizontal: 10,
-
-  },
-  audioContainer:{
-    height: 30,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'rgba(192, 164, 153, 0.9)',
-    backgroundColor: 'rgba(96, 83, 79, 0.32)',
-    //backgroundColor: 'black',
-    //opacity: 0.4
-  },
-  misteriContainer: {
-    flex:1,
-    //backgroundColor: 'red',
-    //opacity: 0.3,
-    paddingVertical: 15,
-  },
-  titolMisteri: {
-    height: 30,
-    justifyContent:'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(66,73,109,0.2)',
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'rgba(66,73,109,0.4)',
-    //opacity: 0.4,
-    //paddingVertical: 5,
-  },
-  descripcioMisteri: {
-    flex:1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 15,
-    //backgroundColor: 'blue',
-    //opacity: 0.4
-  },
-  textDescripcio: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '300',
-  },
-  textTitolMisteri: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '400',
-  }
+   padding: 10,
+   paddingTop:100,
+ },square: {
+   //flexDirection: 'column',
+   //flex: 1,
+   height: 200,
+   padding: 10,
+   backgroundColor: 'rgba(230, 242, 255, 0.3)',
+ },
+ title1:{
+   textAlign: 'center',
+   fontSize: 30,
+   color: 'rgb(0, 26, 51)',
+   fontWeight: '600',
+ },
+ title2:{
+   textAlign: 'center',
+   fontSize: 30,
+   color: 'rgb(0, 26, 51)',
+   fontWeight: '800',
+ },
+ italicText: {
+   color: 'rgb(0, 25, 51)',
+   fontSize: 13,
+   fontStyle: 'italic',
+   textAlign: 'center'
+ },
+ normalText: {
+   flexWrap: 'wrap',
+   color: 'rgb(0, 25, 51)',
+   fontSize: 16,
+   textAlign: 'center'
+ },
+ justText: {
+   flexWrap: 'wrap',
+   color: 'rgb(0, 25, 51)',
+   fontSize: 16,
+   textAlign: 'center'
+ },
+ boldText: {
+   flexWrap: 'wrap',
+   color: 'rgb(0, 25, 51)',
+   fontSize: 16,
+   fontWeight: 'bold',
+   textAlign: 'center'
+ },
+ logoImage:{
+   flex: 1,
+   paddingRight: 5,
+   width: null,
+   height: null,
+   resizeMode: 'contain',
+ },
 });
 export default PVocScreen;
