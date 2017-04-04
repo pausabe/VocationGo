@@ -15,15 +15,19 @@ function paddingBar(){
 
 class TVocScreen extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Image source={require('../img/bg/fons1.jpg')} style={styles.backgroundImage}>
-          <View style={styles.misteriContainer}>
-            <Text>«L'esperit de comunió es fonamenta en el fet que l'Església, com a poble convocat per Crist, està cridada a viure, com ho ha fet des dels seus orígens, una forta experiència de vida comunitària. Convé considerar que, rebut l'orde del presbiterat, els sacerdots estan units entre ells per l'íntima fraternitat sacramental i formen un presbiteri especial a la diòcesi al servei del qual es consagren sota el propi bisbe».
+    const text = "La cercanía entre dos personas siempre significa entrega, generosi- dad y donación de vida. En las reflexiones filosóficas de los clási- cos griegos nunca se habla de la realidad de la entrega; esto no nos debe extrañar, porque en el camino de autenticidad no se plantea un diálogo de tú a tú, sino que un ir a uno mismo, en una especie de exaltación personal.\n\nJesús nos ha enseñado a entregarnos como él se entrega a no- sotros, «me amó y se entregó a la muerte por mí»1, «este es mi cuer- po entregado por vosotros»2 : Jesús nunca les dijo a los apóstoles «conócete a ti mismo», sino «conoce mi amor».\n\nLa vida cristiana no es ordenar la vida al modo de Dios des- de lo que a mi me parece, es una relación con una persona viva, es una existencia iluminada con la riqueza de Dios. La vida humana se hace mucho más humana aunque escape a nuestra inteligencia, porque se hace de Dios; «muy divino, pero muy humano»: “¿Hay algo más cercano al hombre que la ternura del amor de Dios? [...] muchas veces «muy divino» significa «muy abstracto». Pero ¿no es lo divino lo que se nos revela en Cristo? ¿Qué cosa más humana que el amor de Cristo?”3.";
 
-Carta Pastoral Sr. Bisbe
-            </Text>
-          </View>
+      return (
+      <View style={styles.container}>
+        <Image source={require('../img/bg/fons7.jpg')} style={styles.backgroundImage}>
+
+          <ScrollView automaticallyAdjustContentInsets={false} >
+            <View style={styles.square}>
+            <Text style={styles.title}>CERCA DE DIOS Y DE LOS HERMANOS</Text>
+            <Text />
+              <Text style={styles.normalText}>{text}</Text>
+            </View>
+          </ScrollView>
         </Image>
         <BottomBar />
       </View>
@@ -43,52 +47,57 @@ const styles = StyleSheet.create({
    width: null,
    height: null,
    resizeMode: 'cover',
-   paddingHorizontal: 10,
-
+   padding: 15,
   },
-  audioContainer:{
-    height: 30,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'rgba(192, 164, 153, 0.9)',
-    backgroundColor: 'rgba(96, 83, 79, 0.32)',
-    //backgroundColor: 'black',
-    //opacity: 0.4
+  square: {
+    flexDirection: 'column',
+    //flex: 1,
+    padding: 10,
+    backgroundColor: 'rgba(230, 242, 255, 0.4)',
   },
-  misteriContainer: {
-    flex:1,
-    //backgroundColor: 'red',
-    //opacity: 0.3,
-    paddingVertical: 15,
-  },
-  titolMisteri: {
-    height: 30,
-    justifyContent:'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(66,73,109,0.2)',
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'rgba(66,73,109,0.4)',
-    //opacity: 0.4,
-    //paddingVertical: 5,
-  },
-  descripcioMisteri: {
-    flex:1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 15,
-    //backgroundColor: 'blue',
-    //opacity: 0.4
-  },
-  textDescripcio: {
+  title:{
     textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '300',
+    fontSize: 20,
+    color: 'rgb(0, 26, 51)',
+    fontWeight: '600',
   },
-  textTitolMisteri: {
-    textAlign: 'center',
+  italicText: {
+    color: 'rgb(0, 25, 51)',
+    fontSize: 13,
+    fontStyle: 'italic',
+    textAlign: 'center'
+  },
+  italicTextWhite: {
+    color: 'white',
+    fontSize: 13,
+    fontStyle: 'italic',
+    textAlign: 'center'
+  },
+  normalText: {
+    flexWrap: 'wrap',
+    color: 'rgb(0, 25, 51)',
     fontSize: 16,
-    fontWeight: '400',
-  }
+    textAlign: 'justify'
+  },
+  justText: {
+    flexWrap: 'wrap',
+    color: 'rgb(0, 25, 51)',
+    fontSize: 16,
+    textAlign: 'center'
+  },
+  boldText: {
+    flexWrap: 'wrap',
+    color: 'rgb(0, 25, 51)',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  logoImage:{
+    flex: 1,
+    marginRight: 5,
+    width: null,
+    height: null,
+    resizeMode: 'contain',
+  },
 });
 export default TVocScreen;

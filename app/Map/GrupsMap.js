@@ -1,8 +1,18 @@
 //i4S6u4d5
 import React, { Component, PropTypes } from 'react';
-import { AppRegistry, View, Text, StyleSheet } from 'react-native';
+import { AppRegistry, View, Text, StyleSheet, NetInfo,Platform } from 'react-native';
 
 import MapView from 'react-native-maps';
+import GLOBAL from '../Globals/Globals';
+
+function paddingBar(){
+  if(Platform.OS === 'ios'){
+    return 64;
+  }
+  return 0;
+}
+
+const internetMessage = "És necessari tenir internet.\nComprova la connexió";
 
 export default class GrupsMap extends Component {
   constructor(props) {
@@ -10,52 +20,140 @@ export default class GrupsMap extends Component {
 
     this.state = {
       initialRegion: {
-        latitude: 41.60312,
-        longitude: 2.25631,
-        latitudeDelta: 0.8,
-        longitudeDelta: 0.8
+        latitude: 41.60209,
+        longitude: 2.23983,
+        latitudeDelta: 0.7,
+        longitudeDelta: 0.67,
       },
-
       area: [
         {
-        latitude: 41.57795,
-        longitude: 1.91436
+        latitude: 41.57946,
+        longitude: 1.9157
         },
         {
-        latitude: 41.78844,
-        longitude: 2.37545
+        latitude: 41.64056,
+        longitude: 1.99879
         },
         {
-        latitude: 41.68237,
-        longitude: 2.55056
+        latitude: 41.66571,
+        longitude: 2.16155
         },
         {
-        latitude: 41.40895,
-        longitude: 2.03004
+        latitude: 41.69981,
+        longitude: 2.27588
+        },
+        {
+        latitude: 41.73364,
+        longitude: 2.32254
+        },
+        {
+        latitude: 41.78973,
+        longitude: 2.37236
+        },
+        {
+        latitude: 41.77615,
+        longitude: 2.48808
+        },
+        {
+        latitude: 41.72761,
+        longitude: 2.53908
+        },
+        {
+        latitude: 41.72005,
+        longitude: 2.55915
+        },
+        {
+        latitude: 41.6831,
+        longitude: 2.54715
+        },
+        {
+        latitude: 41.64854,
+        longitude: 2.53216
+        },
+        {
+        latitude: 41.58669,
+        longitude: 2.37759
+        },
+        {
+        latitude: 41.53144,
+        longitude: 2.30109
+        },
+        {
+        latitude: 41.48024,
+        longitude: 2.21236
+        },
+        {
+        latitude: 41.4612,
+        longitude: 2.13648
+        },
+        {
+        latitude: 41.43932,
+        longitude: 2.08257
+        },
+        {
+        latitude: 41.44885,
+        longitude: 2.02626
+        },
+        {
+        latitude: 41.4877,
+        longitude: 2.00325
+        },
+        {
+        latitude: 41.51021,
+        longitude: 1.9817
+        },
+        {
+        latitude: 41.52371,
+        longitude: 1.93975
         },
       ],
-
-      markers: []
+      markers: [],
+      isConnected: null,
+      internet: null,
     }
   }
 
+  componentDidMount() {
+    NetInfo.isConnected.addEventListener(
+        'change',
+        this._handleConnectivityChange
+    );
+    NetInfo.isConnected.fetch().done(
+        (isConnected) => { this.setState({isConnected}); }
+    );
+  }
+
+  componentWillUnmount() {
+    NetInfo.isConnected.removeEventListener(
+        'change',
+        this._handleConnectivityChange
+    );
+  }
+
+  _handleConnectivityChange = (isConnected) => {
+    if(this.state.internet === false){
+      this.setState({internet: null});
+      this.getMarkersFromApiAsync();
+    }
+    this.setState({
+      isConnected,
+    });
+  };
+
   getMarkersFromApiAsync() {
-    console.log("ha fet fetch");
     return fetch('https://apps.lifeteen.es/apps/markers.json')
       .then((response) => response.json())
       .then((responseJson) => {
-        console.log("fetch correcte");
         this.displayData(responseJson);
-
+        this.setState({internet: true});
         return responseJson;
       })
       .catch((error) => {
-        console.error("Error de ferch: " + error);
+        this.setState({internet: false});
       });
   }
 
   displayData(data){
-    //console.log("de debo funciona el fetch? " + data.markers[2].description);
     this.setState({markers: data.markers});
   }
 
@@ -65,35 +163,62 @@ export default class GrupsMap extends Component {
 
   render() {
     return (
-      <MapView
-        style={styles.maps}
-        initialRegion={this.state.initialRegion}
-      >
+      <View style={styles.container}>
+        <MapView
+          style={styles.maps}
+          initialRegion={this.state.initialRegion}
+        >
 
-        <MapView.Polygon
-          strokeColor="rgba(100, 255, 255, 1.0)"
-          coordinates={this.state.area}
-          fillColor="rgba(100, 255, 255, 0.4)"
-        />
-
-        {this.state.markers.map(marker => (
-          <MapView.Marker
-            key={marker.key}
-            coordinate={marker.coordinate}
-            title={marker.title}
-            description={marker.description}
+          <MapView.Polygon
+            strokeColor="rgb(157, 196, 251)"
+            coordinates={this.state.area}
+            fillColor="rgba(157, 196, 251, 0.4)"
           />
-        ))}
-      </MapView>
+
+          {this.state.markers.map(marker => (
+            <MapView.Marker
+              key={marker.key}
+              coordinate={marker.coordinate}
+              title={marker.title}
+              description={marker.description}
+              pinColor={GLOBAL.secondColor}
+            />
+          ))}
+        </MapView>
+        {this.state.internet === false?
+          <View style={styles.internetState}>
+            <Text style={styles.textInState}>{internetMessage}</Text>
+          </View>
+          : null
+        }
+        {this.state.internet === null?
+          <View style={styles.internetState}>
+            <Text style={styles.textInState}>Carregant informació...</Text>
+          </View>
+          : null
+        }
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    flex:1,
+    flexDirection: 'column',
+    backgroundColor: 'white',
+    paddingTop: paddingBar()
+  },
+  internetState: {
+    //height: 45,
+    backgroundColor: 'rgba(4, 54, 123, 0.8)',
+  },
+  textInState:{
+    flexWrap: 'wrap',
+    textAlign: 'center',
+    color: 'white',
+    fontSize: GLOBAL.normalTextSize,
+    //fontWeight: '600',
   },
   maps: {
     ...StyleSheet.absoluteFillObject,

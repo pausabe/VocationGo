@@ -13,7 +13,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
-    return 0;
+    return 64;
   }
   return 54;
 }
@@ -105,9 +105,11 @@ export default class RosariScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/fons1.jpg')} style={styles.backgroundImage}>
-          <ScrollView style={{paddingHorizontal: 10}}>
-          {this.rosari(this.props.title)}
+        <Image source={require('../img/bg/fons9.jpg')} style={styles.backgroundImage}>
+          <ScrollView automaticallyAdjustContentInsets={false} >
+            <View style={styles.square}>
+              {this.rosari(this.props.title)}
+            </View>
           </ScrollView>
         </Image>
         <BottomBar />
@@ -451,6 +453,12 @@ export default class RosariScreen extends Component {
           <Text style={styles.misteriTitle}>Lletanies</Text>
           <Text style={styles.textDescripcio}>{lletanies}</Text>
           <Text />
+          <View style={styles.audioContainer}>
+            <AudioBar soundName={`${audio}Lletanies.mp3`}
+                      colorThumb={'rgb(204, 68, 0)'}
+                      colorTrack={'rgb(255, 119, 51)'}/>
+          </View>
+          <Text />
           <Text />
           <Hr lineColor='#CFD8DC' />
           <Text />
@@ -517,7 +525,7 @@ const styles = StyleSheet.create({
    width: null,
    height: null,
    resizeMode: 'cover',
-
+   padding: 15,
   },
   audioContainer:{
     height: 30,
@@ -579,16 +587,21 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   misteriTitle: {
-    paddingTop: 10,
     textAlign: 'center',
-    fontSize: 22,
+    fontSize: 30,
+    color: 'rgb(0, 26, 51)',
     fontWeight: '600',
-    color: 'rgb(38, 42, 64)'
   },
   comentari:{
     textAlign: 'center',
     fontSize: GLOBAL.normalTextSize,
     fontWeight: '300',
     color: 'rgb(86, 95, 143)'
-  }
+  },
+  square: {
+    flexDirection: 'column',
+    //flex: 1,
+    padding: 10,
+    backgroundColor: 'rgba(230, 242, 255, 0.4)',
+  },
 });
