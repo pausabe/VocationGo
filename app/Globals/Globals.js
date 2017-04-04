@@ -7,5 +7,5 @@ module.exports = {
   secondColor: 'rgb(6, 75, 172)',
   itemsBarColor: 'white',
   heightBottomBar: 45,
-  statusBarColor: 'rgb(0, 36, 77)',
+  statusBarColor: 'white',
 };

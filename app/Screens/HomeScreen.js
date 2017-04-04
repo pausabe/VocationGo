@@ -6,7 +6,6 @@ import GLOBAL from '../Globals/Globals';
 
 import CustomTransitions from '../CustomTransitions/CustomTransitions';
 import RosariScreen from '../Screens/RosariScreen'
-import MisteriScreen from '../Screens/MisteriScreen'
 import GrupScreen from '../Screens/GrupsScreen'
 import PVocScreen from '../Screens/PVocScreen'
 import TVocScreen from '../Screens/TVocScreen'
@@ -22,13 +21,19 @@ function paddingBar(){
 }
 
 export default class HomeScreen extends Component {
-  componentWillMount() {
-    BackAndroid.addEventListener('hardwareBackPress', () => {
+  componentWillUnmount() {
+    BackAndroid.removeEventListener('hardwareBackPress', this.backHandler.bind(this));
+  }
+  backHandler(){
+    if(this.props.navigator.getCurrentRoutes().length>1){
       this.props.navigator.pop();
       return true;
-    });
+    }
+    return false;
   }
-
+  componentWillMount() {
+    BackAndroid.addEventListener('hardwareBackPress', this.backHandler.bind(this));
+  }
 
   render() {
     return (
@@ -84,7 +89,7 @@ export default class HomeScreen extends Component {
               style={styles.imageContainer}>
                 <Image  source={require('../img/homeButtons/text.png')}
                         style={styles.homeImage}/>
-                <Text style={styles.buttonText}>Text Vocacional</Text>
+                <Text style={styles.buttonText}>Text</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.button}>
@@ -93,7 +98,7 @@ export default class HomeScreen extends Component {
               style={styles.imageContainer}>
                 <Image  source={require('../img/homeButtons/mapa.png')}
                         style={styles.homeImage}/>
-                <Text style={styles.buttonText}>Grup Pregària</Text>
+                <Text style={styles.buttonText}>Grups</Text>
               </TouchableOpacity>
             </View>
             </View>

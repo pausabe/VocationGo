@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, Text, StyleSheet, Platform } from 'react-native';
+import { View, Text, StyleSheet, Platform, BackAndroid } from 'react-native';
 
 import GrupsMap from '../Map/GrupsMap'
 import BottomBar from '../BottomBar/BottomBar'

@@ -315,7 +315,6 @@
 		00E356EE1AD99517003FC87E /* VocationGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocationGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* VocationGoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VocationGoTests.m; sourceTree = "<group>"; };
-		05446CD79D184C0099C8CA17 /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* VocationGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocationGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,7 +406,6 @@
 				80FEB3528F0F468DAB26BB52 /* libRNSound.a in Frameworks */,
 				641300E742FF404FA51F2AC5 /* libAirMaps.a in Frameworks */,
 				8D0DC433DFD04C09B947E5AB /* libRNVectorIcons.a in Frameworks */,
-				C0AFE2F73B574C00B3AC5BEA /* libSplashScreen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1356,6 +1354,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = VocationGo;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1379,6 +1378,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = VocationGo;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

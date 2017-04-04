@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { View, ScrollView, Text, StyleSheet,
-  TouchableOpacity, Platform, Image } from 'react-native';
+  TouchableOpacity, Platform, Image , BackAndroid} from 'react-native';
 
 import AudioBar from '../AudioBar/AudioBar';
 import Hr from 'react-native-hr';

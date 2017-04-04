@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity, BackAndroid } from 'react-native';
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
