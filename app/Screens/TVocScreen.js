@@ -19,13 +19,13 @@ class TVocScreen extends Component {
 
       return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/fons7.jpg')} style={styles.backgroundImage}>
+        <Image source={require('../img/bg/currentBG.jpg')} style={GLOBAL.backgroundImage}>
 
-          <ScrollView automaticallyAdjustContentInsets={false} >
-            <View style={styles.square}>
-            <Text style={styles.title}>CERCA DE DIOS Y DE LOS HERMANOS</Text>
+          <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false}>
+            <View style={GLOBAL.square}>
+            <Text style={GLOBAL.bigTitle}>CERCA DE DIOS Y DE LOS HERMANOS</Text>
             <Text />
-              <Text style={styles.normalText}>{text}</Text>
+              <Text style={GLOBAL.normalText} selectable={true}>{text}</Text>
             </View>
           </ScrollView>
         </Image>
@@ -40,64 +40,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     paddingTop: paddingBar()
-  },
-  backgroundImage: {
-   flex: 1,
-   backgroundColor: 'transparent',
-   width: null,
-   height: null,
-   resizeMode: 'cover',
-   padding: 15,
-  },
-  square: {
-    flexDirection: 'column',
-    //flex: 1,
-    padding: 10,
-    backgroundColor: 'rgba(230, 242, 255, 0.4)',
-  },
-  title:{
-    textAlign: 'center',
-    fontSize: 20,
-    color: 'rgb(0, 26, 51)',
-    fontWeight: '600',
-  },
-  italicText: {
-    color: 'rgb(0, 25, 51)',
-    fontSize: 13,
-    fontStyle: 'italic',
-    textAlign: 'center'
-  },
-  italicTextWhite: {
-    color: 'white',
-    fontSize: 13,
-    fontStyle: 'italic',
-    textAlign: 'center'
-  },
-  normalText: {
-    flexWrap: 'wrap',
-    color: 'rgb(0, 25, 51)',
-    fontSize: 16,
-    textAlign: 'justify'
-  },
-  justText: {
-    flexWrap: 'wrap',
-    color: 'rgb(0, 25, 51)',
-    fontSize: 16,
-    textAlign: 'center'
-  },
-  boldText: {
-    flexWrap: 'wrap',
-    color: 'rgb(0, 25, 51)',
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center'
-  },
-  logoImage:{
-    flex: 1,
-    marginRight: 5,
-    width: null,
-    height: null,
-    resizeMode: 'contain',
   },
 });
 export default TVocScreen;

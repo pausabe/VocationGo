@@ -39,30 +39,30 @@
 		2DCD954D1E0B4F2C00145EB5 /* VocationGoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VocationGoTests.m */; };
 		454006BB40684866BDEE7E85 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 917C1FEF8AAA4E21A5FAF6F5 /* Ionicons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		5F64E5261E924737005129BE /* dolor1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E50E1E924736005129BE /* dolor1.mp3 */; };
-		5F64E5271E924737005129BE /* dolor2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E50F1E924736005129BE /* dolor2.mp3 */; };
-		5F64E5281E924737005129BE /* dolor3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5101E924736005129BE /* dolor3.mp3 */; };
-		5F64E5291E924737005129BE /* dolor4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5111E924736005129BE /* dolor4.mp3 */; };
-		5F64E52A1E924737005129BE /* dolor5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5121E924736005129BE /* dolor5.mp3 */; };
-		5F64E52B1E924737005129BE /* dolorlletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5131E924736005129BE /* dolorlletanies.mp3 */; };
-		5F64E52C1E924737005129BE /* gloria1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5141E924736005129BE /* gloria1.mp3 */; };
-		5F64E52D1E924737005129BE /* gloria2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5151E924737005129BE /* gloria2.mp3 */; };
-		5F64E52E1E924737005129BE /* gloria3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5161E924737005129BE /* gloria3.mp3 */; };
-		5F64E52F1E924737005129BE /* gloria4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5171E924737005129BE /* gloria4.mp3 */; };
-		5F64E5301E924737005129BE /* gloria5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5181E924737005129BE /* gloria5.mp3 */; };
-		5F64E5311E924737005129BE /* glorialletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5191E924737005129BE /* glorialletanies.mp3 */; };
-		5F64E5321E924737005129BE /* goig1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E51A1E924737005129BE /* goig1.mp3 */; };
-		5F64E5331E924737005129BE /* goig2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E51B1E924737005129BE /* goig2.mp3 */; };
-		5F64E5341E924737005129BE /* goig3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E51C1E924737005129BE /* goig3.mp3 */; };
-		5F64E5351E924737005129BE /* goig4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E51D1E924737005129BE /* goig4.mp3 */; };
-		5F64E5361E924737005129BE /* goig5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E51E1E924737005129BE /* goig5.mp3 */; };
-		5F64E5371E924737005129BE /* goiglletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E51F1E924737005129BE /* goiglletanies.mp3 */; };
-		5F64E5381E924737005129BE /* llum1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5201E924737005129BE /* llum1.mp3 */; };
-		5F64E5391E924737005129BE /* llum2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5211E924737005129BE /* llum2.mp3 */; };
-		5F64E53A1E924737005129BE /* llum3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5221E924737005129BE /* llum3.mp3 */; };
-		5F64E53B1E924737005129BE /* llum4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5231E924737005129BE /* llum4.mp3 */; };
-		5F64E53C1E924737005129BE /* llum5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5241E924737005129BE /* llum5.mp3 */; };
-		5F64E53D1E924737005129BE /* llumlletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5251E924737005129BE /* llumlletanies.mp3 */; };
+		5F64E5D91E952433005129BE /* dolor1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C11E952433005129BE /* dolor1.mp3 */; };
+		5F64E5DA1E952433005129BE /* dolor2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C21E952433005129BE /* dolor2.mp3 */; };
+		5F64E5DB1E952433005129BE /* dolor3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C31E952433005129BE /* dolor3.mp3 */; };
+		5F64E5DC1E952433005129BE /* dolor4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C41E952433005129BE /* dolor4.mp3 */; };
+		5F64E5DD1E952433005129BE /* dolor5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C51E952433005129BE /* dolor5.mp3 */; };
+		5F64E5DE1E952433005129BE /* dolorlletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C61E952433005129BE /* dolorlletanies.mp3 */; };
+		5F64E5DF1E952433005129BE /* gloria1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C71E952433005129BE /* gloria1.mp3 */; };
+		5F64E5E01E952433005129BE /* gloria2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C81E952433005129BE /* gloria2.mp3 */; };
+		5F64E5E11E952433005129BE /* gloria3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C91E952433005129BE /* gloria3.mp3 */; };
+		5F64E5E21E952433005129BE /* gloria4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5CA1E952433005129BE /* gloria4.mp3 */; };
+		5F64E5E31E952433005129BE /* gloria5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5CB1E952433005129BE /* gloria5.mp3 */; };
+		5F64E5E41E952433005129BE /* glorialletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5CC1E952433005129BE /* glorialletanies.mp3 */; };
+		5F64E5E51E952433005129BE /* goig1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5CD1E952433005129BE /* goig1.mp3 */; };
+		5F64E5E61E952433005129BE /* goig2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5CE1E952433005129BE /* goig2.mp3 */; };
+		5F64E5E71E952433005129BE /* goig3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5CF1E952433005129BE /* goig3.mp3 */; };
+		5F64E5E81E952433005129BE /* goig4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D01E952433005129BE /* goig4.mp3 */; };
+		5F64E5E91E952433005129BE /* goig5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D11E952433005129BE /* goig5.mp3 */; };
+		5F64E5EA1E952433005129BE /* goiglletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D21E952433005129BE /* goiglletanies.mp3 */; };
+		5F64E5EB1E952433005129BE /* llum1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D31E952433005129BE /* llum1.mp3 */; };
+		5F64E5EC1E952433005129BE /* llum2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D41E952433005129BE /* llum2.mp3 */; };
+		5F64E5ED1E952433005129BE /* llum3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D51E952433005129BE /* llum3.mp3 */; };
+		5F64E5EE1E952433005129BE /* llum4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D61E952433005129BE /* llum4.mp3 */; };
+		5F64E5EF1E952433005129BE /* llum5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D71E952433005129BE /* llum5.mp3 */; };
+		5F64E5F01E952433005129BE /* llumlletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D81E952433005129BE /* llumlletanies.mp3 */; };
 		5F6AA8971E5645A10085A7A1 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 5F6AA8961E5645A10085A7A1 /* www */; };
 		641300E742FF404FA51F2AC5 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9452EDAEC3594CD1B0CE51D2 /* libAirMaps.a */; };
 		7367BBED09E44746AC1A6C9E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E5A9AF32964C1D8F55111B /* libsqlite3.0.tbd */; };
@@ -330,30 +330,30 @@
 		2D02E47B1E0B4A5D006451C7 /* VocationGo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VocationGo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* VocationGo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VocationGo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		5F64E50E1E924736005129BE /* dolor1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor1.mp3; path = ../android/app/src/main/res/raw/dolor1.mp3; sourceTree = "<group>"; };
-		5F64E50F1E924736005129BE /* dolor2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor2.mp3; path = ../android/app/src/main/res/raw/dolor2.mp3; sourceTree = "<group>"; };
-		5F64E5101E924736005129BE /* dolor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor3.mp3; path = ../android/app/src/main/res/raw/dolor3.mp3; sourceTree = "<group>"; };
-		5F64E5111E924736005129BE /* dolor4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor4.mp3; path = ../android/app/src/main/res/raw/dolor4.mp3; sourceTree = "<group>"; };
-		5F64E5121E924736005129BE /* dolor5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor5.mp3; path = ../android/app/src/main/res/raw/dolor5.mp3; sourceTree = "<group>"; };
-		5F64E5131E924736005129BE /* dolorlletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolorlletanies.mp3; path = ../android/app/src/main/res/raw/dolorlletanies.mp3; sourceTree = "<group>"; };
-		5F64E5141E924736005129BE /* gloria1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria1.mp3; path = ../android/app/src/main/res/raw/gloria1.mp3; sourceTree = "<group>"; };
-		5F64E5151E924737005129BE /* gloria2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria2.mp3; path = ../android/app/src/main/res/raw/gloria2.mp3; sourceTree = "<group>"; };
-		5F64E5161E924737005129BE /* gloria3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria3.mp3; path = ../android/app/src/main/res/raw/gloria3.mp3; sourceTree = "<group>"; };
-		5F64E5171E924737005129BE /* gloria4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria4.mp3; path = ../android/app/src/main/res/raw/gloria4.mp3; sourceTree = "<group>"; };
-		5F64E5181E924737005129BE /* gloria5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria5.mp3; path = ../android/app/src/main/res/raw/gloria5.mp3; sourceTree = "<group>"; };
-		5F64E5191E924737005129BE /* glorialletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = glorialletanies.mp3; path = ../android/app/src/main/res/raw/glorialletanies.mp3; sourceTree = "<group>"; };
-		5F64E51A1E924737005129BE /* goig1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig1.mp3; path = ../android/app/src/main/res/raw/goig1.mp3; sourceTree = "<group>"; };
-		5F64E51B1E924737005129BE /* goig2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig2.mp3; path = ../android/app/src/main/res/raw/goig2.mp3; sourceTree = "<group>"; };
-		5F64E51C1E924737005129BE /* goig3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig3.mp3; path = ../android/app/src/main/res/raw/goig3.mp3; sourceTree = "<group>"; };
-		5F64E51D1E924737005129BE /* goig4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig4.mp3; path = ../android/app/src/main/res/raw/goig4.mp3; sourceTree = "<group>"; };
-		5F64E51E1E924737005129BE /* goig5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig5.mp3; path = ../android/app/src/main/res/raw/goig5.mp3; sourceTree = "<group>"; };
-		5F64E51F1E924737005129BE /* goiglletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goiglletanies.mp3; path = ../android/app/src/main/res/raw/goiglletanies.mp3; sourceTree = "<group>"; };
-		5F64E5201E924737005129BE /* llum1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum1.mp3; path = ../android/app/src/main/res/raw/llum1.mp3; sourceTree = "<group>"; };
-		5F64E5211E924737005129BE /* llum2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum2.mp3; path = ../android/app/src/main/res/raw/llum2.mp3; sourceTree = "<group>"; };
-		5F64E5221E924737005129BE /* llum3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum3.mp3; path = ../android/app/src/main/res/raw/llum3.mp3; sourceTree = "<group>"; };
-		5F64E5231E924737005129BE /* llum4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum4.mp3; path = ../android/app/src/main/res/raw/llum4.mp3; sourceTree = "<group>"; };
-		5F64E5241E924737005129BE /* llum5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum5.mp3; path = ../android/app/src/main/res/raw/llum5.mp3; sourceTree = "<group>"; };
-		5F64E5251E924737005129BE /* llumlletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llumlletanies.mp3; path = ../android/app/src/main/res/raw/llumlletanies.mp3; sourceTree = "<group>"; };
+		5F64E5C11E952433005129BE /* dolor1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor1.mp3; path = ../android/app/src/main/res/raw/dolor1.mp3; sourceTree = "<group>"; };
+		5F64E5C21E952433005129BE /* dolor2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor2.mp3; path = ../android/app/src/main/res/raw/dolor2.mp3; sourceTree = "<group>"; };
+		5F64E5C31E952433005129BE /* dolor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor3.mp3; path = ../android/app/src/main/res/raw/dolor3.mp3; sourceTree = "<group>"; };
+		5F64E5C41E952433005129BE /* dolor4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor4.mp3; path = ../android/app/src/main/res/raw/dolor4.mp3; sourceTree = "<group>"; };
+		5F64E5C51E952433005129BE /* dolor5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor5.mp3; path = ../android/app/src/main/res/raw/dolor5.mp3; sourceTree = "<group>"; };
+		5F64E5C61E952433005129BE /* dolorlletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolorlletanies.mp3; path = ../android/app/src/main/res/raw/dolorlletanies.mp3; sourceTree = "<group>"; };
+		5F64E5C71E952433005129BE /* gloria1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria1.mp3; path = ../android/app/src/main/res/raw/gloria1.mp3; sourceTree = "<group>"; };
+		5F64E5C81E952433005129BE /* gloria2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria2.mp3; path = ../android/app/src/main/res/raw/gloria2.mp3; sourceTree = "<group>"; };
+		5F64E5C91E952433005129BE /* gloria3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria3.mp3; path = ../android/app/src/main/res/raw/gloria3.mp3; sourceTree = "<group>"; };
+		5F64E5CA1E952433005129BE /* gloria4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria4.mp3; path = ../android/app/src/main/res/raw/gloria4.mp3; sourceTree = "<group>"; };
+		5F64E5CB1E952433005129BE /* gloria5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gloria5.mp3; path = ../android/app/src/main/res/raw/gloria5.mp3; sourceTree = "<group>"; };
+		5F64E5CC1E952433005129BE /* glorialletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = glorialletanies.mp3; path = ../android/app/src/main/res/raw/glorialletanies.mp3; sourceTree = "<group>"; };
+		5F64E5CD1E952433005129BE /* goig1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig1.mp3; path = ../android/app/src/main/res/raw/goig1.mp3; sourceTree = "<group>"; };
+		5F64E5CE1E952433005129BE /* goig2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig2.mp3; path = ../android/app/src/main/res/raw/goig2.mp3; sourceTree = "<group>"; };
+		5F64E5CF1E952433005129BE /* goig3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig3.mp3; path = ../android/app/src/main/res/raw/goig3.mp3; sourceTree = "<group>"; };
+		5F64E5D01E952433005129BE /* goig4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig4.mp3; path = ../android/app/src/main/res/raw/goig4.mp3; sourceTree = "<group>"; };
+		5F64E5D11E952433005129BE /* goig5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goig5.mp3; path = ../android/app/src/main/res/raw/goig5.mp3; sourceTree = "<group>"; };
+		5F64E5D21E952433005129BE /* goiglletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goiglletanies.mp3; path = ../android/app/src/main/res/raw/goiglletanies.mp3; sourceTree = "<group>"; };
+		5F64E5D31E952433005129BE /* llum1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum1.mp3; path = ../android/app/src/main/res/raw/llum1.mp3; sourceTree = "<group>"; };
+		5F64E5D41E952433005129BE /* llum2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum2.mp3; path = ../android/app/src/main/res/raw/llum2.mp3; sourceTree = "<group>"; };
+		5F64E5D51E952433005129BE /* llum3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum3.mp3; path = ../android/app/src/main/res/raw/llum3.mp3; sourceTree = "<group>"; };
+		5F64E5D61E952433005129BE /* llum4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum4.mp3; path = ../android/app/src/main/res/raw/llum4.mp3; sourceTree = "<group>"; };
+		5F64E5D71E952433005129BE /* llum5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llum5.mp3; path = ../android/app/src/main/res/raw/llum5.mp3; sourceTree = "<group>"; };
+		5F64E5D81E952433005129BE /* llumlletanies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = llumlletanies.mp3; path = ../android/app/src/main/res/raw/llumlletanies.mp3; sourceTree = "<group>"; };
 		5F6AA8961E5645A10085A7A1 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 		7039FE7232654346BD94593C /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -651,30 +651,30 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				5F64E50E1E924736005129BE /* dolor1.mp3 */,
-				5F64E50F1E924736005129BE /* dolor2.mp3 */,
-				5F64E5101E924736005129BE /* dolor3.mp3 */,
-				5F64E5111E924736005129BE /* dolor4.mp3 */,
-				5F64E5121E924736005129BE /* dolor5.mp3 */,
-				5F64E5131E924736005129BE /* dolorlletanies.mp3 */,
-				5F64E5141E924736005129BE /* gloria1.mp3 */,
-				5F64E5151E924737005129BE /* gloria2.mp3 */,
-				5F64E5161E924737005129BE /* gloria3.mp3 */,
-				5F64E5171E924737005129BE /* gloria4.mp3 */,
-				5F64E5181E924737005129BE /* gloria5.mp3 */,
-				5F64E5191E924737005129BE /* glorialletanies.mp3 */,
-				5F64E51A1E924737005129BE /* goig1.mp3 */,
-				5F64E51B1E924737005129BE /* goig2.mp3 */,
-				5F64E51C1E924737005129BE /* goig3.mp3 */,
-				5F64E51D1E924737005129BE /* goig4.mp3 */,
-				5F64E51E1E924737005129BE /* goig5.mp3 */,
-				5F64E51F1E924737005129BE /* goiglletanies.mp3 */,
-				5F64E5201E924737005129BE /* llum1.mp3 */,
-				5F64E5211E924737005129BE /* llum2.mp3 */,
-				5F64E5221E924737005129BE /* llum3.mp3 */,
-				5F64E5231E924737005129BE /* llum4.mp3 */,
-				5F64E5241E924737005129BE /* llum5.mp3 */,
-				5F64E5251E924737005129BE /* llumlletanies.mp3 */,
+				5F64E5C11E952433005129BE /* dolor1.mp3 */,
+				5F64E5C21E952433005129BE /* dolor2.mp3 */,
+				5F64E5C31E952433005129BE /* dolor3.mp3 */,
+				5F64E5C41E952433005129BE /* dolor4.mp3 */,
+				5F64E5C51E952433005129BE /* dolor5.mp3 */,
+				5F64E5C61E952433005129BE /* dolorlletanies.mp3 */,
+				5F64E5C71E952433005129BE /* gloria1.mp3 */,
+				5F64E5C81E952433005129BE /* gloria2.mp3 */,
+				5F64E5C91E952433005129BE /* gloria3.mp3 */,
+				5F64E5CA1E952433005129BE /* gloria4.mp3 */,
+				5F64E5CB1E952433005129BE /* gloria5.mp3 */,
+				5F64E5CC1E952433005129BE /* glorialletanies.mp3 */,
+				5F64E5CD1E952433005129BE /* goig1.mp3 */,
+				5F64E5CE1E952433005129BE /* goig2.mp3 */,
+				5F64E5CF1E952433005129BE /* goig3.mp3 */,
+				5F64E5D01E952433005129BE /* goig4.mp3 */,
+				5F64E5D11E952433005129BE /* goig5.mp3 */,
+				5F64E5D21E952433005129BE /* goiglletanies.mp3 */,
+				5F64E5D31E952433005129BE /* llum1.mp3 */,
+				5F64E5D41E952433005129BE /* llum2.mp3 */,
+				5F64E5D51E952433005129BE /* llum3.mp3 */,
+				5F64E5D61E952433005129BE /* llum4.mp3 */,
+				5F64E5D71E952433005129BE /* llum5.mp3 */,
+				5F64E5D81E952433005129BE /* llumlletanies.mp3 */,
 				13B07FAE1A68108700A75B9A /* VocationGo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* VocationGoTests */,
@@ -1120,43 +1120,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F64E53D1E924737005129BE /* llumlletanies.mp3 in Resources */,
+				5F64E5F01E952433005129BE /* llumlletanies.mp3 in Resources */,
 				5F6AA8971E5645A10085A7A1 /* www in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				935244F354EE41B2900187C7 /* Entypo.ttf in Resources */,
-				5F64E5301E924737005129BE /* gloria5.mp3 in Resources */,
-				5F64E52D1E924737005129BE /* gloria2.mp3 in Resources */,
-				5F64E5361E924737005129BE /* goig5.mp3 in Resources */,
+				5F64E5E31E952433005129BE /* gloria5.mp3 in Resources */,
+				5F64E5E01E952433005129BE /* gloria2.mp3 in Resources */,
+				5F64E5E91E952433005129BE /* goig5.mp3 in Resources */,
 				7EE2015CAE9D4E9FBE0B1A28 /* EvilIcons.ttf in Resources */,
-				5F64E5371E924737005129BE /* goiglletanies.mp3 in Resources */,
-				5F64E52A1E924737005129BE /* dolor5.mp3 in Resources */,
-				5F64E5391E924737005129BE /* llum2.mp3 in Resources */,
-				5F64E5321E924737005129BE /* goig1.mp3 in Resources */,
-				5F64E53A1E924737005129BE /* llum3.mp3 in Resources */,
-				5F64E52F1E924737005129BE /* gloria4.mp3 in Resources */,
+				5F64E5EA1E952433005129BE /* goiglletanies.mp3 in Resources */,
+				5F64E5DD1E952433005129BE /* dolor5.mp3 in Resources */,
+				5F64E5EC1E952433005129BE /* llum2.mp3 in Resources */,
+				5F64E5E51E952433005129BE /* goig1.mp3 in Resources */,
+				5F64E5ED1E952433005129BE /* llum3.mp3 in Resources */,
+				5F64E5E21E952433005129BE /* gloria4.mp3 in Resources */,
 				1CC52947AD0C4EA2B7D37855 /* FontAwesome.ttf in Resources */,
-				5F64E5291E924737005129BE /* dolor4.mp3 in Resources */,
-				5F64E5331E924737005129BE /* goig2.mp3 in Resources */,
+				5F64E5DC1E952433005129BE /* dolor4.mp3 in Resources */,
+				5F64E5E61E952433005129BE /* goig2.mp3 in Resources */,
 				77F6D15CC2B5475288BCFC47 /* Foundation.ttf in Resources */,
-				5F64E5261E924737005129BE /* dolor1.mp3 in Resources */,
+				5F64E5D91E952433005129BE /* dolor1.mp3 in Resources */,
 				454006BB40684866BDEE7E85 /* Ionicons.ttf in Resources */,
-				5F64E5381E924737005129BE /* llum1.mp3 in Resources */,
-				5F64E5341E924737005129BE /* goig3.mp3 in Resources */,
-				5F64E53C1E924737005129BE /* llum5.mp3 in Resources */,
-				5F64E53B1E924737005129BE /* llum4.mp3 in Resources */,
+				5F64E5EB1E952433005129BE /* llum1.mp3 in Resources */,
+				5F64E5E71E952433005129BE /* goig3.mp3 in Resources */,
+				5F64E5EF1E952433005129BE /* llum5.mp3 in Resources */,
+				5F64E5EE1E952433005129BE /* llum4.mp3 in Resources */,
 				CB57B2685E32401AAA656123 /* MaterialCommunityIcons.ttf in Resources */,
-				5F64E5311E924737005129BE /* glorialletanies.mp3 in Resources */,
-				5F64E52C1E924737005129BE /* gloria1.mp3 in Resources */,
+				5F64E5E41E952433005129BE /* glorialletanies.mp3 in Resources */,
+				5F64E5DF1E952433005129BE /* gloria1.mp3 in Resources */,
 				0855B995856140EBA7FDCA43 /* MaterialIcons.ttf in Resources */,
-				5F64E52B1E924737005129BE /* dolorlletanies.mp3 in Resources */,
-				5F64E5281E924737005129BE /* dolor3.mp3 in Resources */,
+				5F64E5DE1E952433005129BE /* dolorlletanies.mp3 in Resources */,
+				5F64E5DB1E952433005129BE /* dolor3.mp3 in Resources */,
 				1AC80E3E409C4FBAB72B816C /* Octicons.ttf in Resources */,
-				5F64E52E1E924737005129BE /* gloria3.mp3 in Resources */,
+				5F64E5E11E952433005129BE /* gloria3.mp3 in Resources */,
 				A3CAFBC791104D01A8BFF246 /* SimpleLineIcons.ttf in Resources */,
-				5F64E5351E924737005129BE /* goig4.mp3 in Resources */,
+				5F64E5E81E952433005129BE /* goig4.mp3 in Resources */,
 				D5E310C197BA4F2E91EEDF67 /* Zocial.ttf in Resources */,
-				5F64E5271E924737005129BE /* dolor2.mp3 in Resources */,
+				5F64E5DA1E952433005129BE /* dolor2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

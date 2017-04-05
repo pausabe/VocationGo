@@ -42,7 +42,7 @@ export default class HomeScreen extends Component {
           barStyle="light-content"
           backgroundColor="#2c3e50"
         />
-        <Image source={require('../img/bg/fons9.jpg')} style={styles.backgroundImage}>
+        <Image source={require('../img/bg/currentBG.jpg')} style={styles.backgroundImage}>
           <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 20}}>
             <View style={{flex: 1, flexDirection: 'column'}}>
               <View style={styles.button} >
@@ -139,14 +139,13 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
     justifyContent: 'center',
-    //backgroundColor: 'rgba(63,127,191,0.2)',
     padding: 15
   },
   homeImage: {
     flex: 1,
     width: null,
     height: null,
-    tintColor: 'rgb(20, 35, 85)',//'rgb(0, 36, 77)',
+    tintColor: GLOBAL.buttonColor,
     resizeMode: 'contain',
   },
   imageContainer: {
@@ -154,7 +153,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    color: 'rgb(2, 35, 85)',//'rgb(0, 48, 102)',//GLOBAL.barColor,
+    color: GLOBAL.buttonColor,
     fontSize: 16,
     fontWeight: '400'
   },

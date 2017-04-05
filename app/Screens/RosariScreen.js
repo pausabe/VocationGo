@@ -9,8 +9,6 @@ import PREGARIES from '../Globals/PREGARIES';
 import BottomBar from '../BottomBar/BottomBar'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-//let SQLite = require('react-native-sqlite-storage')
-
 function paddingBar(){
   if(Platform.OS === 'ios'){
     return 64;
@@ -64,50 +62,14 @@ export default class RosariScreen extends Component {
       press4: false,
       press5: false,
     }
-
-     /*let nameDB = "vgDB.db";
-     let createFrom;
-     if (Platform.OS == "ios") { createFrom = "1"; } //ios platform
-     else { createFrom = `~${nameDB}`} //android platform
-
-     let db = SQLite.openDatabase(
-       {name : nameDB, readOnly: true, createFromLocation : createFrom},
-      this.openCB,
-      this.errorCB);
-
-      db.transaction((tx) => {
-        tx.executeSql(`SELECT * FROM pregsMisteris`, [], (tx, results) => {
-          let today = new Date();
-          console.log("day of the month: " + today.getDate());
-          var id = (today.getDate()%6)*5;
-          this.setState({preg1: results.rows.item(id+0).pregaria,
-                         preg2: results.rows.item(id+1).pregaria,
-                         preg3: results.rows.item(id+2).pregaria,
-                         preg4: results.rows.item(id+3).pregaria,
-                         preg5: results.rows.item(id+4).pregaria
-                        });
-          });
-      });*/
   }
-
-  /*errorCB(err) {
-    console.log("SQL Error: " + err);
-  }
-
-  successCB() {
-    console.log("SQL executed fine");
-  }
-
-  openCB() {
-    console.log("Database OPENED");
-  }*/
 
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/fons9.jpg')} style={styles.backgroundImage}>
-          <ScrollView automaticallyAdjustContentInsets={false} >
-            <View style={styles.square}>
+        <Image source={require('../img/bg/currentBG.jpg')} style={GLOBAL.backgroundImage}>
+          <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false} >
+            <View style={GLOBAL.square}>
               {this.rosari(this.props.title)}
             </View>
           </ScrollView>
@@ -210,15 +172,15 @@ export default class RosariScreen extends Component {
     if(type==='Rosari'){
       return(
         <View>
-          <Text style={styles.misteriTitle}>MISTERIS DE {misteris}</Text>
-          <Text style={styles.referencia}>Rosari resat pels seminaristes de Catalunya</Text>
+          <Text style={GLOBAL.bigTitle}>MISTERIS DE {misteris}</Text>
+          <Text style={GLOBAL.referencia}>Rosari resat pels seminaristes de Catalunya</Text>
           <View style={styles.misteriContainer}>
             <TouchableOpacity onPress={this.comentariPressed.bind(this,1)}>
               <View style={styles.titolMisteri}>
-                <Text style={styles.textTitolMisteri}>1. {titol1}</Text>
+                <Text style={GLOBAL.litleTitle}>1. {titol1}</Text>
                 <View style={{flex: 1, flexDirection: 'row'}}>
                   <View style={{flex: 20, justifyContent: 'center'}}>
-                    <Text style={styles.referencia}>{referencia1}</Text>
+                    <Text style={GLOBAL.referencia}>{referencia1}</Text>
                   </View>
                   <View style={{flex: 1, paddingRight: 10, justifyContent: 'center'}}>
                     {this.state.press1 ?
@@ -242,19 +204,19 @@ export default class RosariScreen extends Component {
             <View style={styles.descripcioMisteri}>
               {this.state.press1 ?
                 <View>
-                  <Text style={styles.textDescripcio}>{text1}</Text>
+                  <Text style={GLOBAL.normalText} selectable={true}>{text1}</Text>
                   <Text />
                   <Hr lineColor='#CFD8DC' />
                   <Text />
                 </View>
                 : null
               }
-              <Text style={styles.textPregaria}>{this.state.preg1}</Text>
+              <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg1}</Text>
             </View>
             <View style={styles.audioContainer}>
               <AudioBar soundName={`${audio}1.mp3`}
-                        colorThumb={'rgb(204, 68, 0)'}
-                        colorTrack={'rgb(255, 119, 51)'}/>
+                        colorThumb={GLOBAL.thumbColor}
+                        colorTrack={GLOBAL.trackColor}/>
             </View>
           </View>
 
@@ -263,10 +225,10 @@ export default class RosariScreen extends Component {
           <View style={styles.misteriContainer}>
             <TouchableOpacity onPress={this.comentariPressed.bind(this,2)}>
               <View style={styles.titolMisteri}>
-                <Text style={styles.textTitolMisteri}>2. {titol2}</Text>
+                <Text style={GLOBAL.litleTitle}>2. {titol2}</Text>
                 <View style={{flex: 1, flexDirection: 'row'}}>
                   <View style={{flex: 20, justifyContent: 'center'}}>
-                    <Text style={styles.referencia}>{referencia2}</Text>
+                    <Text style={GLOBAL.referencia}>{referencia2}</Text>
                   </View>
                   <View style={{flex: 1, paddingRight: 10, justifyContent: 'center'}}>
                     {this.state.press2 ?
@@ -290,19 +252,19 @@ export default class RosariScreen extends Component {
             <View style={styles.descripcioMisteri}>
               {this.state.press2 ?
                 <View>
-                  <Text style={styles.textDescripcio}>{text2}</Text>
+                  <Text style={GLOBAL.normalText} selectable={true}>{text2}</Text>
                   <Text />
                   <Hr lineColor='#CFD8DC' />
                   <Text />
                 </View>
                 : null
               }
-              <Text style={styles.textPregaria}>{this.state.preg2}</Text>
+              <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg2}</Text>
             </View>
             <View style={styles.audioContainer}>
               <AudioBar soundName={`${audio}2.mp3`}
-                        colorThumb={'rgb(204, 68, 0)'}
-                        colorTrack={'rgb(255, 119, 51)'}/>
+                        colorThumb={GLOBAL.thumbColor}
+                        colorTrack={GLOBAL.trackColor}/>
             </View>
           </View>
 
@@ -311,10 +273,10 @@ export default class RosariScreen extends Component {
           <View style={styles.misteriContainer}>
             <TouchableOpacity onPress={this.comentariPressed.bind(this,3)}>
               <View style={styles.titolMisteri}>
-                <Text style={styles.textTitolMisteri}>3. {titol3}</Text>
+                <Text style={GLOBAL.litleTitle}>3. {titol3}</Text>
                 <View style={{flex: 1, flexDirection: 'row'}}>
                   <View style={{flex: 20, justifyContent: 'center'}}>
-                    <Text style={styles.referencia}>{referencia3}</Text>
+                    <Text style={GLOBAL.referencia}>{referencia3}</Text>
                   </View>
                   <View style={{flex: 1, paddingRight: 10, justifyContent: 'center'}}>
                     {this.state.press3 ?
@@ -338,19 +300,19 @@ export default class RosariScreen extends Component {
             <View style={styles.descripcioMisteri}>
               {this.state.press3 ?
                 <View>
-                  <Text style={styles.textDescripcio}>{text3}</Text>
+                  <Text style={GLOBAL.normalText} selectable={true}>{text3}</Text>
                   <Text />
                   <Hr lineColor='#CFD8DC' />
                   <Text />
                 </View>
                 : null
               }
-              <Text style={styles.textPregaria}>{this.state.preg3}</Text>
+              <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg3}</Text>
             </View>
             <View style={styles.audioContainer}>
               <AudioBar soundName={`${audio}3.mp3`}
-                        colorThumb={'rgb(204, 68, 0)'}
-                        colorTrack={'rgb(255, 119, 51)'}/>
+                        colorThumb={GLOBAL.thumbColor}
+                        colorTrack={GLOBAL.trackColor}/>
             </View>
           </View>
 
@@ -359,10 +321,10 @@ export default class RosariScreen extends Component {
           <View style={styles.misteriContainer}>
             <TouchableOpacity onPress={this.comentariPressed.bind(this,4)}>
               <View style={styles.titolMisteri}>
-                <Text style={styles.textTitolMisteri}>4. {titol4}</Text>
+                <Text style={GLOBAL.litleTitle}>4. {titol4}</Text>
                 <View style={{flex: 1, flexDirection: 'row'}}>
                   <View style={{flex: 20, justifyContent: 'center'}}>
-                    <Text style={styles.referencia}>{referencia4}</Text>
+                    <Text style={GLOBAL.referencia}>{referencia4}</Text>
                   </View>
                   <View style={{flex: 1, paddingRight: 10, justifyContent: 'center'}}>
                     {this.state.press4 ?
@@ -386,19 +348,19 @@ export default class RosariScreen extends Component {
             <View style={styles.descripcioMisteri}>
               {this.state.press4 ?
                 <View>
-                  <Text style={styles.textDescripcio}>{text4}</Text>
+                  <Text style={GLOBAL.normalText} selectable={true}>{text4}</Text>
                   <Text />
                   <Hr lineColor='#CFD8DC' />
                   <Text />
                 </View>
                 : null
               }
-              <Text style={styles.textPregaria}>{this.state.preg4}</Text>
+              <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg4}</Text>
             </View>
             <View style={styles.audioContainer}>
               <AudioBar soundName={`${audio}4.mp3`}
-                        colorThumb={'rgb(204, 68, 0)'}
-                        colorTrack={'rgb(255, 119, 51)'}/>
+                        colorThumb={GLOBAL.thumbColor}
+                        colorTrack={GLOBAL.trackColor}/>
             </View>
           </View>
 
@@ -407,10 +369,10 @@ export default class RosariScreen extends Component {
           <View style={styles.misteriContainer}>
             <TouchableOpacity onPress={this.comentariPressed.bind(this,5)}>
               <View style={styles.titolMisteri}>
-                <Text style={styles.textTitolMisteri}>5. {titol5}</Text>
+                <Text style={GLOBAL.litleTitle}>5. {titol5}</Text>
                 <View style={{flex: 1, flexDirection: 'row'}}>
                   <View style={{flex: 20, justifyContent: 'center'}}>
-                    <Text style={styles.referencia}>{referencia5}</Text>
+                    <Text style={GLOBAL.referencia}>{referencia5}</Text>
                   </View>
                   <View style={{flex: 1, paddingRight: 10, justifyContent: 'center'}}>
                     {this.state.press5 ?
@@ -434,36 +396,36 @@ export default class RosariScreen extends Component {
             <View style={styles.descripcioMisteri}>
               {this.state.press5 ?
                 <View>
-                  <Text style={styles.textDescripcio}>{text5}</Text>
+                  <Text style={GLOBAL.normalText} selectable={true}>{text5}</Text>
                   <Text />
                   <Hr lineColor='#CFD8DC' />
                   <Text />
                 </View>
                 : null
               }
-              <Text style={styles.textPregaria}>{this.state.preg5}</Text>
+              <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg5}</Text>
             </View>
             <View style={styles.audioContainer}>
               <AudioBar soundName={`${audio}5.mp3`}
-                        colorThumb={'rgb(204, 68, 0)'}
-                        colorTrack={'rgb(255, 119, 51)'}/>
+                        colorThumb={GLOBAL.thumbColor}
+                        colorTrack={GLOBAL.trackColor}/>
             </View>
           </View>
 
-          <Text style={styles.misteriTitle}>Lletanies</Text>
-          <Text style={styles.textDescripcio}>{lletanies}</Text>
+          <Text style={GLOBAL.litleTitle}>Lletanies</Text>
+          <Text style={GLOBAL.normalText}>{lletanies}</Text>
           <Text />
           <View style={styles.audioContainer}>
             <AudioBar soundName={`${audio}Lletanies.mp3`}
-                      colorThumb={'rgb(204, 68, 0)'}
-                      colorTrack={'rgb(255, 119, 51)'}/>
+                      colorThumb={GLOBAL.thumbColor}
+                      colorTrack={GLOBAL.trackColor}/>
           </View>
           <Text />
           <Text />
           <Hr lineColor='#CFD8DC' />
           <Text />
-          <Text style={styles.misteriTitle}>Oració</Text>
-          <Text style={styles.textDescripcio}>{oraFi}</Text>
+          <Text style={GLOBAL.litleTitle}>Oració</Text>
+          <Text style={GLOBAL.normalText}>{oraFi}</Text>
           <Text />
         </View>
       )
@@ -472,20 +434,20 @@ export default class RosariScreen extends Component {
       return(
         <View style={styles.misteriContainer}>
           <View style={styles.titolMisteri}>
-            <Text style={styles.textTitolMisteri}>{titol1}</Text>
-            <Text style={styles.referencia}>{referencia1}</Text>
+            <Text style={GLOBAL.litleTitle}>{titol1}</Text>
+            <Text style={GLOBAL.referencia}>{referencia1}</Text>
           </View>
           <View style={styles.descripcioMisteri}>
-            <Text style={styles.textPregaria}>{this.state.preg1}</Text>
+            <Text style={GLOBAL.normalText} selectable={true}>{text1}</Text>
             <Text />
             <Hr lineColor='#CFD8DC' />
             <Text />
-            <Text style={styles.textDescripcio}>{text1}</Text>
+            <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg1}</Text>
           </View>
           <View style={styles.audioContainer}>
             <AudioBar soundName={`${audio}1.mp3`}
-                      colorThumb={'rgb(204, 68, 0)'}
-                      colorTrack={'rgb(255, 119, 51)'}/>
+                      colorThumb={GLOBAL.thumbColor}
+                      colorTrack={GLOBAL.trackColor}/>
           </View>
         </View>
       )
@@ -519,27 +481,15 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingTop: paddingBar()
   },
-  backgroundImage: {
-   flex: 1,
-   backgroundColor: 'transparent',
-   width: null,
-   height: null,
-   resizeMode: 'cover',
-   padding: 15,
-  },
   audioContainer:{
     height: 30,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'rgba(192, 164, 153, 0.5)', //0.9
-    backgroundColor: 'rgba(96, 83, 79, 0.22)', //0.32
-    //backgroundColor: 'black',
-    //opacity: 0.4
+    //borderRadius: 10,
+    //borderWidth: 2,
+    //borderColor: 'rgba(192, 164, 153, 0.5)',
+    //backgroundColor: 'rgba(96, 83, 79, 0.22)',
   },
   misteriContainer: {
     flex:1,
-    //backgroundColor: 'red',
-    //opacity: 0.3,
     paddingVertical: 15,
   },
   titolMisteri: {
@@ -547,61 +497,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(66,73,109,0.2)',
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'rgba(66,73,109,0.4)',
+    backgroundColor: 'rgba(0, 52, 100, 0.1)',//'rgba(66,73,109,0.2)',
+    borderRadius: 5,
+    //borderWidth: 2,
+    //borderColor: 'rgba(0, 52, 100,)'//'rgba(66,73,109,0.4)',
   },
   descripcioMisteri: {
     flex:1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 15,
-    //backgroundColor: 'blue',
-    //opacity: 0.4
-  },
-  textDescripcio: {
-    textAlign: 'center',
-    fontSize: GLOBAL.normalTextSize,
-    fontWeight: '300',
-  },
-  textPregaria: {
-    textAlign: 'center',
-    fontSize: GLOBAL.normalTextSize,
-    fontStyle: 'italic',
-    fontWeight: '300',
-  },
-  textTitolMisteri: {
-    flexWrap: 'wrap',
-    textAlign: 'center',
-    color: GLOBAL.normalTextColor,
-    fontSize: GLOBAL.normalTextSize,
-    fontWeight: '600',
-  },
-  referencia: {
-    color: GLOBAL.normalTextColor,
-    flexWrap: 'wrap',
-    color: 'black',
-    fontSize: 13,
-    fontStyle: 'italic',
-    textAlign: 'center'
-  },
-  misteriTitle: {
-    textAlign: 'center',
-    fontSize: 30,
-    color: 'rgb(0, 26, 51)',
-    fontWeight: '600',
-  },
-  comentari:{
-    textAlign: 'center',
-    fontSize: GLOBAL.normalTextSize,
-    fontWeight: '300',
-    color: 'rgb(86, 95, 143)'
-  },
-  square: {
-    flexDirection: 'column',
-    //flex: 1,
-    padding: 10,
-    backgroundColor: 'rgba(230, 242, 255, 0.4)',
   },
 });

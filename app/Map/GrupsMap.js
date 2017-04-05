@@ -170,9 +170,9 @@ export default class GrupsMap extends Component {
         >
 
           <MapView.Polygon
-            strokeColor="rgb(157, 196, 251)"
+            strokeColor="rgba(0, 97, 186, 1.0)"
             coordinates={this.state.area}
-            fillColor="rgba(157, 196, 251, 0.4)"
+            fillColor="rgba(0, 97, 186, 0.3)"
           />
 
           {this.state.markers.map(marker => (
@@ -181,8 +181,8 @@ export default class GrupsMap extends Component {
               coordinate={marker.coordinate}
               title={marker.title}
               description={marker.description}
-              pinColor={GLOBAL.secondColor}
-            />
+              pinColor={GLOBAL.thumbColor}>
+            </MapView.Marker>
           ))}
         </MapView>
         {this.state.internet === false?
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   },
   internetState: {
     //height: 45,
-    backgroundColor: 'rgba(4, 54, 123, 0.8)',
+    backgroundColor: 'rgba(0, 52, 100, 0.8)',
   },
   textInState:{
     flexWrap: 'wrap',

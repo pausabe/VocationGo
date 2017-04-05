@@ -47,10 +47,6 @@ export default class NavigatorController extends Component {
     if(Platform.OS === 'ios'){
       return (
         <View style={{flex: 1}}>
-          <StatusBar
-            barStyle="light-content"
-            backgroundColor={GLOBAL.statusBarColor}
-          />
           <NavigatorIOS
             ref='navi'
             initialRoute={{
@@ -63,16 +59,16 @@ export default class NavigatorController extends Component {
             tintColor={GLOBAL.itemsBarColor}
             titleTextColor={GLOBAL.itemsBarColor}
           />
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor={GLOBAL.statusBarColor}
+          />
         </View>
       );
     }
     else{
       return (
         <View style={{flex: 1}}>
-          <StatusBar
-            barStyle="light-content"
-            backgroundColor={GLOBAL.statusBarColor}
-          />
           <Navigator
             initialRoute={{id: 'home', index: 0}}
             renderScene={this.renderScene}
@@ -123,6 +119,10 @@ export default class NavigatorController extends Component {
                 style={styles.bar}
               />
             }
+          />
+          <StatusBar
+            backgroundColor={GLOBAL.statusBarColor}
+            barStyle="light-content"
           />
         </View>
       );

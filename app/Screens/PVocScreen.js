@@ -4,6 +4,7 @@ import { View, ScrollView, Text, StyleSheet, Platform, Image, BackAndroid } from
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
+import P_VOC from '../Globals/P_VOC';
 import BottomBar from '../BottomBar/BottomBar'
 
 function paddingBar(){
@@ -14,17 +15,75 @@ function paddingBar(){
 }
 
 class PVocScreen extends Component {
-  render() {
-    const pregaria = "Déu i Pare nostre, que espereu amb els braços oberts els qui s’acosten a Vós, reconeixent la seva debilitat i el seu pecat.\n\nAjudeu els qui Vós elegiu com a ministres del perdó perquè, responent amb generosa entrega, modelin el seu cor amb el signe de la compassió, la comprensió i l’amor.\n\nFeu-los humils ministres vostres, presència de la vostra misericòrdia enmig d’aquest món, perquè hi facin eficaç la força de la vostra  delitat i del vostre amor.\n\nMarqueu la seva vida amb el signe d’una compassió que, no tan sols comprèn el sofriment, sinó que s’apropa per socórrer els qui pateixen.\n\nTransformeu la seva persona en mans que acullen i acaricien per ser «misericordiosos com el Pare».\n\nPer Crist, el vostre Fill, nostre Senyor, que es va entregar per la nostra salvació. Amén.";
+  componentWillMount(){
+    let today = new Date();
+    let day = today.getDate();
+    var id = (day-1)%14;
 
+    //console.log("day: "+day+", id: "+id);
+
+    switch (id) {
+      case 0:
+        this.setState({titol: P_VOC.titol1, text: P_VOC.text1,})
+        break;
+      case 1:
+        this.setState({titol: P_VOC.titol2, text: P_VOC.text2,})
+        break;
+      case 2:
+        this.setState({titol: P_VOC.titol3, text: P_VOC.text3,})
+        break;
+      case 3:
+        this.setState({titol: P_VOC.titol4, text: P_VOC.text4,})
+        break;
+      case 4:
+        this.setState({titol: P_VOC.titol5, text: P_VOC.text5,})
+        break;
+      case 5:
+        this.setState({titol: P_VOC.titol6, text: P_VOC.text6,})
+        break;
+      case 6:
+        this.setState({titol: P_VOC.titol7, text: P_VOC.text7,})
+        break;
+      case 7:
+        this.setState({titol: P_VOC.titol8, text: P_VOC.text8,})
+        break;
+      case 8:
+        this.setState({titol: P_VOC.titol9, text: P_VOC.text9,})
+        break;
+      case 9:
+        this.setState({titol: P_VOC.titol10, text: P_VOC.text10,})
+        break;
+      case 10:
+        this.setState({titol: P_VOC.titol11, text: P_VOC.text11,})
+        break;
+      case 11:
+        this.setState({titol: P_VOC.titol12, text: P_VOC.text12,})
+        break;
+      case 12:
+        this.setState({titol: P_VOC.titol13, text: P_VOC.text13,})
+        break;
+      case 13:
+        this.setState({titol: P_VOC.titol14, text: P_VOC.text14,})
+        break;
+    }
+  }
+  constructor(props){
+    super(props);
+
+    this.state = {
+      titol: "",
+      text: "",
+    }
+  }
+  render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/fons7.jpg')} style={styles.backgroundImage}>
-          <ScrollView automaticallyAdjustContentInsets={false} >
-            <View style={styles.square}>
-              <Text style={styles.title}>DIA DEL SEMINARI 2016</Text>
+        <Image source={require('../img/bg/currentBG.jpg')} style={GLOBAL.backgroundImage}>
+          <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false}>
+            <View style={GLOBAL.square}>
+              <Text style={GLOBAL.bigTitle}>{this.state.titol}</Text>
               <Text />
-              <Text style={styles.normalText}>{pregaria}</Text>
+              <Text style={GLOBAL.normalText} selectable={true}>{this.state.text}</Text>
             </View>
           </ScrollView>
         </Image>
@@ -39,64 +98,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     paddingTop: paddingBar()
-  },
-  backgroundImage: {
-   flex: 1,
-   backgroundColor: 'transparent',
-   width: null,
-   height: null,
-   resizeMode: 'cover',
-   padding: 15,
-  },
-  square: {
-    flexDirection: 'column',
-    //flex: 1,
-    padding: 10,
-    backgroundColor: 'rgba(230, 242, 255, 0.4)',
-  },
-  title:{
-    textAlign: 'center',
-    fontSize: 20,
-    color: 'rgb(0, 26, 51)',
-    fontWeight: '600',
-  },
-  italicText: {
-    color: 'rgb(0, 25, 51)',
-    fontSize: 13,
-    fontStyle: 'italic',
-    textAlign: 'center'
-  },
-  italicTextWhite: {
-    color: 'white',
-    fontSize: 13,
-    fontStyle: 'italic',
-    textAlign: 'center'
-  },
-  normalText: {
-    flexWrap: 'wrap',
-    color: 'rgb(0, 25, 51)',
-    fontSize: 16,
-    textAlign: 'center'
-  },
-  justText: {
-    flexWrap: 'wrap',
-    color: 'rgb(0, 25, 51)',
-    fontSize: 16,
-    textAlign: 'center'
-  },
-  boldText: {
-    flexWrap: 'wrap',
-    color: 'rgb(0, 25, 51)',
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center'
-  },
-  logoImage:{
-    flex: 1,
-    marginRight: 5,
-    width: null,
-    height: null,
-    resizeMode: 'contain',
   },
 });
 export default PVocScreen;
