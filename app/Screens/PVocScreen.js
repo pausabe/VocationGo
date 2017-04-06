@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import { View, ScrollView, Text, StyleSheet, Platform, Image, BackAndroid } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, Platform, Image, BackAndroid, InteractionManager } from 'react-native';
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
@@ -15,6 +15,25 @@ function paddingBar(){
 }
 
 class PVocScreen extends Component {
+  static navigationOptions = {
+    title: 'Pregària',
+  };
+
+  renderPlaceholder() {
+    return (
+      <View style={{flex:1, backgroundColor: 'rgb(230, 242, 255)'}}>
+        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
+        </Image>
+      </View>
+    )
+  }
+
+  componentDidMount(){
+    InteractionManager.runAfterInteractions(() => {
+      this.setState({isReady: true});
+    });
+  }
+
   componentWillMount(){
     let today = new Date();
     let day = today.getDate();
@@ -76,9 +95,13 @@ class PVocScreen extends Component {
     }
   }
   render() {
+    /*if (!this.state.isReady && Platform.OS==='android') {
+      return this.renderPlaceholder();
+    }*/
+
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/currentBG.jpg')} style={GLOBAL.backgroundImage}>
+        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
           <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false}>
             <View style={GLOBAL.square}>
               <Text style={GLOBAL.bigTitle}>{this.state.titol}</Text>

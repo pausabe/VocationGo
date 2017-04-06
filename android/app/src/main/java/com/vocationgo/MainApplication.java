@@ -14,7 +14,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
-
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 import org.pgsqlite.SQLitePluginPackage;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -32,6 +32,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new VectorIconsPackage(),
             //new RnnPackage(),
+            new SplashScreenReactPackage(),
             new MapsPackage(),
             new RNSoundPackage()
       );

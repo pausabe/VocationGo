@@ -39,6 +39,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* VocationGoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VocationGoTests.m */; };
 		454006BB40684866BDEE7E85 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 917C1FEF8AAA4E21A5FAF6F5 /* Ionicons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		5F2A8EF41E96B4020096393A /* launch_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F2A8EF31E96B4020096393A /* launch_screen.png */; };
 		5F64E5D91E952433005129BE /* dolor1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C11E952433005129BE /* dolor1.mp3 */; };
 		5F64E5DA1E952433005129BE /* dolor2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C21E952433005129BE /* dolor2.mp3 */; };
 		5F64E5DB1E952433005129BE /* dolor3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5C31E952433005129BE /* dolor3.mp3 */; };
@@ -330,6 +331,7 @@
 		2D02E47B1E0B4A5D006451C7 /* VocationGo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VocationGo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* VocationGo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VocationGo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		5F2A8EF31E96B4020096393A /* launch_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_screen.png; path = "../android/app/src/main/res/drawable-xhdpi/launch_screen.png"; sourceTree = "<group>"; };
 		5F64E5C11E952433005129BE /* dolor1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor1.mp3; path = ../android/app/src/main/res/raw/dolor1.mp3; sourceTree = "<group>"; };
 		5F64E5C21E952433005129BE /* dolor2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor2.mp3; path = ../android/app/src/main/res/raw/dolor2.mp3; sourceTree = "<group>"; };
 		5F64E5C31E952433005129BE /* dolor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dolor3.mp3; path = ../android/app/src/main/res/raw/dolor3.mp3; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				5F2A8EF31E96B4020096393A /* launch_screen.png */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -1129,6 +1132,7 @@
 				5F64E5E01E952433005129BE /* gloria2.mp3 in Resources */,
 				5F64E5E91E952433005129BE /* goig5.mp3 in Resources */,
 				7EE2015CAE9D4E9FBE0B1A28 /* EvilIcons.ttf in Resources */,
+				5F2A8EF41E96B4020096393A /* launch_screen.png in Resources */,
 				5F64E5EA1E952433005129BE /* goiglletanies.mp3 in Resources */,
 				5F64E5DD1E952433005129BE /* dolor5.mp3 in Resources */,
 				5F64E5EC1E952433005129BE /* llum2.mp3 in Resources */,

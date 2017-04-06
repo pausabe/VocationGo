@@ -15,10 +15,14 @@ function paddingBar(){
 }
 
 class AboutScreen extends Component {
+  static navigationOptions = {
+    title: 'Informació',
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/currentBG.jpg')} style={GLOBAL.backgroundImage}>
+        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
 
           <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false}>
               <View style={GLOBAL.square}>
@@ -95,6 +99,8 @@ class AboutScreen extends Component {
       });
     }
     else{
+      //const { navigate } = this.props.navigation;
+      //navigate(idPressed, {type: title});
       this.props.navigator.push({id: idPressed, index: 1})
     }
   }

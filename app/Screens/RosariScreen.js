@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { View, ScrollView, Text, StyleSheet,
-  TouchableOpacity, Platform, Image , BackAndroid} from 'react-native';
+  TouchableOpacity, Platform, Image , BackAndroid, InteractionManager} from 'react-native';
 
 import AudioBar from '../AudioBar/AudioBar';
 import Hr from 'react-native-hr';
@@ -17,7 +17,24 @@ function paddingBar(){
 }
 
 export default class RosariScreen extends Component {
-  componentWillMount(){
+  /*static navigationOptions = {
+    title: 'Rosari',
+  };*/
+
+  renderPlaceholder() {
+    return (
+      <View style={{flex:1, backgroundColor: 'rgb(230, 242, 255)'}}>
+        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
+        </Image>
+      </View>
+    )
+  }
+
+  componentDidMount(){
+    /*InteractionManager.runAfterInteractions(() => {
+      this.setState({isReady: true});
+    });*/
+
     let today = new Date();
     let day = today.getDate();
     var id = (day-1)%6;
@@ -61,13 +78,20 @@ export default class RosariScreen extends Component {
       press3: false,
       press4: false,
       press5: false,
+      isReady: false
     }
   }
 
   render() {
+    //const { params } = this.props.navigation.state;
+
+    /*if (!this.state.isReady && Platform.OS==='android' && params.type === "Rosari") {
+      return this.renderPlaceholder();
+    }*/
+
     return (
       <View style={styles.container}>
-        <Image source={require('../img/bg/currentBG.jpg')} style={GLOBAL.backgroundImage}>
+        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
           <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false} >
             <View style={GLOBAL.square}>
               {this.rosari(this.props.title)}
@@ -432,22 +456,26 @@ export default class RosariScreen extends Component {
     }
     else{//misteri
       return(
-        <View style={styles.misteriContainer}>
-          <View style={styles.titolMisteri}>
-            <Text style={GLOBAL.litleTitle}>{titol1}</Text>
-            <Text style={GLOBAL.referencia}>{referencia1}</Text>
-          </View>
-          <View style={styles.descripcioMisteri}>
-            <Text style={GLOBAL.normalText} selectable={true}>{text1}</Text>
-            <Text />
-            <Hr lineColor='#CFD8DC' />
-            <Text />
-            <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg1}</Text>
-          </View>
-          <View style={styles.audioContainer}>
-            <AudioBar soundName={`${audio}1.mp3`}
-                      colorThumb={GLOBAL.thumbColor}
-                      colorTrack={GLOBAL.trackColor}/>
+        <View>
+          <Text style={GLOBAL.bigTitle}>1r MISTERI DE {misteris}</Text>
+          <Text style={GLOBAL.referencia}>Rosari resat pels seminaristes de Catalunya</Text>
+          <View style={styles.misteriContainer}>
+            <View style={styles.titolMisteri}>
+              <Text style={GLOBAL.litleTitle}>{titol1}</Text>
+              <Text style={GLOBAL.referencia}>{referencia1}</Text>
+            </View>
+            <View style={styles.descripcioMisteri}>
+              <Text style={GLOBAL.normalText} selectable={true}>{text1}</Text>
+              <Text />
+              <Hr lineColor='#CFD8DC' />
+              <Text />
+              <Text style={GLOBAL.italicNormalText} selectable={true}>{this.state.preg1}</Text>
+            </View>
+            <View style={styles.audioContainer}>
+              <AudioBar soundName={`${audio}1.mp3`}
+                        colorThumb={GLOBAL.thumbColor}
+                        colorTrack={GLOBAL.trackColor}/>
+            </View>
           </View>
         </View>
       )

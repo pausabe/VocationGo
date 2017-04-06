@@ -94,7 +94,7 @@ module.exports = {
    backgroundColor: 'transparent',
    width: null,
    height: null,
-   resizeMode: 'cover',
+   //resizeMode: 'cover',
    padding: 10,
   },
 };

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Text, Image,
-  Platform, TouchableOpacity, StatusBar, BackAndroid } from 'react-native';
+  Platform, TouchableOpacity, BackAndroid, InteractionManager } from 'react-native';
 
 import GLOBAL from '../Globals/Globals';
 
@@ -13,6 +13,8 @@ import AboutScreen from '../Screens/AboutScreen'
 
 import BottomBar from '../BottomBar/BottomBar'
 
+import SplashScreen from 'react-native-splash-screen'
+
 function paddingBar(){
   if(Platform.OS === 'ios'){
     return 64;
@@ -21,6 +23,27 @@ function paddingBar(){
 }
 
 export default class HomeScreen extends Component {
+  /*constructor(props) {
+    super(props)
+
+    this.state = {
+      isReady: false
+    }
+  }*/
+
+  /*static navigationOptions = {
+    title: 'VocationGo',
+    header: {
+      style: { backgroundColor: 'red' }
+    },
+  };*/
+
+  componentDidMount() {
+    if(Platform.OS==='android'){
+      setTimeout(() => { SplashScreen.hide(); }, 550);
+    }
+  }
+
   componentWillUnmount() {
     BackAndroid.removeEventListener('hardwareBackPress', this.backHandler.bind(this));
   }
@@ -38,18 +61,15 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="#2c3e50"
-        />
-        <Image source={require('../img/bg/currentBG.jpg')} style={styles.backgroundImage}>
+        <Image width={null} height={null} source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
           <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 20}}>
             <View style={{flex: 1, flexDirection: 'column'}}>
               <View style={styles.button} >
                 <TouchableOpacity
                 onPress={this.onButtonPress.bind(this, "rosari", "Rosari", RosariScreen)}
                 style={styles.imageContainer}>
-                  <Image  source={require('../img/homeButtons/rosari.png')}
+                  <Image  width={null} height={null}
+                          source={require('../img/homeButtons/rosari.png')}
                           style={styles.homeImage}/>
                   <Text style={styles.buttonText}>Rosari</Text>
                 </TouchableOpacity>
@@ -58,7 +78,7 @@ export default class HomeScreen extends Component {
                 <TouchableOpacity
                 onPress={this.onButtonPress.bind(this, "pvoc", "Pregària", PVocScreen)}
                 style={styles.imageContainer}>
-                  <Image  source={require('../img/homeButtons/pregar.png')}
+                  <Image source={require('../img/homeButtons/pregar.png')}
                           style={styles.homeImage}/>
                   <Text style={styles.buttonText}>Pregària</Text>
                 </TouchableOpacity>
@@ -118,6 +138,8 @@ export default class HomeScreen extends Component {
       });
     }
     else{
+      //const { navigate } = this.props.navigation;
+      //navigate(idPressed, {type: title});
       this.props.navigator.push({id: idPressed, index: 1})
     }
   }
@@ -128,14 +150,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: paddingBar()
   },
-  backgroundImage: {
-   flex: 1,
-   backgroundColor: 'transparent',
-   width: null,
-   height: null,
-   resizeMode: 'cover',
-   padding: 10
- },
   button: {
     flex: 1,
     justifyContent: 'center',

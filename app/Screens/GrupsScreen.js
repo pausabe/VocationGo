@@ -12,6 +12,10 @@ function paddingBar(){
 }
 
 export default class GrupsScreen extends Component {
+  /*static navigationOptions = {
+    title: 'Grups',
+  }*/
+
   render() {
     return (
       <View style={{flex:1}}>
