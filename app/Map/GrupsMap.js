@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import { AppRegistry, View, Text, StyleSheet, NetInfo,Platform } from 'react-native';
 
 import MapView from 'react-native-maps';
+import Hr from 'react-native-hr';
 import GLOBAL from '../Globals/Globals';
 
 function paddingBar(){
@@ -179,9 +180,14 @@ export default class GrupsMap extends Component {
             <MapView.Marker
               key={marker.key}
               coordinate={marker.coordinate}
-              title={marker.title}
-              description={marker.description}
               pinColor={GLOBAL.thumbColor}>
+              <MapView.Callout style={{width: 200}}>
+              <View >
+                <Text style={GLOBAL.litleTitle}>{marker.title}</Text>
+                <Hr lineColor='rgba(166, 183, 191, 0.9)' />
+                <Text style={GLOBAL.normalText}>{marker.description}</Text>
+              </View>
+            </MapView.Callout>
             </MapView.Marker>
           ))}
         </MapView>

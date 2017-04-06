@@ -14,6 +14,7 @@ const thumbColor = 'rgb(0, 97, 186)';
 
 module.exports = {
   titleApp: 'VocationGo',
+  superWhite: 'rgb(235, 245, 254)',
   trackColor: trackColor,
   thumbColor: thumbColor,
   barColor: barColor,
@@ -24,6 +25,12 @@ module.exports = {
   heightBottomBar: 45,
   normalText: {
     textAlign: 'center',
+    fontSize: normalSize,
+    fontWeight: '300',
+    color: textColor,
+  },
+  justifyNormalText: {
+    textAlign: 'justify',
     fontSize: normalSize,
     fontWeight: '300',
     color: textColor,
@@ -86,7 +93,7 @@ module.exports = {
   square: {
     flexDirection: 'column',
     padding: 10,
-    backgroundColor: 'rgba(250, 253, 255, 0.5)', //0.5
+    backgroundColor: 'rgba(250, 253, 255, 0.5)',
     //borderRadius: 5,
   },
   backgroundImage: {

@@ -4,6 +4,7 @@ import { View, ScrollView, Text, StyleSheet, Platform, Image, BackAndroid, Inter
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
+import T_VOC from '../Globals/T_VOC';
 import BottomBar from '../BottomBar/BottomBar'
 
 function paddingBar(){
@@ -14,41 +15,55 @@ function paddingBar(){
 }
 
 class TVocScreen extends Component {
-  static navigationOptions = {
-    title: 'Text',
-  };
+  constructor(props){
+    super(props);
 
-  renderPlaceholder() {
-    return (
-      <View style={{flex:1, backgroundColor: 'rgb(230, 242, 255)'}}>
-        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
-        </Image>
-      </View>
-    )
+    this.state = {
+      titol: "",
+      subtitol: "",
+      text: "",
+    }
   }
 
-  componentDidMount(){
-    InteractionManager.runAfterInteractions(() => {
-      this.setState({isReady: true});
-    });
+  componentWillMount(){
+    let today = new Date();
+    let day = today.getDate();
+    var id = (day-1)%6;
+
+    switch (id) {
+      case 0:
+        this.setState({titol: T_VOC.titol1, subtitol: T_VOC.subtitol1, text: T_VOC.text1,})
+        break;
+      case 1:
+        this.setState({titol: T_VOC.titol2, subtitol: T_VOC.subtitol2, text: T_VOC.text2,})
+        break;
+      case 2:
+        this.setState({titol: T_VOC.titol3, subtitol: T_VOC.subtitol3, text: T_VOC.text3,})
+        break;
+      case 3:
+        this.setState({titol: T_VOC.titol4, subtitol: T_VOC.subtitol4, text: T_VOC.text4,})
+        break;
+      case 4:
+        this.setState({titol: T_VOC.titol5, subtitol: T_VOC.subtitol5, text: T_VOC.text5,})
+        break;
+      case 5:
+        this.setState({titol: T_VOC.titol6, subtitol: T_VOC.subtitol6, text: T_VOC.text6,})
+        break;
+      }
   }
 
   render() {
-    /*if (!this.state.isReady && Platform.OS==='android') {
-      return this.renderPlaceholder();
-    }*/
-
-    const text = "La cercanía entre dos personas siempre significa entrega, generosi- dad y donación de vida. En las reflexiones filosóficas de los clási- cos griegos nunca se habla de la realidad de la entrega; esto no nos debe extrañar, porque en el camino de autenticidad no se plantea un diálogo de tú a tú, sino que un ir a uno mismo, en una especie de exaltación personal.\n\nJesús nos ha enseñado a entregarnos como él se entrega a no- sotros, «me amó y se entregó a la muerte por mí»1, «este es mi cuer- po entregado por vosotros»2 : Jesús nunca les dijo a los apóstoles «conócete a ti mismo», sino «conoce mi amor».\n\nLa vida cristiana no es ordenar la vida al modo de Dios des- de lo que a mi me parece, es una relación con una persona viva, es una existencia iluminada con la riqueza de Dios. La vida humana se hace mucho más humana aunque escape a nuestra inteligencia, porque se hace de Dios; «muy divino, pero muy humano»: “¿Hay algo más cercano al hombre que la ternura del amor de Dios? [...] muchas veces «muy divino» significa «muy abstracto». Pero ¿no es lo divino lo que se nos revela en Cristo? ¿Qué cosa más humana que el amor de Cristo?”3.";
-
-      return (
+    return (
       <View style={styles.container}>
         <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
-
           <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false}>
             <View style={GLOBAL.square}>
-            <Text style={GLOBAL.bigTitle}>CERCA DE DIOS Y DE LOS HERMANOS</Text>
-            <Text />
-              <Text style={GLOBAL.normalText} selectable={true}>{text}</Text>
+              <Text style={GLOBAL.bigTitle}>{this.state.titol}</Text>
+              {this.state.subtitol === "-" ? null :
+                <Text style={GLOBAL.litleTitle}>{this.state.subtitol}</Text>
+              }
+              <Text />
+              <Text style={GLOBAL.justifyNormalText} selectable={true}>{this.state.text}</Text>
             </View>
           </ScrollView>
         </Image>

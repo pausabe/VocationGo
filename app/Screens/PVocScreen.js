@@ -19,15 +19,6 @@ class PVocScreen extends Component {
     title: 'Pregària',
   };
 
-  renderPlaceholder() {
-    return (
-      <View style={{flex:1, backgroundColor: 'rgb(230, 242, 255)'}}>
-        <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
-        </Image>
-      </View>
-    )
-  }
-
   componentDidMount(){
     InteractionManager.runAfterInteractions(() => {
       this.setState({isReady: true});
@@ -95,10 +86,6 @@ class PVocScreen extends Component {
     }
   }
   render() {
-    /*if (!this.state.isReady && Platform.OS==='android') {
-      return this.renderPlaceholder();
-    }*/
-
     return (
       <View style={styles.container}>
         <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>

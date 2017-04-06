@@ -440,7 +440,7 @@ export default class RosariScreen extends Component {
           <Text style={GLOBAL.normalText}>{lletanies}</Text>
           <Text />
           <View style={styles.audioContainer}>
-            <AudioBar soundName={`${audio}Lletanies.mp3`}
+            <AudioBar soundName={`${audio}lletanies.mp3`}
                       colorThumb={GLOBAL.thumbColor}
                       colorTrack={GLOBAL.trackColor}/>
           </View>
