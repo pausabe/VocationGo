@@ -79,7 +79,7 @@ class AboutScreen extends Component {
               <Text />
               <Text />
               <Text style={GLOBAL.italicNormalText}>Per començar un grup nou</Text>
-              <Text style={GLOBAL.italicNormalText}>contacta amb Mn Guillem 600 847 213</Text>
+              <Text style={GLOBAL.italicNormalText}>contacta amb Mn Guillem 660 847 213</Text>
               <Text />
               <Text />
             </View>

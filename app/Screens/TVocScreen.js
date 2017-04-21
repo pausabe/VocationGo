@@ -6,6 +6,7 @@ import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
 import T_VOC from '../Globals/T_VOC';
 import BottomBar from '../BottomBar/BottomBar'
+let SQLite = require('react-native-sqlite-storage')
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
@@ -15,17 +16,50 @@ function paddingBar(){
 }
 
 class TVocScreen extends Component {
-  constructor(props){
-    super(props);
+  constructor(props) {
+    super(props)
 
     this.state = {
       titol: "",
       subtitol: "",
       text: "",
     }
+
+    let nameDB = "vgDB_v0.2.db";
+    let createFrom;
+    if (Platform.OS == "ios") { createFrom = "1"; } //ios platform
+    else { createFrom = `~${nameDB}`} //android platform
+
+    let db = SQLite.openDatabase(
+       {name : nameDB, readOnly: true, createFromLocation : createFrom},
+       this.openCB,
+       this.errorCB);
+
+   var today = new Date();
+   var id = today.getDate();
+
+    db.transaction((tx) => {
+      tx.executeSql(`SELECT * FROM textosVocacionals WHERE id = ${id}`, [], (tx, results) => {
+        this.setState({titol: results.rows.item(0).titol});
+        this.setState({subtitol: results.rows.item(0).subtitol});
+        this.setState({text: results.rows.item(0).text});
+        });
+    });
   }
 
-  componentWillMount(){
+  errorCB(err) {
+    console.log("SQL Error: " + err);
+  }
+
+  successCB() {
+    console.log("SQL executed fine");
+  }
+
+  openCB() {
+    console.log("Database OPENED");
+  }
+
+  /*componentWillMount(){
     let today = new Date();
     let day = today.getDate();
     var id = (day-1)%6;
@@ -50,7 +84,7 @@ class TVocScreen extends Component {
         this.setState({titol: T_VOC.titol6, subtitol: T_VOC.subtitol6, text: T_VOC.text6,})
         break;
       }
-  }
+  }*/
 
   render() {
     return (

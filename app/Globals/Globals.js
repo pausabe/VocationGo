@@ -17,6 +17,8 @@ module.exports = {
   superWhite: 'rgb(235, 245, 254)',
   trackColor: trackColor,
   thumbColor: thumbColor,
+  mapColor: 'rgb(0, 119, 230)',
+  mapColorTransparent: 'rgba(0, 119, 230, 0.3)',
   barColor: barColor,
   statusBarColor: statusBarColor,
   normalTextSize: normalSize,

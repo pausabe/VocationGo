@@ -171,16 +171,16 @@ export default class GrupsMap extends Component {
         >
 
           <MapView.Polygon
-            strokeColor="rgba(0, 97, 186, 1.0)"
+            strokeColor={GLOBAL.mapColor}
             coordinates={this.state.area}
-            fillColor="rgba(0, 97, 186, 0.3)"
+            fillColor={GLOBAL.mapColorTransparent}
           />
 
           {this.state.markers.map(marker => (
             <MapView.Marker
               key={marker.key}
               coordinate={marker.coordinate}
-              pinColor={GLOBAL.thumbColor}>
+              pinColor={GLOBAL.mapColor}>
               <MapView.Callout style={{width: 200}}>
               <View >
                 <Text style={GLOBAL.litleTitle}>{marker.title}</Text>
