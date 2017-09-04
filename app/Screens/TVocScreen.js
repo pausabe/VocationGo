@@ -40,9 +40,7 @@ class TVocScreen extends Component {
 
     db.transaction((tx) => {
       tx.executeSql(`SELECT * FROM textosVocacionals WHERE id = ${id}`, [], (tx, results) => {
-        this.setState({titol: results.rows.item(0).titol});
-        this.setState({subtitol: results.rows.item(0).subtitol});
-        this.setState({text: results.rows.item(0).text});
+        this.setState({titol: results.rows.item(0).titol, subtitol: results.rows.item(0).subtitol, text: results.rows.item(0).text});
         });
     });
   }
