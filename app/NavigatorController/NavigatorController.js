@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  Navigator,
   NavigatorIOS,
   Text,
   StyleSheet,
@@ -13,6 +12,8 @@ import {
   Platform,
   BackAndroid
 } from 'react-native';
+
+import NavigationExperimental from 'react-native-deprecated-custom-components'
 
 import CustomTransitions from '../CustomTransitions/CustomTransitions';
 
@@ -69,7 +70,7 @@ export default class NavigatorController extends Component {
     else{
       return (
         <View style={{flex: 1}}>
-          <Navigator
+          <NavigationExperimental.Navigator
             initialRoute={{id: 'home', index: 0}}
             renderScene={this.renderScene}
 
@@ -80,7 +81,7 @@ export default class NavigatorController extends Component {
             }
 
             navigationBar={
-              <Navigator.NavigationBar
+              <NavigationExperimental.Navigator.NavigationBar
                 routeMapper={{
                   LeftButton: (route, navigator, index, navState) =>
                   {

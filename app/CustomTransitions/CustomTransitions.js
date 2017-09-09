@@ -1,5 +1,7 @@
-import React, { Navigator, } from 'react-native';
+import React from 'react-native';
 import buildStyleInterpolator from 'buildStyleInterpolator';
+
+import NavigationExperimental from 'react-native-deprecated-custom-components'
 
 var NoTransition = {
     opacity: {
@@ -8,7 +10,7 @@ var NoTransition = {
     }
 };
 
-const NONE = Object.assign({}, Navigator.SceneConfigs.FadeAndroid, {
+const NONE = Object.assign({}, NavigationExperimental.Navigator.SceneConfigs.FadeAndroid, {
     gestures: null,
     defaultTransitionVelocity: 1000,
     animationInterpolators: {
