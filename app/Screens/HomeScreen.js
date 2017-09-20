@@ -10,7 +10,7 @@ import GrupScreen from '../Screens/GrupsScreen'
 import PVocScreen from '../Screens/PVocScreen'
 import TVocScreen from '../Screens/TVocScreen'
 import AboutScreen from '../Screens/AboutScreen'
-
+import SettingsManager from '../Settings/SettingsManager';
 import BottomBar from '../BottomBar/BottomBar'
 
 import SplashScreen from 'react-native-splash-screen'
@@ -42,6 +42,10 @@ export default class HomeScreen extends Component {
     if(Platform.OS==='android'){
       setTimeout(() => { SplashScreen.hide(); }, 550);
     }
+
+    SettingsManager.getSettingDiocesis((r) => {
+        console.log("Diòcesi: " + r);
+    });
   }
 
   componentWillUnmount() {
