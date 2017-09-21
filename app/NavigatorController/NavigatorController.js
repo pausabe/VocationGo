@@ -30,6 +30,7 @@ import GLOBAL from '../Globals/Globals'
 import Icon from 'react-native-vector-icons/Ionicons'
 import SettingsComponentAdapter from "../Settings/SettingsComponentAdapter";
 import SettingsManager from '../Settings/SettingsManager';
+import EventEmitter from 'EventEmitter';
 
 export default class NavigatorController extends Component {
   componentWillMount() {
@@ -37,6 +38,7 @@ export default class NavigatorController extends Component {
     SettingsComponentAdapter.getSettingsOptions().then(result =>{
         this.setState({options: result});
     }).catch(error => console.log(error));
+    this.eventEmitter = new EventEmitter();
   }
 
   constructor(props) {
@@ -74,6 +76,7 @@ export default class NavigatorController extends Component {
               component: HomeScreen,
               title: GLOBAL.titleApp,
               rightButtonIcon: this.state.settingsIcon,
+              passProps: {events: this.eventEmitter},
               onRightButtonPress: () => this.rightPress(),
             }}
 
@@ -122,7 +125,7 @@ export default class NavigatorController extends Component {
           />
 
           <Navigator
-            initialRoute={{id: 'home', index: 0}}
+            initialRoute={{id: 'home', index: 0, events: this.eventEmitter}}
             renderScene={this.renderScene}
 
             configureScene={(route, routeStack) =>
@@ -236,7 +239,20 @@ export default class NavigatorController extends Component {
   }
 
   okDialog(androidDate){
+    if(this.state.firstShow){
+      SettingsManager.getSettingDiocesis((r) => {
+        if(r==='none'){//it means no one is selected, so Barcelona has to be
+          SettingsManager.setSettingDiocesis('Barcelona');
+          this.popupDialog.dismiss();
+          this.eventEmitter.emit('myEvent');
+          this.setState({firstShow: false});
+        }
+      });
+    }
+    else{
       this.popupDialog.dismiss();
+    }
+    this.eventEmitter.emit('myEvent');
   }
 
   cancelDialog(){
@@ -246,7 +262,7 @@ export default class NavigatorController extends Component {
   renderScene(route,nav){
     switch (route.id) {
       case 'home':
-        return (<HomeScreen navigator={nav} route={route} title="Home"/>);
+        return (<HomeScreen navigator={nav} events={route.events} route={route} title="Home"/>);
       case 'rosari':
         return (<RosariScreen navigator={nav} route={route} title="Rosari"/>);
       case 'misteri':

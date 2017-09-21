@@ -9,7 +9,10 @@ export default class BottomBar extends Component {
     return (
       <View style={styles.bottomBar}>
         <View style={{flex:1}}>
-          <Text style={styles.bottomBarText}>Seminari de Terrassa</Text>
+          {this.props.seminari !== 'none'?
+            <Text style={styles.bottomBarText}>{'Seminari de '+this.props.seminari}</Text>
+            : null
+          }
         </View>
         <View style={{width: GLOBAL.heightBottomBar}}>
           <Image  source={require('../img/altres/logo-seminari.png')}

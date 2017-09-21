@@ -12,7 +12,7 @@ import TVocScreen from '../Screens/TVocScreen'
 import AboutScreen from '../Screens/AboutScreen'
 import SettingsManager from '../Settings/SettingsManager';
 import BottomBar from '../BottomBar/BottomBar'
-
+import EventEmitter from 'EventEmitter';
 import SplashScreen from 'react-native-splash-screen'
 
 function paddingBar(){
@@ -23,13 +23,18 @@ function paddingBar(){
 }
 
 export default class HomeScreen extends Component {
-  /*constructor(props) {
+  constructor(props) {
     super(props)
 
     this.state = {
-      isReady: false
+      seminari: 'none'
     }
-  }*/
+
+    SettingsManager.getSettingDiocesis((r) => {
+        console.log("Diòcesi HOME: " + r);
+        this.setState({seminari: r});
+    });
+  }
 
   /*static navigationOptions = {
     title: 'VocationGo',
@@ -42,10 +47,7 @@ export default class HomeScreen extends Component {
     if(Platform.OS==='android'){
       setTimeout(() => { SplashScreen.hide(); }, 550);
     }
-
-    SettingsManager.getSettingDiocesis((r) => {
-        console.log("Diòcesi: " + r);
-    });
+    this.props.events.addListener('myEvent', this.onOkEvent.bind(this));
   }
 
   componentWillUnmount() {
@@ -128,7 +130,7 @@ export default class HomeScreen extends Component {
             </View>
           </View>
         </Image>
-        <BottomBar />
+        <BottomBar seminari={this.state.seminari}/> 
       </View>
     )
   }
@@ -146,6 +148,13 @@ export default class HomeScreen extends Component {
       //navigate(idPressed, {type: title});
       this.props.navigator.push({id: idPressed, index: 1})
     }
+  }
+
+  onOkEvent(){
+    SettingsManager.getSettingDiocesis((r) => {
+        console.log("Diòcesi HOME EVENT: " + r);
+        this.setState({seminari: r});
+    });
   }
 }
 
