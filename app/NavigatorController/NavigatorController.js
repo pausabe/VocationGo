@@ -238,21 +238,26 @@ export default class NavigatorController extends Component {
     nav.pop();
   }
 
-  okDialog(androidDate){
+  okDialog(){
     if(this.state.firstShow){
       SettingsManager.getSettingDiocesis((r) => {
         if(r==='none'){//it means no one is selected, so Barcelona has to be
           SettingsManager.setSettingDiocesis('Barcelona');
           this.popupDialog.dismiss();
-          this.eventEmitter.emit('myEvent');
           this.setState({firstShow: false});
+          this.eventEmitter.emit('myEvent');
+        }
+        else{
+          this.popupDialog.dismiss();
+          this.setState({firstShow: false});
+          this.eventEmitter.emit('myEvent');
         }
       });
     }
     else{
       this.popupDialog.dismiss();
+      this.eventEmitter.emit('myEvent');
     }
-    this.eventEmitter.emit('myEvent');
   }
 
   cancelDialog(){

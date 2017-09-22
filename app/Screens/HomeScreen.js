@@ -65,6 +65,7 @@ export default class HomeScreen extends Component {
   }
 
   render() {
+    console.log("home render");
     return (
       <View style={styles.container}>
         <Image width={null} height={null} source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
@@ -130,7 +131,7 @@ export default class HomeScreen extends Component {
             </View>
           </View>
         </Image>
-        <BottomBar seminari={this.state.seminari}/> 
+        <BottomBar seminari={this.state.seminari}/>
       </View>
     )
   }
