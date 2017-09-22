@@ -99,7 +99,7 @@ class TVocScreen extends Component {
             </View>
           </ScrollView>
         </Image>
-        <BottomBar />
+        <BottomBar seminari={this.props.seminari}/>
       </View>
     )
   }

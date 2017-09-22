@@ -22,7 +22,7 @@ export default class GrupsScreen extends Component {
         <View style={styles.container}>
           <GrupsMap />
         </View>
-        <BottomBar />
+        <BottomBar seminari={this.props.seminari}/>
       </View>
     )
   }

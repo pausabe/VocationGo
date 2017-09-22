@@ -80,6 +80,8 @@ export default class RosariScreen extends Component {
       press5: false,
       isReady: false
     }
+
+    //console.log("super log: " + this.props.seminari);
   }
 
   render() {
@@ -98,7 +100,7 @@ export default class RosariScreen extends Component {
             </View>
           </ScrollView>
         </Image>
-        <BottomBar />
+        <BottomBar seminari={this.props.seminari}/>
       </View>
     )
   }

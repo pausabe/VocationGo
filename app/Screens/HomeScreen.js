@@ -140,14 +140,14 @@ export default class HomeScreen extends Component {
     if(Platform.OS === 'ios'){
       this.props.navigator.push({
         title: title,
-        passProps: {title: title},
+        passProps: {title: title, seminari: this.state.seminari},
         component: component
       });
     }
     else{
       //const { navigate } = this.props.navigation;
       //navigate(idPressed, {type: title});
-      this.props.navigator.push({id: idPressed, index: 1})
+      this.props.navigator.push({id: idPressed, index: 1, seminari: this.state.seminari})
     }
   }
 

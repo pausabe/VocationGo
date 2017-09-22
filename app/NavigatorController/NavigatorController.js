@@ -267,19 +267,19 @@ export default class NavigatorController extends Component {
   renderScene(route,nav){
     switch (route.id) {
       case 'home':
-        return (<HomeScreen navigator={nav} events={route.events} route={route} title="Home"/>);
+        return (<HomeScreen navigator={nav} route={route} title="Home" events={route.events}/>);
       case 'rosari':
-        return (<RosariScreen navigator={nav} route={route} title="Rosari"/>);
+        return (<RosariScreen navigator={nav} route={route} title="Rosari" seminari={route.seminari}/>);
       case 'misteri':
-        return (<RosariScreen navigator={nav} route={route} title="Misteri"/>);
+        return (<RosariScreen navigator={nav} route={route} title="Misteri" seminari={route.seminari}/>);
       case 'grup':
-        return (<GrupScreen navigator={nav} route={route} title="Grup"/>);
+        return (<GrupScreen navigator={nav} route={route} title="Grup" seminari={route.seminari}/>);
       case 'pvoc':
-        return (<PVocScreen navigator={nav} route={route} title="PVoc"/>);
+        return (<PVocScreen navigator={nav} route={route} title="PVoc" seminari={route.seminari}/>);
       case 'tvoc':
-        return (<TVocScreen navigator={nav} route={route} title="TVoc"/>);
+        return (<TVocScreen navigator={nav} route={route} title="TVoc" seminari={route.seminari}/>);
       case 'about':
-        return (<AboutScreen navigator={nav} route={route} title="About"/>);
+        return (<AboutScreen navigator={nav} route={route} title="About" seminari={route.seminari}/>);
     }
   }
 }
