@@ -27,12 +27,12 @@ export default class HomeScreen extends Component {
     super(props)
 
     this.state = {
-      seminari: 'none'
+      bisbat: 'none'
     }
 
     SettingsManager.getSettingDiocesis((r) => {
         console.log("Diòcesi HOME: " + r);
-        this.setState({seminari: r});
+        this.setState({bisbat: r});
     });
   }
 
@@ -131,7 +131,7 @@ export default class HomeScreen extends Component {
             </View>
           </View>
         </Image>
-        <BottomBar seminari={this.state.seminari}/>
+        <BottomBar bisbat={this.state.bisbat}/>
       </View>
     )
   }
@@ -140,21 +140,21 @@ export default class HomeScreen extends Component {
     if(Platform.OS === 'ios'){
       this.props.navigator.push({
         title: title,
-        passProps: {title: title, seminari: this.state.seminari},
+        passProps: {title: title, bisbat: this.state.bisbat},
         component: component
       });
     }
     else{
       //const { navigate } = this.props.navigation;
       //navigate(idPressed, {type: title});
-      this.props.navigator.push({id: idPressed, index: 1, seminari: this.state.seminari})
+      this.props.navigator.push({id: idPressed, index: 1, bisbat: this.state.bisbat})
     }
   }
 
   onOkEvent(){
     SettingsManager.getSettingDiocesis((r) => {
         console.log("Diòcesi HOME EVENT: " + r);
-        this.setState({seminari: r});
+        this.setState({bisbat: r});
     });
   }
 }

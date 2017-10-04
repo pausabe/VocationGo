@@ -9,8 +9,8 @@ export default class BottomBar extends Component {
     return (
       <View style={styles.bottomBar}>
         <View style={{flex:1}}>
-          {this.props.seminari !== 'none'?
-            <Text style={styles.bottomBarText}>{'Seminari de '+this.props.seminari}</Text>
+          {this.props.bisbat !== 'none'?
+            <Text style={styles.bottomBarText}>{'Bisbat de '+this.props.bisbat}</Text>
             : null
           }
         </View>

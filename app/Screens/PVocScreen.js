@@ -97,7 +97,7 @@ class PVocScreen extends Component {
             </View>
           </ScrollView>
         </Image>
-        <BottomBar seminari={this.props.seminari}/>
+        <BottomBar bisbat={this.props.bisbat}/>
       </View>
     )
   }

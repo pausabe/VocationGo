@@ -20,9 +20,9 @@ export default class GrupsScreen extends Component {
     return (
       <View style={{flex:1}}>
         <View style={styles.container}>
-          <GrupsMap />
+          <GrupsMap bisbat={this.props.bisbat}/>
         </View>
-        <BottomBar seminari={this.props.seminari}/>
+        <BottomBar bisbat={this.props.bisbat}/>
       </View>
     )
   }

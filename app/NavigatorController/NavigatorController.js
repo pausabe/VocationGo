@@ -91,7 +91,7 @@ export default class NavigatorController extends Component {
             dismissOnTouchOutside={!this.state.firstShow}
             show={this.state.firstShow}
             dialogStyle={{backgroundColor: 'white'}}
-            dialogTitle={<DialogTitle title="Sel·lecciona el seminari" />} >
+            dialogTitle={<DialogTitle title="Sel·lecciona el bisbat" />} >
             <View style={{flex:1}}>
               <View style={styles.itemList}>
                   {this.state.options}
@@ -203,7 +203,7 @@ export default class NavigatorController extends Component {
             show={this.state.firstShow}
             dismissOnTouchOutside={!this.state.firstShow}
             dismissOnHardwareBackPress={!this.state.firstShow}
-            dialogTitle={<DialogTitle title="Sel·lecciona el seminari" />} >
+            dialogTitle={<DialogTitle title="Sel·lecciona el bisbat" />} >
             <View style={{flex:1}}>
               <View style={styles.itemList}>
                   {this.state.options}
@@ -269,17 +269,17 @@ export default class NavigatorController extends Component {
       case 'home':
         return (<HomeScreen navigator={nav} route={route} title="Home" events={route.events}/>);
       case 'rosari':
-        return (<RosariScreen navigator={nav} route={route} title="Rosari" seminari={route.seminari}/>);
+        return (<RosariScreen navigator={nav} route={route} title="Rosari" bisbat={route.bisbat}/>);
       case 'misteri':
-        return (<RosariScreen navigator={nav} route={route} title="Misteri" seminari={route.seminari}/>);
+        return (<RosariScreen navigator={nav} route={route} title="Misteri" bisbat={route.bisbat}/>);
       case 'grup':
-        return (<GrupScreen navigator={nav} route={route} title="Grup" seminari={route.seminari}/>);
+        return (<GrupScreen navigator={nav} route={route} title="Grup" bisbat={route.bisbat}/>);
       case 'pvoc':
-        return (<PVocScreen navigator={nav} route={route} title="PVoc" seminari={route.seminari}/>);
+        return (<PVocScreen navigator={nav} route={route} title="PVoc" bisbat={route.bisbat}/>);
       case 'tvoc':
-        return (<TVocScreen navigator={nav} route={route} title="TVoc" seminari={route.seminari}/>);
+        return (<TVocScreen navigator={nav} route={route} title="TVoc" bisbat={route.bisbat}/>);
       case 'about':
-        return (<AboutScreen navigator={nav} route={route} title="About" seminari={route.seminari}/>);
+        return (<AboutScreen navigator={nav} route={route} title="About" bisbat={route.bisbat}/>);
     }
   }
 }
