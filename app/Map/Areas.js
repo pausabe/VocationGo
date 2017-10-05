@@ -1,3 +1,5 @@
+//Bisbats Catalunya - https://www.google.com/maps/d/viewer?mid=19uD0DfgsLUP0l9_5A3PPB-yJ0X4&usp=sharing
+
 module.exports = {
   Barcelona: {
     coordinates: [
@@ -545,96 +547,92 @@ module.exports = {
       longitudeDelta: 1.38,
     }
   },
-  /*Tarragona: {
+  Tarragona: {
     coordinates: [
       {
-      latitude: ,
-      longitude:
+      latitude: 41.12384,
+      longitude: 1.39938
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.05035,
+      longitude: 1.16729
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.07158,
+      longitude: 1.12129
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 40.98611,
+      longitude: 0.93383
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 40.9353,
+      longitude: 0.86105
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.08659,
+      longitude: 0.74089
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.15539,
+      longitude: 0.61042
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.26129,
+      longitude: 0.61454
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.43706,
+      longitude: 0.81092
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.59464,
+      longitude: 0.83805
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.59131,
+      longitude: 1.03752
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.56049,
+      longitude: 1.22497
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.52965,
+      longitude: 1.39595
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.5006,
+      longitude: 1.46186
       },
       {
-      latitude:,
-      longitude:
+      latitude: 41.42754,
+      longitude: 1.47594
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.28761,
+      longitude: 1.62117
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.25277,
+      longitude: 1.57722
       },
       {
-      latitude:,
-      longitude:
+      latitude: 41.23599,
+      longitude: 1.62322
       },
       {
-      latitude: ,
-      longitude:
-      },
-      {
-      latitude: ,
-      longitude:
+      latitude: 41.1926,
+      longitude: 1.64897
       },
     ],
     center: {
-      latitude: ,
-      longitude: ,
-      latitudeDelta: ,
-      longitudeDelta: ,
+      latitude: 41.3397,
+      longitude: 1.09863,
+      latitudeDelta: 1.2,
+      longitudeDelta: 1.2,
     }
-  },*/
+  },
   Terrassa: {
     coordinates: [
       {
@@ -823,96 +821,204 @@ module.exports = {
       longitudeDelta: 0.85,
     }
   },
-  /*Urgell: {
+  Urgell: {
     coordinates: [
       {
-      latitude: ,
-      longitude:
+      latitude: 42.41635,
+      longitude: 2.20001
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.43891,
+      longitude: 2.25563
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.36767,
+      longitude: 2.45304
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.27934,
+      longitude: 2.27108
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.26689,
+      longitude: 2.18112
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.27553,
+      longitude: 2.06989
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.2895,
+      longitude: 2.01461
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.23665,
+      longitude: 1.8663
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.29051,
+      longitude: 1.61018
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.25444,
+      longitude: 1.44573
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.15475,
+      longitude: 1.3702
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.08471,
+      longitude: 1.38187
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 42.02532,
+      longitude: 1.32556
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.85396,
+      longitude: 1.32282
       },
       {
-      latitude:,
-      longitude:
+      latitude: 41.80023,
+      longitude: 1.28746
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.73442,
+      longitude: 1.2648
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.69675,
+      longitude: 1.26274
       },
       {
-      latitude:,
-      longitude:
+      latitude: 41.68573,
+      longitude: 1.16764
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.68291,
+      longitude: 1.01795
       },
       {
-      latitude: ,
-      longitude:
+      latitude: 41.6765,
+      longitude: 0.92388
+      },
+      {
+      latitude: 41.63699,
+      longitude: 0.79032
+      },
+      {
+      latitude: 41.73186,
+      longitude: 0.67085
+      },
+      {
+      latitude: 41.83478,
+      longitude: 0.7656
+      },
+      {
+      latitude: 41.95949,
+      longitude: 0.79719
+      },
+      {
+      latitude: 41.99011,
+      longitude: 0.83427
+      },
+      {
+      latitude: 42.0243,
+      longitude: 0.87203
+      },
+      {
+      latitude: 42.04317,
+      longitude: 0.81024
+      },
+      {
+      latitude: 42.16289,
+      longitude: 0.8329
+      },
+      {
+      latitude: 42.22292,
+      longitude: 0.82672
+      },
+      {
+      latitude: 42.33063,
+      longitude: 0.84251
+      },
+      {
+      latitude: 42.40267,
+      longitude: 0.84045
+      },
+      {
+      latitude: 42.43156,
+      longitude: 0.72921
+      },
+      {
+      latitude: 42.47665,
+      longitude: 0.69419
+      },
+      {
+      latitude: 42.61122,
+      longitude: 0.76766
+      },
+      {
+      latitude: 42.62587,
+      longitude: 0.69351
+      },
+      {
+      latitude: 42.8377,
+      longitude: 0.65505
+      },
+      {
+      latitude: 42.86438,
+      longitude: 0.71342
+      },
+      {
+      latitude: 42.79036,
+      longitude: 0.92285
+      },
+      {
+      latitude: 42.78481,
+      longitude: 1.08352
+      },
+      {
+      latitude: 42.70918,
+      longitude: 1.16661
+      },
+      {
+      latitude: 42.72229,
+      longitude: 1.35063
+      },
+      {
+      latitude: 42.60414,
+      longitude: 1.45431
+      },
+      {
+      latitude: 42.65466,
+      longitude: 1.48178
+      },
+      {
+      latitude: 42.58493,
+      longitude: 1.78321
+      },
+      {
+      latitude: 42.49792,
+      longitude: 1.72828
+      },
+      {
+      latitude: 42.45436,
+      longitude: 1.92878
+      },
+      {
+      latitude: 42.35245,
+      longitude: 2.01255
       },
     ],
     center: {
-      latitude: ,
-      longitude: ,
-      latitudeDelta: ,
-      longitudeDelta: ,
+      latitude: 42.27,
+      longitude: 1.55,
+      latitudeDelta: 1.85,
+      longitudeDelta: 1.85,
     }
-  },*/
+  },
   Vic: {
     coordinates: [
       {

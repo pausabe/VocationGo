@@ -36,10 +36,10 @@ export default class GrupsMap extends Component {
       case 'Lleida': return(AREAS.Lleida.coordinates); break;
       case 'Sant Feliu de Llobregat': return(AREAS.SantFeliu.coordinates); break;
       case 'Solsona': return(AREAS.Solsona.coordinates); break;
-      //case 'Tarragona': return(AREAS.Tarragona.coordinates); break;
+      case 'Tarragona': return(AREAS.Tarragona.coordinates); break;
       case 'Terrassa': return(AREAS.Terrassa.coordinates); break;
       case 'Tortosa': return(AREAS.Tortosa.coordinates); break;
-      //case 'Urgell': return(AREAS.Urgell.coordinates); break;
+      case 'Urgell': return(AREAS.Urgell.coordinates); break;
       case 'Vic': return(AREAS.Vic.coordinates); break;
     }
   }
@@ -51,10 +51,10 @@ export default class GrupsMap extends Component {
       case 'Lleida': return(AREAS.Lleida.center); break;
       case 'Sant Feliu de Llobregat': return(AREAS.SantFeliu.center); break;
       case 'Solsona': return(AREAS.Solsona.center); break;
-      //case 'Tarragona': return(AREAS.Tarragona.center); break;
+      case 'Tarragona': return(AREAS.Tarragona.center); break;
       case 'Terrassa': return(AREAS.Terrassa.center); break;
       case 'Tortosa': return(AREAS.Tortosa.center); break;
-      //case 'Urgell': return(AREAS.Urgell.center); break;
+      case 'Urgell': return(AREAS.Urgell.center); break;
       case 'Vic': return(AREAS.Vic.center); break;
     }
   }
