@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity, BackAndroid } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity, BackAndroid, NetInfo } from 'react-native';
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
@@ -15,6 +15,72 @@ function paddingBar(){
 }
 
 class AboutScreen extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      contacte: {
+        nom: "none",
+        telefon: "none"
+      },
+      isConnected: null,
+      internet: null,
+    }
+  }
+
+  nameBisbat(bisbat){
+    if(bisbat === 'Sant Feliu de Llobregat') return 'SantFeliu';
+    return bisbat;
+  }
+
+  componentWillMount() {
+    this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
+  }
+
+  componentDidMount() {
+    NetInfo.isConnected.addEventListener(
+        'change',
+        this._handleConnectivityChange
+    );
+    NetInfo.isConnected.fetch().done(
+        (isConnected) => { this.setState({isConnected}); }
+    );
+  }
+
+  componentWillUnmount() {
+    NetInfo.isConnected.removeEventListener(
+        'change',
+        this._handleConnectivityChange
+    );
+  }
+
+  _handleConnectivityChange = (isConnected) => {
+    if(this.state.internet === false){
+      this.setState({internet: null});
+      this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
+    }
+    this.setState({
+      isConnected,
+    });
+  };
+
+  getMarkersFromApiAsync(bisbat) {
+    return fetch(`https://pausabe.com/apps/vocationGo/${bisbat}.json`)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.displayData(responseJson);
+        this.setState({internet: true});
+        return responseJson;
+      })
+      .catch((error) => {
+        this.setState({internet: false});
+      });
+  }
+
+  displayData(data){
+    this.setState({contacte: data.contacte});
+  }
+
   static navigationOptions = {
     title: 'Informació',
   };
@@ -26,15 +92,15 @@ class AboutScreen extends Component {
 
           <ScrollView automaticallyAdjustContentInsets={false} showsVerticalScrollIndicator={false}>
               <View style={GLOBAL.square}>
-              <Text style={GLOBAL.bigTitle}>GRUP DE PREGÀRIA</Text>
-              <Text style={GLOBAL.boldBigTitle}>PER LES VOCACIONS</Text>
-              <Text style={GLOBAL.italicNormalText}>Pregueu a l'amo dels sembrats que enviï més segadors</Text>
+              <Text style={GLOBAL.bigTitle}>{"GRUP DE PREGÀRIA"}</Text>
+              <Text style={GLOBAL.boldBigTitle}>{"PER LES VOCACIONS"}</Text>
+              <Text style={GLOBAL.italicNormalText}>{"Pregueu a l'amo dels sembrats que enviï més segadors"}</Text>
               <Text />
               <Text />
-              <Text style={GLOBAL.normalText}>Un objectiu del pla pastoral del bisbat de Terrassa és la creació de grups de pregària per les vocacions. Ens falten capellans i hem de demanar aquest do. Ajuda'ns a aconseguir-ho formant un grup de pregària.</Text>
+              <Text style={GLOBAL.normalText}>{"Ens falten capellans i hem de demanar aquest do. Ajuda'ns a aconseguir-ho formant un grup de pregària."}</Text>
               <Text />
               <Text />
-              <Text style={GLOBAL.boldNormalText}>A què em comprometo?</Text>
+              <Text style={GLOBAL.boldNormalText}>{"A què em comprometo?"}</Text>
               <Text />
               <View style={{flexDirection: 'row'}}>
                 <View style={{width: 40}}>
@@ -42,7 +108,7 @@ class AboutScreen extends Component {
                           style={styles.logoImage}/>
                 </View>
                 <View style={{flex:1}}>
-                  <Text style={GLOBAL.autoNormalText}>A nivell individual: Pregar diàriament per les vocacions. VocationGo t'ofereix el rosari, un misteri i pregàries i textos vocacionals.</Text>
+                  <Text style={GLOBAL.autoNormalText}>{"A nivell individual: Pregar diàriament per les vocacions. VocationGo t'ofereix el rosari, un misteri i pregàries i textos vocacionals."}</Text>
                 </View>
               </View>
               <Text />
@@ -52,10 +118,10 @@ class AboutScreen extends Component {
                           style={styles.logoImage}/>
                 </View>
                 <View style={{flex:1}}>
-                  <Text style={GLOBAL.autoNormalText}>A nivell comunitari: Trobar-se, almenys, un cop al mes amb tots els membres del grup per pregar per les vocacions.</Text>
+                  <Text style={GLOBAL.autoNormalText}>{"A nivell comunitari: Trobar-se, almenys, un cop al mes amb tots els membres del grup per pregar per les vocacions."}</Text>
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     <View style={{flex:1}}>
-                      <Text style={GLOBAL.italicRightNormalText}>Troba el teu grup aquí:</Text>
+                      <Text style={GLOBAL.italicRightNormalText}>{"Troba el teu grup aquí:"}</Text>
                     </View>
                     <View style={{height: 40, paddingLeft:5}}>
                       <TouchableOpacity style={{flex:1}} onPress={this.onButtonPress.bind(this, "grup", "Grup Pregària", GrupScreen)}>
@@ -73,13 +139,18 @@ class AboutScreen extends Component {
                           style={styles.logoImage}/>
                 </View>
                 <View style={{flex:1}}>
-                  <Text style={GLOBAL.autoNormalText}>Pregar per un seminarista: Pregar per un seminarista assignat en el grup.</Text>
+                  <Text style={GLOBAL.autoNormalText}>{"Pregar per un seminarista: Pregar per un seminarista assignat en el grup."}</Text>
                 </View>
               </View>
               <Text />
               <Text />
-              <Text style={GLOBAL.italicNormalText}>Per començar un grup nou</Text>
-              <Text style={GLOBAL.italicNormalText}>contacta amb Mn Guillem 660 847 213</Text>
+              { this.state.contacte.nom !== 'none' ?
+                <View>
+                  <Text style={GLOBAL.italicNormalText}>{"Per començar un grup nou"}</Text>
+                  <Text style={GLOBAL.italicNormalText}>{"contacta amb "}{this.state.contacte.nom}{" "}{this.state.contacte.telefon}</Text>
+                </View>
+                : null
+              }
               <Text />
               <Text />
             </View>
@@ -94,14 +165,14 @@ class AboutScreen extends Component {
     if(Platform.OS === 'ios'){
       this.props.navigator.push({
         title: title,
-        passProps: {title: title},
+        passProps: {title: title, bisbat: this.props.bisbat},
         component: component
       });
     }
     else{
       //const { navigate } = this.props.navigation;
       //navigate(idPressed, {type: title});
-      this.props.navigator.push({id: idPressed, index: 1})
+      this.props.navigator.push({id: idPressed, index: 1, bisbat: this.props.bisbat})
     }
   }
 }
@@ -128,3 +199,5 @@ const styles = StyleSheet.create({
   },
 });
 export default AboutScreen;
+
+//Un objectiu del pla pastoral dels bisbats de Catalunya és la creació de grups de pregària per les vocacions.

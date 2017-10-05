@@ -59,6 +59,11 @@ export default class GrupsMap extends Component {
     }
   }
 
+  nameBisbat(bisbat){
+    if(bisbat === 'Sant Feliu de Llobregat') return 'SantFeliu';
+    return bisbat;
+  }
+
   componentDidMount() {
     NetInfo.isConnected.addEventListener(
         'change',
@@ -79,15 +84,15 @@ export default class GrupsMap extends Component {
   _handleConnectivityChange = (isConnected) => {
     if(this.state.internet === false){
       this.setState({internet: null});
-      this.getMarkersFromApiAsync();
+      this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
     }
     this.setState({
       isConnected,
     });
   };
 
-  getMarkersFromApiAsync() {
-    return fetch('https://apps.lifeteen.es/apps/markers.json')
+  getMarkersFromApiAsync(bisbat) {
+    return fetch(`https://pausabe.com/apps/vocationGo/${bisbat}.json`)
       .then((response) => response.json())
       .then((responseJson) => {
         this.displayData(responseJson);
@@ -104,7 +109,7 @@ export default class GrupsMap extends Component {
   }
 
   componentWillMount() {
-    this.getMarkersFromApiAsync();
+    this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
   }
 
   render() {

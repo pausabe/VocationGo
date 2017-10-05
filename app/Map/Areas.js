@@ -289,10 +289,10 @@ module.exports = {
       },
     ],
     center: {
-      latitude: 41.84603,
-      longitude: 0.63583,
-      latitudeDelta: 1.15,
-      longitudeDelta: 1.15,
+      latitude: 41.86,
+      longitude: 0.6,
+      latitudeDelta: 1.25,
+      longitudeDelta: 1.25,
     }
   },
   SantFeliu: {
@@ -815,8 +815,8 @@ module.exports = {
       },
     ],
     center: {
-      latitude: 40.8751,
-      longitude: 0.52871,
+      latitude: 40.92492,
+      longitude: 0.5403,
       latitudeDelta: 0.85,
       longitudeDelta: 0.85,
     }
