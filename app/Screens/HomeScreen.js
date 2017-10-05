@@ -121,7 +121,7 @@ export default class HomeScreen extends Component {
             </View>
             <View style={styles.button}>
               <TouchableOpacity
-              onPress={this.onButtonPress.bind(this, "grup", "Grup Pregària", GrupScreen)}
+              onPress={this.onButtonPress.bind(this, "grup", "Grup de pregària", GrupScreen)}
               style={styles.imageContainer}>
                 <Image  source={require('../img/homeButtons/mapa.png')}
                         style={styles.homeImage}/>

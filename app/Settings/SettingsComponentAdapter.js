@@ -47,7 +47,7 @@ export default class SettingsComponentAdapter{
         let value = await SettingsManager.getSettingDiocesis();
         value = _getKeyFromValue(diocesis, value);
         let component = (<SettingComponent selectorComponent="picker" name="Diòcesi" id="diocesis" key="diocesis"
-            value={value} options={diocesis} selectorProps={{mode: "dropdown"}} callback={(id, value) => {
+            value={value} options={diocesis} callback={(id, value) => {
                 SettingsManager.setSettingDiocesis(diocesis[value]);
             }}/>);
         return component;

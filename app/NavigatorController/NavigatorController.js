@@ -91,13 +91,13 @@ export default class NavigatorController extends Component {
             dismissOnTouchOutside={!this.state.firstShow}
             show={this.state.firstShow}
             dialogStyle={{backgroundColor: 'white'}}
-            dialogTitle={<DialogTitle title="Sel·lecciona el bisbat" />} >
+            dialogTitle={<DialogTitle titleTextStyle={{fontSize: 19, color: 'black'}} title="Sel·lecciona un bisbat" />} >
             <View style={{flex:1}}>
               <View style={styles.itemList}>
                   {this.state.options}
               </View>
             </View>
-            <View style={{justifyContent: 'flex-end', paddingBottom: 5, flexDirection: 'row', backgroundColor: 'white'}}>
+            <View style={{justifyContent: 'flex-end', borderRadius: 15, paddingBottom: 5, flexDirection: 'row', backgroundColor: 'white'}}>
               <View style={{flex: 1, alignItems: 'center'}}>
                 {this.state.firstShow? null
                   :
@@ -201,15 +201,16 @@ export default class NavigatorController extends Component {
             ref={(popupDialog) => { this.popupDialog = popupDialog}}
             dialogStyle={{backgroundColor: 'white'}}
             show={this.state.firstShow}
+            height={150}
             dismissOnTouchOutside={!this.state.firstShow}
             dismissOnHardwareBackPress={!this.state.firstShow}
-            dialogTitle={<DialogTitle title="Sel·lecciona el bisbat" />} >
-            <View style={{flex:1}}>
+            dialogTitle={<DialogTitle titleTextStyle={{fontSize: 18, color: 'black'}} title="Sel·lecciona un bisbat" />} >
+            <View style={{flex:1, justifyContent: 'center'}}>
               <View style={styles.itemList}>
                   {this.state.options}
               </View>
             </View>
-            <View style={{justifyContent: 'flex-end', paddingBottom: 5, flexDirection: 'row', backgroundColor: 'white'}}>
+            <View style={{justifyContent: 'flex-end', borderRadius: 15, paddingBottom: 5, flexDirection: 'row', backgroundColor: 'white'}}>
               <View style={{flex: 1, alignItems: 'center'}}>
                 {this.state.firstShow? null
                   :

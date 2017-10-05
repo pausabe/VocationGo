@@ -5,6 +5,7 @@ import GLOBAL from "../Globals/Globals";
 import PopupDialog, {
   DialogTitle,
 } from 'react-native-popup-dialog';
+import ModalDropdown from 'react-native-modal-dropdown';
 
 export default class SettingComponent extends Component{
 
@@ -46,9 +47,6 @@ export default class SettingComponent extends Component{
         return(
           <View>
               <View style={styles.option}>
-                  <View style={styles.textView}>
-                      <Text style={styles.text}>{this.name}</Text>
-                  </View>
                   <View style={styleSelectorView}>
                       {selectorComponent}
                   </View>
@@ -81,18 +79,17 @@ export default class SettingComponent extends Component{
               onValueChange: this._updateSelectionStateCallback.bind(this)
           });
           return React.createElement(Picker, selectorProps,
-              this._generatePickerOptions()
-          );
+              this._generatePickerOptions());
         }
         else{
           let selectorProps = this._mergeProps({
               selectedValue: this.state.value,
+              mode: 'dropdown',
               onValueChange: this._updateSelectionStateCallback.bind(this),
               style: styles.selectorPicker
           });
           return React.createElement(Picker, selectorProps,
-              this._generatePickerOptions()
-          );
+              this._generatePickerOptions());
         }
     }
 
@@ -127,11 +124,10 @@ export default class SettingComponent extends Component{
 
 const styles = StyleSheet.create({
     option: {
-        minHeight: 70,
-        paddingHorizontal: 20,
+        //minHeight: 70,
+        paddingHorizontal: 30,
         paddingVertical: 10,
         flexDirection: "row",
-        justifyContent: "space-between"
     },
     textView: {
         flex: 5,
@@ -139,11 +135,12 @@ const styles = StyleSheet.create({
     },
     selectorView: {
         flex: 5,
-        justifyContent: "center"
+        justifyContent: "center",
     },
     text: {
         color: "black",
-        fontSize: 16
+        fontSize: 17,
+        fontWeight: "600",
     },
     selectorViewSwitch: {
         flex: 1,
@@ -151,6 +148,6 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end"
     },
     selectorPicker: {
-        color: "gray"
+      color: "gray"
     }
 });
