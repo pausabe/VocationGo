@@ -88,10 +88,6 @@ export default class GrupsMap extends Component {
         return (
           [
             {
-            latitude: 41.78973,
-            longitude: 2.37236
-            },
-            {
             latitude: 41.77615,
             longitude: 2.48808
             },
@@ -188,28 +184,20 @@ export default class GrupsMap extends Component {
             longitude: 2.48153
             },
             {
-            latitude: 42.42244,
-            longitude: 2.29751
+            latitude: 42.36767,
+            longitude: 2.45304
             },
             {
-            latitude: 42.31641,
-            longitude: 2.23915
+            latitude: 42.0921,
+            longitude: 2.34146
             },
             {
-            latitude: 42.30676,
-            longitude: 2.33871
+            latitude: 42.00083,
+            longitude: 2.5756
             },
             {
-            latitude: 42.13285,
-            longitude: 2.22061
-            },
-            {
-            latitude: 41.35645,
-            longitude: 2.06096
-            },
-            {
-            latitude: 41.3741,
-            longitude: 2.09632
+            latitude: 41.92373,
+            longitude: 2.6168
             },
           ]
         )
@@ -644,6 +632,352 @@ export default class GrupsMap extends Component {
           ]
         )
       break;
+      case 'Tortosa':
+        return (
+          [
+            {
+            latitude: 40.9353,
+            longitude: 0.86105
+            },
+            {
+            latitude: 40.81796,
+            longitude: 0.75119
+            },
+            {
+            latitude: 40.71291,
+            longitude: 0.91049
+            },
+            {
+            latitude: 40.55554,
+            longitude: 0.67428
+            },
+            {
+            latitude: 40.52319,
+            longitude: 0.51635
+            },
+            {
+            latitude: 40.54824,
+            longitude: 0.43807
+            },
+            {
+            latitude: 40.57432,
+            longitude: 0.44219
+            },
+            {
+            latitude: 40.63375,
+            longitude: 0.27191
+            },
+            {
+            latitude: 40.68896,
+            longitude: 0.28564
+            },
+            {
+            latitude: 40.73685,
+            longitude: 0.1799
+            },
+            {
+            latitude: 40.8242,
+            longitude: 0.27191
+            },
+            {
+            latitude: 40.90209,
+            longitude: 0.24444
+            },
+            {
+            latitude: 40.96849,
+            longitude: 0.29251
+            },
+            {
+            latitude: 41.10781,
+            longitude: 0.20599
+            },
+            {
+            latitude: 41.16004,
+            longitude: 0.30418
+            },
+            {
+            latitude: 41.22411,
+            longitude: 0.32341
+            },
+            {
+            latitude: 41.23392,
+            longitude: 0.38246
+            },
+            {
+            latitude: 41.27212,
+            longitude: 0.3828
+            },
+            {
+            latitude: 41.25225,
+            longitude: 0.50399
+            },
+            {
+            latitude: 41.26129,
+            longitude: 0.61454
+            },
+            {
+            latitude: 41.15539,
+            longitude: 0.61042
+            },
+            {
+            latitude: 41.08659,
+            longitude: 0.74089
+            },
+          ]
+        )
+      break;
+      /*case 'Urgell':
+        return (
+          [
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude:,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude:,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+            {
+            latitude: ,
+            longitude:
+            },
+          ]
+        )
+      break;*/
+      case 'Vic':
+        return (
+          [
+            {
+            latitude: 41.5006,
+            longitude: 1.46186
+            },
+            {
+            latitude: 41.52965,
+            longitude: 1.39595
+            },
+            {
+            latitude: 41.54224,
+            longitude: 1.43474
+            },
+            {
+            latitude: 41.57076,
+            longitude: 1.44075
+            },
+            {
+            latitude: 41.59336,
+            longitude: 1.42667
+            },
+            {
+            latitude: 41.62288,
+            longitude: 1.39904
+            },
+            {
+            latitude: 41.63469,
+            longitude: 1.4071
+            },
+            {
+            latitude: 41.63417,
+            longitude: 1.47285
+            },
+            {
+            latitude: 41.71457,
+            longitude: 1.40933
+            },
+            {
+            latitude: 41.76683,
+            longitude: 1.4689
+            },
+            {
+            latitude: 41.80945,
+            longitude: 1.62906
+            },
+            {
+            latitude: 41.81687,
+            longitude: 1.75781
+            },
+            {
+            latitude: 41.84552,
+            longitude: 1.81137
+            },
+            {
+            latitude: 41.83554,
+            longitude: 1.87625
+            },
+            {
+            latitude: 42.01052,
+            longitude: 2.01667
+            },
+            {
+            latitude: 42.10739,
+            longitude: 2.00775
+            },
+            {
+            latitude: 42.12267,
+            longitude: 2.06542
+            },
+            {
+            latitude: 42.15678,
+            longitude: 2.07023
+            },
+            {
+            latitude: 42.20003,
+            longitude: 2.09392
+            },
+            {
+            latitude: 42.23639,
+            longitude: 2.07572
+            },
+            {
+            latitude: 42.27553,
+            longitude: 2.06989
+            },
+            {
+            latitude: 42.26689,
+            longitude: 2.18112
+            },
+            {
+            latitude: 42.27934,
+            longitude: 2.27108
+            },
+            {
+            latitude: 42.41635,
+            longitude: 2.20001
+            },
+            {
+            latitude: 42.43891,
+            longitude: 2.25563
+            },
+            {
+            latitude: 42.36767,
+            longitude: 2.45304
+            },
+            {
+            latitude: 42.0921,
+            longitude: 2.34146
+            },
+            {
+            latitude: 42.00083,
+            longitude: 2.5756
+            },
+            {
+            latitude: 41.92373,
+            longitude: 2.6168
+            },
+            {
+            latitude: 41.78411,
+            longitude: 2.49114
+            },
+            {
+            latitude: 41.78973,
+            longitude: 2.37236
+            },
+            {
+            latitude: 41.73364,
+            longitude: 2.32254
+            },
+            {
+            latitude: 41.69981,
+            longitude: 2.27588
+            },
+            {
+            latitude: 41.66571,
+            longitude: 2.16155
+            },
+            {
+            latitude: 41.64056,
+            longitude: 1.99879
+            },
+            {
+            latitude: 41.57946,
+            longitude: 1.9157
+            },
+            {
+            latitude: 41.65341,
+            longitude: 1.79111
+            },
+            {
+            latitude: 41.64854,
+            longitude: 1.73206
+            },
+            {
+            latitude: 41.59541,
+            longitude: 1.75746
+            },
+            {
+            latitude: 41.5078,
+            longitude: 1.50444
+            },
+          ]
+        )
+      break;
     }
   }
 
@@ -662,10 +996,10 @@ export default class GrupsMap extends Component {
       case 'Girona':
         return (
           {
-            latitude: 42.1,
-            longitude: 2.75,
+            latitude: 42.09414,
+            longitude: 2.83595,
             latitudeDelta: 1.0,
-            longitudeDelta: 1.15,
+            longitudeDelta: 1.05,
           }
         )
         break;
@@ -716,6 +1050,36 @@ export default class GrupsMap extends Component {
             longitude: 2.23983,
             latitudeDelta: 0.7,
             longitudeDelta: 0.67,
+          }
+        )
+        break;
+      case 'Tortosa':
+        return (
+          {
+            latitude: 40.8751,
+            longitude: 0.52871,
+            latitudeDelta: 0.85,
+            longitudeDelta: 0.85,
+          }
+        )
+        break;
+      /*case 'Urgell':
+        return (
+          {
+            latitude: ,
+            longitude: ,
+            latitudeDelta: ,
+            longitudeDelta: ,
+          }
+        )
+        break;*/
+      case 'Vic':
+        return (
+          {
+            latitude: 41.98195,
+            longitude: 2.00366,
+            latitudeDelta: 1.3,
+            longitudeDelta: 1.3,
           }
         )
         break;

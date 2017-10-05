@@ -10,7 +10,7 @@ export default class BottomBar extends Component {
       <View style={styles.bottomBar}>
         <View style={{flex:1}}>
           {this.props.bisbat !== 'none'?
-            <Text style={styles.bottomBarText}>{'Bisbat de '+this.props.bisbat}</Text>
+            <Text style={styles.bottomBarText}>{'Bisbat '}{this.showName(this.props.bisbat)}</Text>
             : null
           }
         </View>
@@ -20,6 +20,11 @@ export default class BottomBar extends Component {
         </View>
       </View>
     )
+  }
+
+  showName(bisbat){
+    if(bisbat === 'Urgell') return "d'Urgell";
+    return "de " + bisbat;
   }
 }
 

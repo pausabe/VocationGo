@@ -11,7 +11,6 @@ export const diocesis = {
     TORTOSA: "Tortosa",
     URGELL: "Urgell",
     VIC: "Vic",
-    ANDORRA: "Andorra",
 };
 
 /*export const lloc = {
