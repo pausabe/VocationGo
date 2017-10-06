@@ -45,7 +45,10 @@ export default class HomeScreen extends Component {
 
   componentDidMount() {
     if(Platform.OS==='android'){
-      setTimeout(() => { SplashScreen.hide(); }, 550);
+      setTimeout(() => { SplashScreen.hide(); }, 100);
+    }
+    else{
+      SplashScreen.hide();
     }
     this.props.events.addListener('myEvent', this.onOkEvent.bind(this));
   }

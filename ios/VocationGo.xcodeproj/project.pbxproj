@@ -65,6 +65,7 @@
 		5F64E5EF1E952433005129BE /* llum5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D71E952433005129BE /* llum5.mp3 */; };
 		5F64E5F01E952433005129BE /* llumlletanies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F64E5D81E952433005129BE /* llumlletanies.mp3 */; };
 		5F6AA8971E5645A10085A7A1 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 5F6AA8961E5645A10085A7A1 /* www */; };
+		5FDB6CD71F86AB5400BFE26B /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F64E56D1E939CA0005129BE /* libSplashScreen.a */; };
 		641300E742FF404FA51F2AC5 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9452EDAEC3594CD1B0CE51D2 /* libAirMaps.a */; };
 		7367BBED09E44746AC1A6C9E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E5A9AF32964C1D8F55111B /* libsqlite3.0.tbd */; };
 		77F6D15CC2B5475288BCFC47 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ECE8FF3BC0E466E8175C4AE /* Foundation.ttf */; };
@@ -392,6 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDB6CD71F86AB5400BFE26B /* libSplashScreen.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -1358,6 +1360,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 542WEU679H;
 				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
@@ -1383,6 +1386,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 542WEU679H;
 				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);

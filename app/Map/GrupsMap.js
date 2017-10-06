@@ -130,7 +130,8 @@ export default class GrupsMap extends Component {
             <MapView.Marker
               key={marker.key}
               coordinate={marker.coordinate}
-              pinColor={GLOBAL.mapColor}>
+              pinColor={GLOBAL.mapColor}
+              zIndex={999}>
               <MapView.Callout style={{width: 200}}>
               <View >
                 <Text style={GLOBAL.litleTitle}>{marker.title}</Text>
