@@ -141,17 +141,17 @@ export default class GrupsMap extends Component {
                 <Text style={GLOBAL.litleTitle}>{marker.title}</Text>
                 <Hr lineColor='rgba(166, 183, 191, 0.9)' />
                 {marker.description !== "none"?
-                  <View>
                     <Text style={GLOBAL.normalText}>{marker.description}</Text>
-                    <Hr lineColor='rgba(166, 183, 191, 0.9)' />
-                  </View>
                   : null
                 }
                 {marker.contact.name !== "none"?
-                  <TouchableOpacity >
-                    <Text style={GLOBAL.normalText}>{"Contacta amb "}{marker.contact.name}{": "}
-                        <Text style={GLOBAL.normalTextBlue}>{this.phoneToShow(marker.contact.phone)}</Text></Text>
-                  </TouchableOpacity>
+                  <View>
+                    <Hr lineColor='rgba(166, 183, 191, 0.9)' />
+                    <TouchableOpacity >
+                      <Text style={GLOBAL.normalText}>{"Contacta amb "}{marker.contact.name}{": "}
+                          <Text style={GLOBAL.normalTextBlue}>{this.phoneToShow(marker.contact.phone)}</Text></Text>
+                    </TouchableOpacity>
+                  </View>
                   : null
                 }
               </View>

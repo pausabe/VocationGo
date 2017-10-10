@@ -1,6 +1,6 @@
-const litleSize = 14;
-const normalSize = 17;
-const bigSize = 28;
+const litleSize = 17;//14;
+const normalSize = 20;//17;
+const bigSize = 29;//28;
 
 const litleTitleColor = 'rgb(0, 33, 64)';
 const bigTitleColor = 'rgb(0, 27, 51)';
