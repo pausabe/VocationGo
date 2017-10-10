@@ -135,7 +135,7 @@ export default class GrupsMap extends Component {
               coordinate={marker.coordinate}
               pinColor={GLOBAL.mapColor}
               zIndex={999}
-              onCalloutPress={this.makeCall.bind(this, marker.contact1.phone)}>
+              onCalloutPress={this.makeCall.bind(this, marker.contact.phone)}>
               <MapView.Callout width={200} >
               <View >
                 <Text style={GLOBAL.litleTitle}>{marker.title}</Text>
@@ -147,11 +147,10 @@ export default class GrupsMap extends Component {
                   </View>
                   : null
                 }
-                {marker.contact1.name !== "none"?
-                  <TouchableOpacity
-                    onPress={this.makeCall.bind(this, marker.contact1.phone)}>
-                    <Text style={GLOBAL.normalText}>{"Contacta amb "}{marker.contact1.name}{": "}
-                        <Text style={GLOBAL.normalTextBlue}>{this.phoneToShow(marker.contact1.phone)}</Text></Text>
+                {marker.contact.name !== "none"?
+                  <TouchableOpacity >
+                    <Text style={GLOBAL.normalText}>{"Contacta amb "}{marker.contact.name}{": "}
+                        <Text style={GLOBAL.normalTextBlue}>{this.phoneToShow(marker.contact.phone)}</Text></Text>
                   </TouchableOpacity>
                   : null
                 }
@@ -190,7 +189,11 @@ export default class GrupsMap extends Component {
         prompt: true // Optional boolean property. Determines if the user should be prompt prior to the call
       }
 
-      call(CallArgs).catch(console.error);
+      try {
+        call(CallArgs);
+      } catch (e) {
+        console.log("error!");
+      }
     }
   }
 }

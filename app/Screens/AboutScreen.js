@@ -4,8 +4,9 @@ import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity, 
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
-import BottomBar from '../BottomBar/BottomBar'
-import GrupScreen from '../Screens/GrupsScreen'
+import BottomBar from '../BottomBar/BottomBar';
+import GrupScreen from '../Screens/GrupsScreen';
+import call from 'react-native-phone-call';
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
@@ -145,10 +146,11 @@ class AboutScreen extends Component {
               <Text />
               <Text />
               { this.state.contacte.nom !== 'none' ?
-                <View>
+                <TouchableOpacity onPress={this.makeCall.bind(this, this.state.contacte.telefon)}>
                   <Text style={GLOBAL.italicNormalText}>{"Per començar un grup nou"}</Text>
-                  <Text style={GLOBAL.italicNormalText}>{"contacta amb "}{this.state.contacte.nom}{" "}{this.state.contacte.telefon}</Text>
-                </View>
+                  <Text style={GLOBAL.italicNormalText}>{"contacta amb "}{this.state.contacte.nom}{" "}
+                    <Text style={GLOBAL.italicNormalTextBlue}>{this.phoneToShow(this.state.contacte.telefon)}</Text></Text>
+                </TouchableOpacity>
                 : null
               }
               <Text />
@@ -159,6 +161,28 @@ class AboutScreen extends Component {
         <BottomBar bisbat={this.props.bisbat}/>
       </View>
     )
+  }
+
+  phoneToShow(phone){
+    if(phone.length !== 9) return phone;
+    return phone.charAt(0) + phone.charAt(1) + phone.charAt(2) + " " +
+        phone.charAt(3) + phone.charAt(4) + phone.charAt(5) + " " +
+        phone.charAt(6) + phone.charAt(7) + phone.charAt(8);
+  }
+
+  makeCall(phone){
+    if(phone && phone !== "none"){
+      const CallArgs = {
+        number: phone, // String value with the number to call
+        prompt: true // Optional boolean property. Determines if the user should be prompt prior to the call
+      }
+
+      try {
+        call(CallArgs);
+      } catch (e) {
+        console.log("error!");
+      }
+    }
   }
 
   onButtonPress(idPressed, title, component){

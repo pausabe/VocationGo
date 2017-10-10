@@ -1,9 +1,22 @@
 {
   "contacte": {
-    "nom": "none",
-    "telefon": "none"
+    "nom": "Delegació diocesana de Pastoral Vocacional",
+    "telefon": "936327630"
   },
   "markers": [
-    
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 41.377279,
+        "longitude": 2.045082
+      },
+      "title": "Casa de l'Església",
+      "description": "Els darrers dijous de mes a les 19h Vespres i Adoració del Sant Sagrament",
+      "contact": {
+        "name": "Delegació diocesana de Pastoral Vocacional",
+        "phone": "936327630"
+      }
+    }
   ]
 }

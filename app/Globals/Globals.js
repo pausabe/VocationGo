@@ -57,6 +57,13 @@ module.exports = {
     fontWeight: '300',
     color: textColor,
   },
+  italicNormalTextBlue: {
+    textAlign: 'center',
+    fontSize: normalSize,
+    fontStyle: 'italic',
+    fontWeight: '300',
+    color: 'rgb(51, 153, 255)',
+  },
   italicRightNormalText: {
     textAlign: 'right',
     fontSize: litleSize,
