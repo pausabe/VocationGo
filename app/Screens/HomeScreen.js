@@ -13,7 +13,7 @@ import AboutScreen from '../Screens/AboutScreen'
 import SettingsManager from '../Settings/SettingsManager';
 import BottomBar from '../BottomBar/BottomBar'
 import EventEmitter from 'EventEmitter';
-import SplashScreen from 'react-native-splash-screen'
+import SplashScreen from 'react-native-splash-screen';
 
 function paddingBar(){
   if(Platform.OS === 'ios'){

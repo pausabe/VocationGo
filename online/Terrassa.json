@@ -1,7 +1,7 @@
 {
   "contacte": {
     "nom": "Mn Guillem",
-    "telefon": "660 847 213"
+    "telefon": "660847213"
   },
   "markers": [
     {
@@ -12,7 +12,11 @@
         "longitude": 2.06925
       },
       "title": "Seminari Diocesà de Terrassa",
-      "description": "Preguen cada dia Laudes i Vespres.\nDijous ofereixen la Missa per les vocacions"
+      "description": "Preguen cada dia Laudes i Vespres.\nDijous ofereixen la Missa per les vocacions",
+      "contact": {
+        "name": "none",
+        "phone": "none"
+      }
     },
     {
       "key": "1",
@@ -22,7 +26,11 @@
         "longitude": 2.011514
       },
       "title": "Catedral del Sant Esperit - Terrassa",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb la Margarida 620 067 703"
+      "description": "none",
+      "contact": {
+        "name": "Margarida",
+        "phone": "620067703"
+      }
     },
     {
       "key": "2",
@@ -32,7 +40,11 @@
         "longitude": 2.012508
       },
       "title": "Parròquia de Sant Valentí - Terrassa",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb la Dolors 609 773 727"
+      "description": "none",
+      "contact": {
+        "name": "Dolors",
+        "phone": "609773727"
+      }
     },
     {
       "key": "3",
@@ -42,7 +54,11 @@
         "longitude": 2.128845
       },
       "title": "Parròquia Mare de Déu del Roser - Cerdanyola",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb la Luisa 661 816 272"
+      "description": "none",
+      "contact": {
+        "name": "Luisa",
+        "phone": "661816272"
+      }
     },
     {
       "key": "4",
@@ -52,7 +68,11 @@
         "longitude": 2.354688
       },
       "title": "Parròquia de Sant Muç - Cànoves",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb el Manel 635 88 94 24 i el Salvador 676 90 48 99"
+      "description": "none",
+      "contact": {
+        "name": "Manel",
+        "phone": "635889424"
+      }
     },
     {
       "key": "5",
@@ -62,7 +82,11 @@
         "longitude": 2.151260
       },
       "title": "Parròquia de Sant Salvador de Polinyà",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb Mn. Mario 605 446 601"
+      "description": "none",
+      "contact": {
+        "name": "Mn Mario",
+        "phone": "605446601"
+      }
     },
     {
       "key": "6",
@@ -72,7 +96,11 @@
         "longitude": 2.221755
       },
       "title": "Parròquia de Sant Pere i Sant Pau - Bigues",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb la Mercè Morales 689 399 627"
+      "description": "none",
+      "contact": {
+        "name": "Marcè Morales",
+        "phone": "689399627"
+      }
     },
     {
       "key": "7",
@@ -82,7 +110,11 @@
         "longitude": 2.067081
       },
       "title": "Parròquia de Sant Cebrià - Valldoreix",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb l'Àlex Serra 608 193 785 i el Jacob Espín 685 168 626"
+      "description": "none",
+      "contact": {
+        "name": "Àlex Serra",
+        "phone": "608193785"
+      }
     },
     {
       "key": "8",
@@ -92,7 +124,11 @@
         "longitude": 2.290689
       },
       "title": "Parròquia de la Mare de Déu de Montserrat i Sant Antoni de Pàdua - Granollers",
-      "description": "Per unir-te al grup i obtenir més informació, contacta amb P. Jordi 616 31 38 82"
+      "description": "none",
+      "contact": {
+        "name": "P. Jordi",
+        "phone": "616313882"
+      }
     }
   ]
 }

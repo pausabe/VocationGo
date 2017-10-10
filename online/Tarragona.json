@@ -1,9 +1,22 @@
 {
   "contacte": {
-    "nom": "none",
-    "telefon": "none"
+    "nom": "Mn Josep Mateu",
+    "telefon": "639442033"
   },
   "markers": [
-    
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 41.139140,
+        "longitude": 1.051095
+      },
+      "title": "Parròquia St. Jaume de Riudoms",
+      "description": "Preguen cada dia el rosari a les 19h",
+      "contact": {
+        "name": "Pere Castells",
+        "phone": "670095595"
+      }
+    }
   ]
 }

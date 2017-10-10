@@ -55,8 +55,8 @@ module.exports = {
     center: {
         latitude: 41.47874,
         longitude: 2.26,
-        latitudeDelta: 0.65,
-        longitudeDelta: 0.5,
+        latitudeDelta: 0.7,
+        longitudeDelta: 0.7,
     }
   },
   Girona: {
@@ -293,6 +293,124 @@ module.exports = {
       longitude: 0.6,
       latitudeDelta: 1.25,
       longitudeDelta: 1.25,
+    }
+  },
+  Mallorca: {
+    coordinates: [
+      {
+      latitude: 39.57923,
+      longitude: 2.29202
+      },
+      {
+      latitude: 39.71141,
+      longitude: 2.51312
+      },
+      {
+      latitude: 39.86442,
+      longitude: 2.76443
+      },
+      {
+      latitude: 39.92553,
+      longitude: 2.94158
+      },
+      {
+      latitude: 39.96343,
+      longitude: 3.22036
+      },
+      {
+      latitude: 39.94027,
+      longitude: 3.20388
+      },
+      {
+      latitude: 39.9013,
+      longitude: 3.07891
+      },
+      {
+      latitude: 39.86337,
+      longitude: 3.10089
+      },
+      {
+      latitude: 39.89709,
+      longitude: 3.1929
+      },
+      {
+      latitude: 39.84966,
+      longitude: 3.20526
+      },
+      {
+      latitude: 39.81908,
+      longitude: 3.12149
+      },
+      {
+      latitude: 39.76315,
+      longitude: 3.16543
+      },
+      {
+      latitude: 39.72936,
+      longitude: 3.25057
+      },
+      {
+      latitude: 39.79376,
+      longitude: 3.33572
+      },
+      {
+      latitude: 39.72831,
+      longitude: 3.47717
+      },
+      {
+      latitude: 39.56864,
+      longitude: 3.40438
+      },
+      {
+      latitude: 39.35341,
+      longitude: 3.23959
+      },
+      {
+      latitude: 39.26096,
+      longitude: 3.05831
+      },
+      {
+      latitude: 39.35235,
+      longitude: 2.9663
+      },
+      {
+      latitude: 39.35659,
+      longitude: 2.7919
+      },
+      {
+      latitude: 39.42134,
+      longitude: 2.72186
+      },
+      {
+      latitude: 39.5284,
+      longitude: 2.72598
+      },
+      {
+      latitude: 39.55911,
+      longitude: 2.64221
+      },
+      {
+      latitude: 39.54429,
+      longitude: 2.63946
+      },
+      {
+      latitude: 39.51781,
+      longitude: 2.55638
+      },
+      {
+      latitude: 39.44785,
+      longitude: 2.51861
+      },
+      {
+      latitude: 39.57923,
+      longitude: 2.29202
+      },
+    ],
+    center: {
+        latitude: 39.60357,
+        longitude: 2.9,
+        latitudeDelta: 1.3,
+        longitudeDelta: 1.3,
     }
   },
   SantFeliu: {

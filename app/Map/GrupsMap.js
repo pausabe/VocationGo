@@ -1,11 +1,12 @@
 //i4S6u4d5
 import React, { Component, PropTypes } from 'react';
-import { AppRegistry, View, Text, StyleSheet, NetInfo,Platform } from 'react-native';
+import { AppRegistry, TouchableOpacity, View, Text, StyleSheet, NetInfo,Platform } from 'react-native';
 
 import MapView from 'react-native-maps';
 import Hr from 'react-native-hr';
 import GLOBAL from '../Globals/Globals';
-import AREAS from '../Map/Areas'
+import AREAS from '../Map/Areas';
+import call from 'react-native-phone-call';
 
 function paddingBar(){
   if(Platform.OS === 'ios'){
@@ -34,6 +35,7 @@ export default class GrupsMap extends Component {
       case 'Barcelona': return(AREAS.Barcelona.coordinates); break;
       case 'Girona': return(AREAS.Girona.coordinates); break;
       case 'Lleida': return(AREAS.Lleida.coordinates); break;
+      case 'Mallorca': return(AREAS.Mallorca.coordinates); break;
       case 'Sant Feliu de Llobregat': return(AREAS.SantFeliu.coordinates); break;
       case 'Solsona': return(AREAS.Solsona.coordinates); break;
       case 'Tarragona': return(AREAS.Tarragona.coordinates); break;
@@ -49,6 +51,7 @@ export default class GrupsMap extends Component {
       case 'Barcelona': return(AREAS.Barcelona.center); break;
       case 'Girona': return(AREAS.Girona.center); break;
       case 'Lleida': return(AREAS.Lleida.center); break;
+      case 'Mallorca': return(AREAS.Mallorca.center); break;
       case 'Sant Feliu de Llobregat': return(AREAS.SantFeliu.center); break;
       case 'Solsona': return(AREAS.Solsona.center); break;
       case 'Tarragona': return(AREAS.Tarragona.center); break;
@@ -131,12 +134,27 @@ export default class GrupsMap extends Component {
               key={marker.key}
               coordinate={marker.coordinate}
               pinColor={GLOBAL.mapColor}
-              zIndex={999}>
-              <MapView.Callout style={{width: 200}}>
+              zIndex={999}
+              onCalloutPress={this.makeCall.bind(this, marker.contact1.phone)}>
+              <MapView.Callout width={200} >
               <View >
                 <Text style={GLOBAL.litleTitle}>{marker.title}</Text>
                 <Hr lineColor='rgba(166, 183, 191, 0.9)' />
-                <Text style={GLOBAL.normalText}>{marker.description}</Text>
+                {marker.description !== "none"?
+                  <View>
+                    <Text style={GLOBAL.normalText}>{marker.description}</Text>
+                    <Hr lineColor='rgba(166, 183, 191, 0.9)' />
+                  </View>
+                  : null
+                }
+                {marker.contact1.name !== "none"?
+                  <TouchableOpacity
+                    onPress={this.makeCall.bind(this, marker.contact1.phone)}>
+                    <Text style={GLOBAL.normalText}>{"Contacta amb "}{marker.contact1.name}{": "}
+                        <Text style={GLOBAL.normalTextBlue}>{this.phoneToShow(marker.contact1.phone)}</Text></Text>
+                  </TouchableOpacity>
+                  : null
+                }
               </View>
             </MapView.Callout>
             </MapView.Marker>
@@ -156,6 +174,24 @@ export default class GrupsMap extends Component {
         }
       </View>
     )
+  }
+
+  phoneToShow(phone){
+    if(phone.length !== 9) return phone;
+    return phone.charAt(0) + phone.charAt(1) + phone.charAt(2) + " " +
+        phone.charAt(3) + phone.charAt(4) + phone.charAt(5) + " " +
+        phone.charAt(6) + phone.charAt(7) + phone.charAt(8);
+  }
+
+  makeCall(phone){
+    if(phone && phone !== "none"){
+      const CallArgs = {
+        number: phone, // String value with the number to call
+        prompt: true // Optional boolean property. Determines if the user should be prompt prior to the call
+      }
+
+      call(CallArgs).catch(console.error);
+    }
   }
 }
 

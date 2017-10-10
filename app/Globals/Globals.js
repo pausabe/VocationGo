@@ -31,6 +31,12 @@ module.exports = {
     fontWeight: '300',
     color: textColor,
   },
+  normalTextBlue: {
+    textAlign: 'center',
+    fontSize: normalSize,
+    fontWeight: '300',
+    color: 'rgb(51, 153, 255)',
+  },
   justifyNormalText: {
     textAlign: 'justify',
     fontSize: normalSize,
