@@ -17,6 +17,34 @@
         "name": "Delegació diocesana de Pastoral Vocacional",
         "phone": "936327630"
       }
+    },
+    {
+      "key": "1",
+      "coordinate":
+      {
+        "latitude": 41.328595,
+        "longitude": 2.092576
+      },
+      "title": "Pregària de Taizé",
+      "description": "Pregària amb cants de Taizé el tercer divendres de mes. 19.30 - 20.30 hores",
+      "contact": {
+        "name": "Marta Peiró, carmelita missionera",
+        "phone": "679913256"
+      }
+    },
+    {
+      "key": "2",
+      "coordinate":
+      {
+        "latitude": 41.316215,
+        "longitude": 2.090062
+      },
+      "title": "Pregària del dijous",
+      "description": "Pregària amb exposició del santíssim els dijous de 10 a 11 hores",
+      "contact": {
+        "name": "Lluís Portabella, prevere",
+        "phone": "660872314"
+      }
     }
   ]
 }
