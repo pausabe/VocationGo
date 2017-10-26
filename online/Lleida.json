@@ -4,6 +4,33 @@
     "telefon": "695271159"
   },
   "markers": [
-
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 41.634217,
+        "longitude": 0.590118
+      },
+      "title": "Llar d'acollida Mare Esperança",
+      "description": "Cada dimarts de 7:00 a 7:30 del matí: Missa per les vocacions",
+      "contact": {
+        "name": "none",
+        "phone": "none"
+      }
+    },
+    {
+      "key": "1",
+      "coordinate":
+      {
+        "latitude": 41.631200,
+        "longitude": 0.592676
+      },
+      "title": "Parròquia de la Mare de Déu de Montserrat",
+      "description": "Cada dimarts de 7:45 a 20:30: Laudes i Missa per les vocacions",
+      "contact": {
+        "name": "none",
+        "phone": "none"
+      }
+    }
   ]
 }
