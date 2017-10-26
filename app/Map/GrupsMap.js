@@ -68,16 +68,21 @@ export default class GrupsMap extends Component {
   }
 
   componentDidMount() {
+    console.log("appleConnectLog. componentDidMount");
     NetInfo.isConnected.addEventListener(
         'change',
         this._handleConnectivityChange
     );
     NetInfo.isConnected.fetch().done(
-        (isConnected) => { this.setState({isConnected}); }
+        (isConnected) => {
+          console.log("appleConnectLog. isConnected: " + isConnected);
+          this.setState({isConnected});
+        }
     );
   }
 
   componentWillUnmount() {
+    console.log("appleConnectLog. componentWillUnmount");
     NetInfo.isConnected.removeEventListener(
         'change',
         this._handleConnectivityChange
@@ -85,7 +90,9 @@ export default class GrupsMap extends Component {
   }
 
   _handleConnectivityChange = (isConnected) => {
+    console.log("appleConnectLog. _handleConnectivityChange");
     if(this.state.internet === false){
+      console.log("appleConnectLog. no this.state.internet -> internet = null & getMarkersFromApiAsync");
       this.setState({internet: null});
       this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
     }
@@ -95,27 +102,43 @@ export default class GrupsMap extends Component {
   };
 
   getMarkersFromApiAsync(bisbat) {
-    return fetch(`https://pausabe.com/apps/vocationGo/${bisbat}.json`)
+    console.log("appleConnectLog. getMarkersFromApiAsync");
+    return fetch(`https://pausabe.com/apps/vocationGo/${bisbat}.json`, {
+        headers: {
+        'Cache-Control': 'no-cache'
+      }
+    })
       .then((response) => response.json())
       .then((responseJson) => {
+        console.log("appleConnectLog. internet = true & displayData");
         this.displayData(responseJson);
         this.setState({internet: true});
         return responseJson;
       })
       .catch((error) => {
+        console.log("appleConnectLog. error: "+error);
         this.setState({internet: false});
       });
   }
 
   displayData(data){
+    console.log("appleConnectLog. displayData");
+    if(data.markers.length !== 0){
+      console.log("appleConnectLog. there are markers: " + data.markers[0].description);
+    }
+    else{
+      console.log("appleConnectLog. there are no markers");
+    }
     this.setState({markers: data.markers});
   }
 
   componentWillMount() {
-    this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
+    console.log("appleConnectLog. componentWillMount -> getMarkersFromApiAsync");
+    var v = this.getMarkersFromApiAsync(this.nameBisbat(this.props.bisbat));
   }
 
   render() {
+    console.log("appleConnectLog. render");
     return (
       <View style={styles.container}>
         <MapView
@@ -192,7 +215,7 @@ export default class GrupsMap extends Component {
       try {
         call(CallArgs);
       } catch (e) {
-        console.log("error!");
+        console.log("appleConnectLog. error call");
       }
     }
   }
