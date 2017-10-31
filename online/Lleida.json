@@ -14,8 +14,8 @@
       "title": "Llar d'acollida Mare Esperança",
       "description": "Cada dia de 7:30 a 8:30 del matí: Missa per les vocacions",
       "contact": {
-        "name": "none",
-        "phone": "none"
+        "name": "Mn. Manel Mercadé",
+        "phone": "973232810"
       }
     },
     {
@@ -28,8 +28,22 @@
       "title": "Parròquia de la Mare de Déu de Montserrat",
       "description": "Cada dimarts de 7:45 a 8:30 del matí: Laudes i Missa per les vocacions",
       "contact": {
-        "name": "none",
-        "phone": "none"
+        "name": "Mn. Manel Mercadé",
+        "phone": "973232810"
+      }
+    },
+    {
+      "key": "2",
+      "coordinate":
+      {
+        "latitude": 41.612327,
+        "longitude": 0.610717
+      },
+      "title": "Sant Pau",
+      "description": "Cada dijous de 19h a 19:30 adoració eucarística en favor de les vocacions",
+      "contact": {
+        "name": "Antoni Agelet",
+        "phone": "973260573"
       }
     }
   ]

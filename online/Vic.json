@@ -4,6 +4,19 @@
     "telefon": "656366337"
   },
   "markers": [
-
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 41.928159,
+        "longitude": 2.255311
+      },
+      "title": "Catedral de Vic",
+      "description": "Hora d’adoració al Santíssim, amb el res de vespres",
+      "contact": {
+        "name": "Mn. Jaume Casamitjana",
+        "phone": "656366337"
+      }
+    }
   ]
 }
