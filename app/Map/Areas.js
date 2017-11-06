@@ -684,20 +684,32 @@ module.exports = {
       longitude: 0.93383
       },
       {
-      latitude: 40.9353,
-      longitude: 0.86105
+      latitude: 41.09927,
+      longitude: 0.89126
       },
       {
-      latitude: 41.08659,
-      longitude: 0.74089
+      latitude: 41.12927,
+      longitude: 0.80835
       },
       {
-      latitude: 41.15539,
-      longitude: 0.61042
+      latitude: 41.13341,
+      longitude: 0.74518
       },
       {
-      latitude: 41.26129,
-      longitude: 0.61454
+      latitude: 41.18679,
+      longitude: 0.75239
+      },
+      {
+      latitude: 41.22269,
+      longitude: 0.76663
+      },
+      {
+      latitude: 41.28902,
+      longitude: 0.75599
+      },
+      {
+      latitude: 41.28657,
+      longitude: 0.63274
       },
       {
       latitude: 41.43706,
@@ -864,20 +876,72 @@ module.exports = {
       longitude: 0.51635
       },
       {
-      latitude: 40.54824,
-      longitude: 0.43807
+      latitude: 40.29733,
+      longitude: 0.3519
       },
       {
-      latitude: 40.57432,
-      longitude: 0.44219
+      latitude: 40.25476,
+      longitude: 0.29225
       },
       {
-      latitude: 40.63375,
-      longitude: 0.27191
+      latitude: 40.2638,
+      longitude: 0.20187
       },
       {
-      latitude: 40.68896,
-      longitude: 0.28564
+      latitude: 40.32874,
+      longitude: 0.195
+      },
+      {
+      latitude: 40.41192,
+      longitude: 0.05836
+      },
+      {
+      latitude: 40.4916,
+      longitude: -0.10265
+      },
+      {
+      latitude: 40.48142,
+      longitude: -0.21697
+      },
+      {
+      latitude: 40.52945,
+      longitude: -0.29697
+      },
+      {
+      latitude: 40.61212,
+      longitude: -0.29422
+      },
+      {
+      latitude: 40.61812,
+      longitude: -0.37525
+      },
+      {
+      latitude: 40.66735,
+      longitude: -0.37113
+      },
+      {
+      latitude: 40.68948,
+      longitude: -0.23895
+      },
+      {
+      latitude: 40.77222,
+      longitude: -0.21011
+      },
+      {
+      latitude: 40.7873,
+      longitude: -0.15792
+      },
+      {
+      latitude: 40.73373,
+      longitude: -0.08651
+      },
+      {
+      latitude: 40.7254,
+      longitude: 0.01235
+      },
+      {
+      latitude: 40.68792,
+      longitude: 0.03845
       },
       {
       latitude: 40.73685,
@@ -924,19 +988,43 @@ module.exports = {
       longitude: 0.61454
       },
       {
-      latitude: 41.15539,
-      longitude: 0.61042
+      latitude: 41.28657,
+      longitude: 0.63274
       },
       {
-      latitude: 41.08659,
-      longitude: 0.74089
+      latitude: 41.28902,
+      longitude: 0.75599
+      },
+      {
+      latitude: 41.22269,
+      longitude: 0.76663
+      },
+      {
+      latitude: 41.18679,
+      longitude: 0.75239
+      },
+      {
+      latitude: 41.13341,
+      longitude: 0.74518
+      },
+      {
+      latitude: 41.12927,
+      longitude: 0.80835
+      },
+      {
+      latitude: 41.09927,
+      longitude: 0.89126
+      },
+      {
+      latitude: 40.98585,
+      longitude: 0.93074
       },
     ],
     center: {
-      latitude: 40.92492,
-      longitude: 0.5403,
-      latitudeDelta: 0.85,
-      longitudeDelta: 0.85,
+      latitude: 40.83848,
+      longitude: 0.31826,
+      latitudeDelta: 1.5,
+      longitudeDelta: 1.5,
     }
   },
   Urgell: {
