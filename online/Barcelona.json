@@ -1,9 +1,23 @@
 {
   "contacte": {
     "nom": "Mn David Alvarez",
-    "telefon": "647178487"
+    "telefon": "647178487",
+    "webSeminaristes": "none"
   },
   "markers": [
-
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 41.387977,
+        "longitude": 2.163488
+      },
+      "title": "Seminari Conciliar de Barcelona",
+      "description": "Exposició del Santíssim els dijous de 18h a 21h",
+      "contact": {
+        "name": "Mn. Josep Maria Turull",
+        "phone": "934541600"
+      }
+    }
   ]
 }

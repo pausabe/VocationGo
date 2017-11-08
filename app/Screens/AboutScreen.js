@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity, BackAndroid, NetInfo } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, Platform, Image, TouchableOpacity, BackAndroid, NetInfo, Linking } from 'react-native';
 
 import AudioBar from '../AudioBar/AudioBar';
 import GLOBAL from '../Globals/Globals';
@@ -22,7 +22,8 @@ class AboutScreen extends Component {
     this.state = {
       contacte: {
         nom: "none",
-        telefon: "none"
+        telefon: "none",
+        webSeminaristes: "none"
       },
       isConnected: null,
       internet: null,
@@ -66,7 +67,11 @@ class AboutScreen extends Component {
   };
 
   getMarkersFromApiAsync(bisbat) {
-    return fetch(`https://pausabe.com/apps/vocationGo/${bisbat}.json`)
+    return fetch(`https://pausabe.com/apps/vocationGo/${bisbat}.json`, {
+          headers: {
+          'Cache-Control': 'no-cache'
+        }
+      })
       .then((response) => response.json())
       .then((responseJson) => {
         this.displayData(responseJson);
@@ -79,6 +84,7 @@ class AboutScreen extends Component {
   }
 
   displayData(data){
+    console.log("data: " + data.contacte.webSeminaristes);
     this.setState({contacte: data.contacte});
   }
 
@@ -87,6 +93,7 @@ class AboutScreen extends Component {
   };
 
   render() {
+    console.log("this.state.contacte.webSeminaristes: " + this.state.contacte.webSeminaristes);
     return (
       <View style={styles.container}>
         <Image source={require('../img/bg/currentbg.png')} style={GLOBAL.backgroundImage}>
@@ -141,6 +148,20 @@ class AboutScreen extends Component {
                 </View>
                 <View style={{flex:1}}>
                   <Text style={GLOBAL.autoNormalText}>{"Pregar per un seminarista: Pregar per un seminarista assignat en el grup."}</Text>
+                  {this.state.contacte.webSeminaristes !== 'none'?
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                      <View style={{flex:1}}>
+                        <Text style={GLOBAL.italicRightNormalText}>{"Consulta els seminaristes aquí:"}</Text>
+                      </View>
+                      <View style={{height: 40, paddingLeft:5}}>
+                        <TouchableOpacity style={{flex:1}} onPress={() => {Linking.openURL(this.state.contacte.webSeminaristes)}}>
+                          <Image  source={require('../img/homeButtons/text.png')}
+                                  style={styles.logoImage2}/>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                    :null
+                  }
                 </View>
               </View>
               <Text />

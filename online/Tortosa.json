@@ -1,9 +1,23 @@
 {
   "contacte": {
     "nom": "Mn Javier Villanueva",
-    "telefon": "679 371 261"
+    "telefon": "679371261",
+    "webSeminaristes": "none"
   },
   "markers": [
-
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 40.807142,
+        "longitude": 0.525724
+      },
+      "title": "Seminari Diocesà de Tortosa",
+      "description": "Cada dijous fem una hora d’adoració",
+      "contact": {
+        "name": "Mossèn Javier",
+        "phone": "679371261"
+      }
+    }
   ]
 }

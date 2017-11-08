@@ -1,9 +1,23 @@
 {
   "contacte": {
-    "nom": "Mn Tomeu Villalonga",
-    "telefon": "630767994"
+    "nom": "Mn Bartomeu Villalonga",
+    "telefon": "971713511",
+    "webSeminaristes": "https://seminarimallorca.jimdo.com/qui-som/qui-som/"
   },
   "markers": [
-
+    {
+      "key": "0",
+      "coordinate":
+      {
+        "latitude": 39.566962,
+        "longitude": 2.654354
+      },
+      "title": "Seminari Major de Mallorca",
+      "description": "Exposició del Santíssim els dijous de 19h a 20’30h",
+      "contact": {
+        "name": "Mn. Bartomeu Villalonga",
+        "phone": "971713511"
+      }
+    }
   ]
 }
